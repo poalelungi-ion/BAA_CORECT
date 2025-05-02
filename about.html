@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>About - UpConstruction Bootstrap Template</title>
+  <title data-translate="title.about">About - BAA «CORECT»</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -27,28 +27,24 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
 </head>
 
 <body class="about-page">
 
 <header id="header" class="header d-flex align-items-center fixed-top">
   <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
     <a href="index.html" class="logo d-flex align-items-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
       <img src="assets/img/logo.png" alt="">
       <h1 class="sitename">BAA «CORECT»</h1> <span>.</span>
     </a>
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="index.html" >Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <!--          <li><a href="services.html">Services</a></li>-->
-        <li><a href="projects.html">Our Team </a></li>
-        <li><a href="blog.html">Publications</a></li>
-        <li class="dropdown"><a href="contact.html"><span>Contacts</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <li><a href="index.html" data-translate="nav.home">Startseite</a></li>
+        <li><a href="about.html" class="active" data-translate="nav.about">Über uns</a></li>
+        <li><a href="projects.html" data-translate="nav.team">Unser Team</a></li>
+        <li><a href="blog.html" data-translate="nav.publications">Publikationen</a></li>
+        <li class="dropdown"><a href="contact.html"><span data-translate="nav.contacts">Kontakte</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
             <li><a href="#">Stepan Zghibarțî</a></li>
             <li><a href="#">Buzu Nicolae</a></li>
@@ -56,388 +52,585 @@
             <li><a href="#">Alexei Barbăneagră</a></li>
           </ul>
         </li>
+        <li class="dropdown"><a href="#"><span id="active-language" data-translate="nav.language">Sprache: Deutsch</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="#" onclick="setLanguage('en')">English</a></li>
+            <li><a href="#" onclick="setLanguage('ro')">Română</a></li>
+            <li><a href="#" onclick="setLanguage('fr')">Français</a></li>
+            <li><a href="#" onclick="setLanguage('de')">Deutsch</a></li>
+          </ul>
+        </li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>
-
   </div>
 </header>
 
-  <main class="main">
+<main class="main">
+  <!-- Page Title -->
+  <div class="page-title" data-aos="fade" style="background-image: url(assets/img/colectiv3.jpg);">
+    <div class="container position-relative">
+      <h1 data-translate="page.title">BAA CORECT</h1>
+      <h4 data-translate="page.established">Est 1993</h4>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="index.html" data-translate="nav.home">Startseite</a></li>
+          <li class="current" data-translate="nav.about">Über uns</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
 
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade" style="background-image: url(assets/img/colectiv3.jpg);">
-      <div class="container position-relative">
-        <h1>BAA CORECT</h1>
-        <h4>Est 1993</h4>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">About</li>
-          </ol>
-        </nav>
+  <!-- About Section -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="row position-relative">
+        <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200"><img src="assets/img/Legal-scales-books-gavel-Image.jpg"></div>
+        <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+          <div class="our-story">
+            <h4 data-translate="about.established">Est 1993</h4>
+            <h3 data-translate="about.story.title">Our Story</h3>
+            <p data-translate="about.story.text1">The Associated Lawyers’ Firm «CORECT» was founded in Chisinau in 1993 and its main objectives are to provide legal assistance to Moldovan and foreign businesses in complex corporate transactions and commercial matters in the Republic of Moldova, as well as to protect the rights, freedoms and legitimate interests of Moldovan citizens.</p>
+            <p data-translate="about.story.text2">Our law firm is a private association of attorneys. Its 11 members have a vast experience in the legal field (as judges, prosecutors and lawyers) of more than 20 years each.</p>
+            <p data-translate="about.story.text3">Our attorneys have held, in the recent past, senior positions in the state administration and institutions of the Republic of Moldova as well as in international legal organisations, such as:</p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span data-translate="about.story.list1">First Vice-Prime Minister of the Government of the Republic of Moldova;</span></li>
+              <li><i class="bi bi-check-circle"></i> <span data-translate="about.story.list2">Minister of Justice;</span></li>
+              <li><i class="bi bi-check-circle"></i> <span data-translate="about.story.list3">Members of Parliament (3 attorneys);</span></li>
+              <li><i class="bi bi-check-circle"></i> <span data-translate="about.story.list4">Judge at the International Court of Human Rights in Strasbourg;</span></li>
+              <li><i class="bi bi-check-circle"></i> <span data-translate="about.story.list5">Judge of the Supreme Court of the Republic of Moldova (2 attorneys);</span></li>
+              <li><i class="bi bi-check-circle"></i> <span data-translate="about.story.list6">Prosecutors at the General Prosecutor’s Office of the Republic of Moldova (3 attorneys);</span></li>
+            </ul>
+            <p data-translate="about.story.text4">Our team identifies itself by approaching every single client with the utmost seriousness and diligence, seeking to solve their legal issues as soon as possible. We offer advice and expertise in various fields of law, being backed by the necessary attributes and competence in order to ensure effective legal advice and representation in court for our clients.</p>
+          </div>
+        </div>
       </div>
-    </div><!-- End Page Title -->
+    </div>
+  </section><!-- /About Section -->
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container">
-
-        <div class="row position-relative">
-
-          <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200"><img src="assets/img/Legal-scales-books-gavel-Image.jpg"></div>
-
-          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="our-story">
-              <h4>Est 1993</h4>
-              <h3>Our Story</h3>
-              <p>The Associated Lawyers’ Firm «CORECT» was founded in Chisinau in 1993 and its main objectives are to provide legal assistance to Moldovan and foreign businesses in complex corporate transactions and commercial matters in the Republic of Moldova, as well as to protect the rights, freedoms and legitimate interests of Moldovan citizens.
-
-                Our law firm is a private association of attorneys. Its 11 members have a vast experience in the legal field (as judges, prosecutors and lawyers) of more than 20 years each.
-
-                Our attorneys have held, in the recent past, senior positions in the state administration and institutions of the Republic of Moldova as well as in international legal organisations, such as:</p>
-              <ul>
-                <li><i class="bi bi-check-circle"></i> <span> First Vice-Prime Minister of the Government of the Republic of Moldova;</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Minister of Justice;</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Members of Parliament (3 attorneys);</span></li>
-                <li><i class="bi bi-check-circle"></i> <span> Judge at the International Court of Human Rights in Strasbourg;</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Judge of the Supreme Court of the Republic of Moldova (2 attorneys);</span></li>
-                <li><i class="bi bi-check-circle"></i> <span> Prosecutors at the General Prosecutor’s Office of the Republic of Moldova (3 attorneys);</span></li>
-              </ul>
-              <p>Our team identifies itself by approaching every single client with the utmost seriousness and diligence, seeking to solve their legal issues as soon as possible. We offer advice and expertise in various fields of law, being backed by the necessary attributes and competence in order to ensure effective legal advice and representation in court for our clients.</p>
-
-              <div class="watch-video d-flex align-items-center position-relative">
-<!--                <i class="bi bi-play-circle"></i>-->
-<!--                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox stretched-link">Watch Video</a>-->
-            </div>
+  <!-- Stats Counter Section -->
+  <section id="stats-counter" class="stats-counter section">
+    <div class="container section-title" data-aos="fade-up">
+      <h2 data-translate="stats.title">Stats</h2>
+    </div>
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item d-flex align-items-center w-100 h-100">
+            <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p data-translate="stats.clients">Happy Clients</p>
             </div>
           </div>
-
         </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Stats Counter Section -->
-    <section id="stats-counter" class="stats-counter section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Stats</h2>
-<!--        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>-->
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Happy Clients</p>
-              </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item d-flex align-items-center w-100 h-100">
+            <i class="bi bi-journal-richtext color-orange flex-shrink-0"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p data-translate="stats.projects">Projects</p>
             </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="bi bi-journal-richtext color-orange flex-shrink-0"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Projects</p>
-              </div>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="bi bi-headset color-green flex-shrink-0"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Hours Of Support</p>
-              </div>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="bi bi-people color-pink flex-shrink-0"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Hard Workers</p>
-              </div>
-            </div>
-          </div><!-- End Stats Item -->
-
+          </div>
         </div>
-
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item d-flex align-items-center w-100 h-100">
+            <i class="bi bi-headset color-green flex-shrink-0"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+              <p data-translate="stats.support">Hours Of Support</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item d-flex align-items-center w-100 h-100">
+            <i class="bi bi-people color-pink flex-shrink-0"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+              <p data-translate="stats.workers">Hard Workers</p>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+  </section><!-- /Stats Counter Section -->
 
-    </section><!-- /Stats Counter Section -->
+  <!-- Alt Services Section -->
+  <section id="alt-services" class="alt-services section">
+    <div class="container">
+      <div class="row justify-content-around gy-4">
+        <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="assets/img/1920x1200-data-out-45-37108909-chess-wallpaper.jpg" alt=""></div>
+        <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <h3 data-translate="efficiency.title">The efficiency of our firm’s work is ensured by</h3>
+          <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-easel flex-shrink-0"></i>
+            <div>
+              <h4><a href="" class="stretched-link" data-translate="efficiency.list1">The vast experience of our team</a></h4>
+            </div>
+          </div>
+          <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-patch-check flex-shrink-0"></i>
+            <div>
+              <h4><a href="" class="stretched-link" data-translate="efficiency.list2">The high intellectual potential of our attorneys</a></h4>
+            </div>
+          </div>
+          <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="500">
+            <i class="bi bi-brightness-high flex-shrink-0"></i>
+            <div>
+              <h4><a href="" class="stretched-link" data-translate="efficiency.list3">Our strict respect for the principles of complete trust and confidentiality when working with our clients</a></h4>
+            </div>
+          </div>
+          <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="600">
+            <i class="bi bi-brightness-high flex-shrink-0"></i>
+            <div>
+              <h4><a href="" class="stretched-link" data-translate="efficiency.list4">An individual approach to each case and client</a></h4>
+            </div>
+          </div>
+          <p data-translate="efficiency.text">We thank you for choosing our attorneys to represent your legal interests. And in turn, we assure you that we will do everything possible so that your rights, freedoms and legitimate interests will be respected in the Republic of Moldova.</p>
+        </div>
+      </div>
+    </div>
+  </section><!-- /Alt Services Section -->
 
-    <!-- Alt Services Section -->
-    <section id="alt-services" class="alt-services section">
-
-      <div class="container">
-
-        <div class="row justify-content-around gy-4">
-          <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="assets/img/1920x1200-data-out-45-37108909-chess-wallpaper.jpg" alt=""></div>
-
-          <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            <h3>The efficiency of our firm’s work is ensured by</h3>
-<!--            <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi</p>-->
-
-            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+  <!-- Alt Services 2 Section -->
+  <section id="alt-services-2" class="alt-services-2 section">
+    <div class="container">
+      <div class="row justify-content-around gy-4">
+        <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+          <h3 data-translate="awards.title">Awards</h3>
+          <p data-translate="awards.text">According to Chambers & Partners: “Peers are quick to attest that this association of lawyers has some of the country's most talented litigators among its ranks. The lawyers represent Moldovan clients as well as foreign parties before the domestic courts and the ECHR. The team handles commercial, IP, banking and tax litigation, and is also well known for its experience in criminal law. Sources comment on Igor Clima's outstanding skills in litigation and his knowledge of the workings of the courts. Stepan Zghibarțî is a notable figure, admired for his long experience.”</p>
+          <div class="row">
+            <div class="col-lg-6 icon-box d-flex">
               <i class="bi bi-easel flex-shrink-0"></i>
               <div>
-                <h4><a href="" class="stretched-link">The vast experience of our team</a></h4>
-<!--                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>-->
+                <h4 data-translate="awards.chambers.title">CHAMBERS&PARTNERS- CHAMBERS EUROPE</h4>
+                <p data-translate="awards.chambers.text">2019 "Dispute resolution: Moldova -Firms-Band 1- Associated Lawyers Firm «CORECT»"</p>
               </div>
-            </div><!-- End Icon Box -->
-
-            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+            </div>
+            <div class="col-lg-6 icon-box d-flex">
               <i class="bi bi-patch-check flex-shrink-0"></i>
               <div>
-                <h4><a href="" class="stretched-link"> The high intellectual potential of out attorneys</a></h4>
-<!--                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>-->
+                <h4 data-translate="awards.bestlawyers.title">BEST LAWYERS</h4>
+                <p data-translate="awards.bestlawyers.text">1-BEST LAWYERS-2013-2014 "Republic of Moldova-Litigation,Corporation and M&A-Firm-Associated Lawyers Firm «CORECT»"</p>
               </div>
-            </div><!-- End Icon Box -->
-
-            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="500">
-              <i class="bi bi-brightness-high flex-shrink-0"></i>
-              <div>
-                <h4><a href="" class="stretched-link">Our strict respect for the principles of complete trust and confidentiality when working with our clients</a></h4>
-<!--                <p>Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>-->
-              </div>
-            </div><!-- End Icon Box -->
-
-            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="600">
-              <i class="bi bi-brightness-high flex-shrink-0"></i>
-              <div>
-                <h4><a href="" class="stretched-link">An individual approach to each case and client</a></h4>
-<!--                <p>Est voluptatem labore deleniti quis a delectus et. Saepe dolorem libero sit non aspernatur odit amet. Et eligendi</p>-->
-              </div>
-            </div><!-- End Icon Box -->
-            <p>We thank you for choosing our attorneys to represent your legal interests. And in turn, we assure you that we will do everything possible so that your rights, freedoms and legitimate interests will be respected in the Republic of Moldova.</p>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Alt Services Section -->
-
-    <!-- Alt Services 2 Section -->
-    <section id="alt-services-2" class="alt-services-2 section">
-
-      <div class="container">
-
-        <div class="row justify-content-around gy-4">
-
-          <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-            <h3>Awards</h3>
-            <p>According to Chambers & Partners: “Peers are quick to attest that this association of lawyers has some of the country's most talented litigators among its ranks. The lawyers represent Moldovan clients as well as foreign parties before the domestic courts and the ECHR. The team handles commercial, IP, banking and tax litigation, and is also well known for its experience in criminal law. Sources comment on Igor Clima's outstanding skills in litigation and his knowledge of the workings of the courts. Stepan Zghibarțî is a notable figure, admired for his long experience.”</p>
-
-            <div class="row">
-
-              <div class="col-lg-6 icon-box d-flex">
-                <i class="bi bi-easel flex-shrink-0"></i>
-                <div>
-                  <h4>CHAMBERS&PARTNERS- CHAMBERS EUROPE</h4>
-                  <p>2019 "Dispute resolution: Moldova -Firms-Band 1- Associated Lawyers Firm «CORECT»"</p>
-                </div>
-              </div><!-- End Icon Box -->
-
-              <div class="col-lg-6 icon-box d-flex">
-                <i class="bi bi-patch-check flex-shrink-0"></i>
-                <div>
-                  <h4>BEST LAWYERS</h4>
-                  <p>1-BEST LAWYERS-2013-2014 "Republic of Moldova-Litigation,Corporation and M&A-Firm-Associated Lawyers Firm «CORECT»"</p>
-                </div>
-              </div><!-- End Icon Box -->
-
-              <div class="col-lg-6 icon-box d-flex">
-                <i class="bi bi-brightness-high flex-shrink-0"></i>
-                <div>
-                  <h4>Corporate INTL</h4>
-                  <p>1-LEGAL AWARDS-2012 "2012 Disoute Resolution Law Firm of the Year in Moldova"-Anexa nr. 3</p>
-                </div>
-              </div><!-- End Icon Box -->
-
-
             </div>
-
+            <div class="col-lg-6 icon-box d-flex">
+              <i class="bi bi-brightness-high flex-shrink-0"></i>
+              <div>
+                <h4 data-translate="awards.corporate.title">Corporate INTL</h4>
+                <p data-translate="awards.corporate.text">1-LEGAL AWARDS-2012 "2012 Dispute Resolution Law Firm of the Year in Moldova"-Anexa nr. 3</p>
+              </div>
+            </div>
           </div>
-
-          <div class="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/slide2.png" alt="">
-          </div>
-
         </div>
-
+        <div class="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/img/slide2.png" alt="">
+        </div>
       </div>
+    </div>
+  </section><!-- /Alt Services 2 Section -->
 
-    </section><!-- /Alt Services 2 Section -->
-
-
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Publications</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials section">
+    <div class="container section-title" data-aos="fade-up">
+      <h2 data-translate="testimonials.title">Publications</h2>
+    </div>
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper">
+        <script type="application/json" class="swiper-config">
+          {
+            "loop": true,
+            "speed": 600,
+            "autoplay": {
+              "delay": 5000
+            },
+            "slidesPerView": "auto",
+            "pagination": {
+              "el": ".swiper-pagination",
+              "type": "bullets",
+              "clickable": true
+            },
+            "breakpoints": {
+              "320": {
+                "slidesPerView": 1,
+                "spaceBetween": 40
               },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 20
-                }
+              "1200": {
+                "slidesPerView": 2,
+                "spaceBetween": 20
               }
             }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                    <article class="position-relative h-100">
-                      <div class="post-img position-relative overflow-hidden">
-                        <img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt="">
-                      </div>
-
-                      <div class="post-content d-flex flex-column">
-                        <h3 class="post-title">DL. AV. FALĂ NICOLAE ÎN CALITATE DE FORMATOR ÎN CADRUL...</h3>
-                        <p>
-                          Dl. av. Fală Nicolae, Senior Expert și Trainer în cadrul proiectului european „Support to the public administration reform process in the Republic of Moldova”, în calitate de formator în cadrul evenimentului „Codul Administrativ – Oportunități și Provocări”, organizat de A.O....
-                        </p>
-                        <hr>
-                        <a href="#" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-                      </div>
-                    </article>
-                </div>
+          }
+        </script>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <article class="position-relative h-100">
+                  <div class="post-img position-relative overflow-hidden">
+                    <img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt="">
+                  </div>
+                  <div class="post-content d-flex flex-column">
+                    <h3 class="post-title" data-translate="testimonials.item1.title">DL. AV. FALĂ NICOLAE ÎN CALITATE DE FORMATOR ÎN CADRUL...</h3>
+                    <p data-translate="testimonials.item1.text">Dl. av. Fală Nicolae, Senior Expert și Trainer în cadrul proiectului european „Support to the public administration reform process in the Republic of Moldova”, în calitate de formator în cadrul evenimentului „Codul Administrativ – Oportunități și Provocări”, organizat de A.O....</p>
+                    <hr>
+                    <a href="#" class="readmore stretched-link"><span data-translate="testimonials.readmore">Read More</span><i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </article>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <article class="position-relative h-100">
-                    <div class="post-img position-relative overflow-hidden">
-                      <img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt="">
-                    </div>
-
-                    <div class="post-content d-flex flex-column">
-                      <h3 class="post-title">COMUNICAT DL. IGOR CLIMA DIN 28.02.2019.</h3>
-                      <p>
-                        La data de 28.02.2019, dl. Av. Igor Clima a participat în calitate de vorbitor la conferința națională ,,Modificările CPC: Antivirus împotriva abuzului de drept”, organizată de Juridice Moldova, acoperind palierul procesual la subiectul „Excepția prescripției dreptului material la acțiune”.
-                      </p>
-                      <hr>
-                      <a href="#" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-                    </div>
-                  </article>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-
+            </div>
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <article class="position-relative h-100">
+                  <div class="post-img position-relative overflow-hidden">
+                    <img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt="">
+                  </div>
+                  <div class="post-content d-flex flex-column">
+                    <h3 class="post-title" data-translate="testimonials.item2.title">COMUNICAT DL. IGOR CLIMA DIN 28.02.2019.</h3>
+                    <p data-translate="testimonials.item2.text">La data de 28.02.2019, dl. Av. Igor Clima a participat în calitate de vorbitor la conferința națională ,,Modificările CPC: Antivirus împotriva abuzului de drept”, organizată de Juridice Moldova, acoperind palierul procesual la subiectul „Excepția prescripției dreptului material la acțiune”.</p>
+                    <hr>
+                    <a href="#" class="readmore stretched-link"><span data-translate="testimonials.readmore">Read More</span><i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
         </div>
-
+        <div class="swiper-pagination"></div>
       </div>
-
-    </section><!-- /Testimonials Section -->
-
-  </main>
+    </div>
+  </section><!-- /Testimonials Section -->
+</main>
 
 <footer id="footer" class="footer">
-
   <div class="container footer-top">
     <div class="row gy-4">
       <div class="col-lg-4 col-md-6 footer-about">
         <a href="index.html" class="logo d-flex align-items-center">
-          <span class="sitename">B.A.A. „Corect”</span>
+          <span class="sitename" data-translate="footer.sitename">B.A.A. „Corect”</span>
         </a>
         <div class="footer-contact pt-3">
-          <p>str. Mitropolit Gavriil Bănulescu Bodoni 14/4 </p>
-          <p>Chișinău, Moldova.</p>
-          <p class="mt-3"><strong>Phone:</strong> <span>+373 69 105 693</span></p>
-          <p><strong>Email:</strong> <span>buzunicolae@gmail.com</span></p>
+          <p data-translate="footer.address1">str. Mitropolit Gavriil Bănulescu Bodoni 14/4</p>
+          <p data-translate="footer.address2">Chișinău, Moldova.</p>
+          <p class="mt-3"><strong data-translate="footer.phone.title">Phone:</strong> <span>+373 69 105 693</span></p>
+          <p><strong data-translate="footer.email.title">Email:</strong> <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="73001619165d1a101c1f121633141e121a1f5d101c1e">[email&#160;protected]</a></span></p>
         </div>
-
       </div>
-
       <div class="col-lg-2 col-md-3 footer-links">
-        <h4>Useful Links</h4>
+        <h4 data-translate="footer.links.title">Useful Links</h4>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Our Team</a></li>
-          <li><a href="#">Publications</a></li>
+          <li><a href="#" data-translate="footer.links.home">Startseite</a></li>
+          <li><a href="#" data-translate="footer.links.about">Über uns</a></li>
+          <li><a href="#" data-translate="footer.links.team">Unser Team</a></li>
+          <li><a href="#" data-translate="footer.links.publications">Publikationen</a></li>
         </ul>
       </div>
-
-
-
     </div>
   </div>
-
   <div class="container copyright text-center mt-4">
-    <p>© <span>Copyright</span> <strong class="px-1 sitename">B.A.A. „Corect”</strong> <span>All Rights Reserved</span></p>
+    <p>© <span data-translate="footer.copyright">Copyright</span> <strong class="px-1 sitename" data-translate="footer.sitename">B.A.A. „Corect”</strong> <span data-translate="footer.rights">All Rights Reserved</span></p>
     <div class="credits">
-
-      Designed by <a href="#">Poalelungi Ion</a>
+      <span data-translate="footer.designed">Designed by</span> <a href="#">Poalelungi Ion</a>
     </div>
   </div>
-
 </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+<!-- Preloader -->
+<div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<!-- Vendor JS Files -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
 
+<!-- Translation Script -->
+<script>
+  const translations = {
+    en: {
+      "title.about": "About - BAA «CORECT»",
+      "nav.home": "Home",
+      "nav.about": "About",
+      "nav.team": "Our Team",
+      "nav.publications": "Publications",
+      "nav.contacts": "Contacts",
+      "nav.language": "Language: English",
+      "page.title": "BAA CORECT",
+      "page.established": "Est 1993",
+      "about.established": "Est 1993",
+      "about.story.title": "Our Story",
+      "about.story.text1": "The Associated Lawyers’ Firm «CORECT» was founded in Chisinau in 1993 and its main objectives are to provide legal assistance to Moldovan and foreign businesses in complex corporate transactions and commercial matters in the Republic of Moldova, as well as to protect the rights, freedoms and legitimate interests of Moldovan citizens.",
+      "about.story.text2": "Our law firm is a private association of attorneys. Its 11 members have a vast experience in the legal field (as judges, prosecutors and lawyers) of more than 20 years each.",
+      "about.story.text3": "Our attorneys have held, in the recent past, senior positions in the state administration and institutions of the Republic of Moldova as well as in international legal organisations, such as:",
+      "about.story.list1": "First Vice-Prime Minister of the Government of the Republic of Moldova;",
+      "about.story.list2": "Minister of Justice;",
+      "about.story.list3": "Members of Parliament (3 attorneys);",
+      "about.story.list4": "Judge at the International Court of Human Rights in Strasbourg;",
+      "about.story.list5": "Judge of the Supreme Court of the Republic of Moldova (2 attorneys);",
+      "about.story.list6": "Prosecutors at the General Prosecutor’s Office of the Republic of Moldova (3 attorneys);",
+      "about.story.text4": "Our team identifies itself by approaching every single client with the utmost seriousness and diligence, seeking to solve their legal issues as soon as possible. We offer advice and expertise in various fields of law, being backed by the necessary attributes and competence in order to ensure effective legal advice and representation in court for our clients.",
+      "stats.title": "Stats",
+      "stats.clients": "Happy Clients",
+      "stats.projects": "Projects",
+      "stats.support": "Hours Of Support",
+      "stats.workers": "Hard Workers",
+      "efficiency.title": "The efficiency of our firm’s work is ensured by",
+      "efficiency.list1": "The vast experience of our team",
+      "efficiency.list2": "The high intellectual potential of our attorneys",
+      "efficiency.list3": "Our strict respect for the principles of complete trust and confidentiality when working with our clients",
+      "efficiency.list4": "An individual approach to each case and client",
+      "efficiency.text": "We thank you for choosing our attorneys to represent your legal interests. And in turn, we assure you that we will do everything possible so that your rights, freedoms and legitimate interests will be respected in the Republic of Moldova.",
+      "awards.title": "Awards",
+      "awards.text": "According to Chambers & Partners: “Peers are quick to attest that this association of lawyers has some of the country's most talented litigators among its ranks. The lawyers represent Moldovan clients as well as foreign parties before the domestic courts and the ECHR. The team handles commercial, IP, banking and tax litigation, and is also well known for its experience in criminal law. Sources comment on Igor Clima's outstanding skills in litigation and his knowledge of the workings of the courts. Stepan Zghibarțî is a notable figure, admired for his long experience.”",
+      "awards.chambers.title": "CHAMBERS&PARTNERS- CHAMBERS EUROPE",
+      "awards.chambers.text": "2019 \"Dispute resolution: Moldova -Firms-Band 1- Associated Lawyers Firm «CORECT»\"",
+      "awards.bestlawyers.title": "BEST LAWYERS",
+      "awards.bestlawyers.text": "1-BEST LAWYERS-2013-2014 \"Republic of Moldova-Litigation,Corporation and M&A-Firm-Associated Lawyers Firm «CORECT»\"",
+      "awards.corporate.title": "Corporate INTL",
+      "awards.corporate.text": "1-LEGAL AWARDS-2012 \"2012 Dispute Resolution Law Firm of the Year in Moldova\"-Anexa nr. 3",
+      "testimonials.title": "Publications",
+      "testimonials.item1.title": "DL. AV. FALĂ NICOLAE ÎN CALITATE DE FORMATOR ÎN CADRUL...",
+      "testimonials.item1.text": "Dl. av. Fală Nicolae, Senior Expert și Trainer în cadrul proiectului european „Support to the public administration reform process in the Republic of Moldova”, în calitate de formator în cadrul evenimentului „Codul Administrativ – Oportunități și Provocări”, organizat de A.O....",
+      "testimonials.item2.title": "COMUNICAT DL. IGOR CLIMA DIN 28.02.2019.",
+      "testimonials.item2.text": "La data de 28.02.2019, dl. Av. Igor Clima a participat în calitate de vorbitor la conferința națională ,,Modificările CPC: Antivirus împotriva abuzului de drept”, organizată de Juridice Moldova, acoperind palierul procesual la subiectul „Excepția prescripției dreptului material la acțiune”.",
+      "testimonials.readmore": "Read More",
+      "footer.sitename": "B.A.A. „Corect”",
+      "footer.address1": "str. Mitropolit Gavriil Bănulescu Bodoni 14/4",
+      "footer.address2": "Chișinău, Moldova.",
+      "footer.phone.title": "Phone:",
+      "footer.email.title": "Email:",
+      "footer.links.title": "Useful Links",
+      "footer.links.home": "Home",
+      "footer.links.about": "About us",
+      "footer.links.team": "Our Team",
+      "footer.links.publications": "Publications",
+      "footer.copyright": "Copyright",
+      "footer.rights": "All Rights Reserved",
+      "footer.designed": "Designed by"
+    },
+    ro: {
+      "title.about": "Despre - BAA «CORECT»",
+      "nav.home": "Acasă",
+      "nav.about": "Despre",
+      "nav.team": "Echipa Noastră",
+      "nav.publications": "Publicații",
+      "nav.contacts": "Contacte",
+      "nav.language": "Limbă: Română",
+      "page.title": "BAA CORECT",
+      "page.established": "Înființat 1993",
+      "about.established": "Înființat 1993",
+      "about.story.title": "Povestea Noastră",
+      "about.story.text1": "Biroul Asociat de Avocați «CORECT» a fost fondat în Chișinău în 1993, având ca obiective principale oferirea de asistență juridică întreprinderilor moldovenești și străine în tranzacții corporative complexe și chestiuni comerciale în Republica Moldova, precum și protejarea drepturilor, libertăților și intereselor legitime ale cetățenilor moldoveni.",
+      "about.story.text2": "Firma noastră de avocatură este o asociație privată de avocați. Cei 11 membri ai săi au o vastă experiență în domeniul juridic (ca judecători, procurori și avocați) de peste 20 de ani fiecare.",
+      "about.story.text3": "Avocații noștri au ocupat, în trecutul recent, poziții de conducere în administrația de stat și instituțiile Republicii Moldova, precum și în organizații juridice internaționale, cum ar fi:",
+      "about.story.list1": "Prim-viceprim-ministru al Guvernului Republicii Moldova;",
+      "about.story.list2": "Ministru al Justiției;",
+      "about.story.list3": "Membri ai Parlamentului (3 avocați);",
+      "about.story.list4": "Judecător la Curtea Internațională a Drepturilor Omului din Strasbourg;",
+      "about.story.list5": "Judecător al Curții Supreme a Republicii Moldova (2 avocați);",
+      "about.story.list6": "Procurori la Parchetul General al Republicii Moldova (3 avocați);",
+      "about.story.text4": "Echipa noastră se remarcă prin abordarea fiecărui client cu maximă seriozitate și diligență, căutând să rezolve problemele juridice cât mai rapid posibil. Oferim consiliere și expertiză în diverse domenii ale dreptului, fiind susținuți de atributele și competențele necesare pentru a asigura consiliere juridică eficientă și reprezentare în instanță pentru clienții noștri.",
+      "stats.title": "Statistici",
+      "stats.clients": "Clienți Mulțumiți",
+      "stats.projects": "Proiecte",
+      "stats.support": "Ore de Suport",
+      "stats.workers": "Muncitori Dedicați",
+      "efficiency.title": "Eficiența muncii firmei noastre este asigurată de",
+      "efficiency.list1": "Vasta experiență a echipei noastre",
+      "efficiency.list2": "Potențialul intelectual ridicat al avocaților noștri",
+      "efficiency.list3": "Respectul strict pentru principiile de încredere completă și confidențialitate în lucrul cu clienții noștri",
+      "efficiency.list4": "O abordare individuală pentru fiecare caz și client",
+      "efficiency.text": "Vă mulțumim că ați ales avocații noștri pentru a vă reprezenta interesele juridice. La rândul nostru, vă asigurăm că vom face tot posibilul pentru ca drepturile, libertățile și interesele dumneavoastră legitime să fie respectate în Republica Moldova.",
+      "awards.title": "Premii",
+      "awards.text": "Conform Chambers & Partners: „Colegii sunt prompti în a atesta că această asociație de avocați are printre membrii săi unii dintre cei mai talentați litiganți ai țării. Avocații reprezintă clienți moldoveni, precum și părți străine, în fața instanțelor naționale și a CEDO. Echipa gestionează litigii comerciale, de proprietate intelectuală, bancare și fiscale și este, de asemenea, bine cunoscută pentru experiența sa în dreptul penal. Sursele comentează abilitățile remarcabile ale lui Igor Clima în litigii și cunoștințele sale despre funcționarea instanțelor. Stepan Zghibarțî este o figură notabilă, admirată pentru experiența sa îndelungată.”",
+      "awards.chambers.title": "CHAMBERS&PARTNERS- CHAMBERS EUROPE",
+      "awards.chambers.text": "2019 „Soluționarea litigiilor: Moldova -Firme-Band 1- Biroul Asociat de Avocați «CORECT»”",
+      "awards.bestlawyers.title": "BEST LAWYERS",
+      "awards.bestlawyers.text": "1-BEST LAWYERS-2013-2014 „Republica Moldova-Litigii, Corporații și Fuziuni & Achiziții-Firma-Biroul Asociat de Avocați «CORECT»”",
+      "awards.corporate.title": "Corporate INTL",
+      "awards.corporate.text": "1-LEGAL AWARDS-2012 „2012 Firma de Avocatură a Anului pentru Soluționarea Litigiilor în Moldova” - Anexa nr. 3",
+      "testimonials.title": "Publicații",
+      "testimonials.item1.title": "DL. AV. FALĂ NICOLAE ÎN CALITATE DE FORMATOR ÎN CADRUL...",
+      "testimonials.item1.text": "Dl. av. Fală Nicolae, Senior Expert și Trainer în cadrul proiectului european „Support to the public administration reform process in the Republic of Moldova”, în calitate de formator în cadrul evenimentului „Codul Administrativ – Oportunități și Provocări”, organizat de A.O....",
+      "testimonials.item2.title": "COMUNICAT DL. IGOR CLIMA DIN 28.02.2019.",
+      "testimonials.item2.text": "La data de 28.02.2019, dl. Av. Igor Clima a participat în calitate de vorbitor la conferința națională ,,Modificările CPC: Antivirus împotriva abuzului de drept”, organizată de Juridice Moldova, acoperind palierul procesual la subiectul „Excepția prescripției dreptului material la acțiune”.",
+      "testimonials.readmore": "Citește mai mult",
+      "footer.sitename": "B.A.A. „Corect”",
+      "footer.address1": "str. Mitropolit Gavriil Bănulescu Bodoni 14/4",
+      "footer.address2": "Chișinău, Moldova.",
+      "footer.phone.title": "Telefon:",
+      "footer.email.title": "Email:",
+      "footer.links.title": "Linkuri Utile",
+      "footer.links.home": "Acasă",
+      "footer.links.about": "Despre noi",
+      "footer.links.team": "Echipa Noastră",
+      "footer.links.publications": "Publicații",
+      "footer.copyright": "Drepturi de autor",
+      "footer.rights": "Toate drepturile rezervate",
+      "footer.designed": "Proiectat de"
+    },
+    fr: {
+      "title.about": "À propos - BAA «CORECT»",
+      "nav.home": "Accueil",
+      "nav.about": "À propos",
+      "nav.team": "Notre équipe",
+      "nav.publications": "Publications",
+      "nav.contacts": "Contacts",
+      "nav.language": "Langue: Français",
+      "page.title": "BAA CORECT",
+      "page.established": "Fondé en 1993",
+      "about.established": "Fondé en 1993",
+      "about.story.title": "Notre histoire",
+      "about.story.text1": "Le cabinet d'avocats associés «CORECT» a été fondé à Chișinău en 1993 avec pour principaux objectifs de fournir une assistance juridique aux entreprises moldaves et étrangères dans des transactions corporatives complexes et des affaires commerciales en République de Moldavie, ainsi que de protéger les droits, libertés et intérêts légitimes des citoyens moldaves.",
+      "about.story.text2": "Notre cabinet d'avocats est une association privée d'avocats. Ses 11 membres possèdent une vaste expérience dans le domaine juridique (en tant que juges, procureurs et avocats) de plus de 20 ans chacun.",
+      "about.story.text3": "Nos avocats ont occupé, dans un passé récent, des postes de haut niveau dans l'administration publique et les institutions de la République de Moldavie, ainsi que dans des organisations juridiques internationales, telles que :",
+      "about.story.list1": "Premier Vice-Premier Ministre du Gouvernement de la République de Moldavie ;",
+      "about.story.list2": "Ministre de la Justice ;",
+      "about.story.list3": "Membres du Parlement (3 avocats) ;",
+      "about.story.list4": "Juge à la Cour Internationale des Droits de l'Homme à Strasbourg ;",
+      "about.story.list5": "Juge de la Cour Suprême de la République de Moldavie (2 avocats) ;",
+      "about.story.list6": "Procureurs au Bureau du Procureur Général de la République de Moldavie (3 avocats) ;",
+      "about.story.text4": "Notre équipe se distingue par son approche de chaque client avec le plus grand sérieux et la plus grande diligence, cherchant à résoudre leurs problèmes juridiques aussi rapidement que possible. Nous offrons des conseils et une expertise dans divers domaines du droit, soutenus par les attributs et compétences nécessaires pour assurer des conseils juridiques efficaces et une représentation en cour pour nos clients.",
+      "stats.title": "Statistiques",
+      "stats.clients": "Clients Satisfaits",
+      "stats.projects": "Projets",
+      "stats.support": "Heures de Soutien",
+      "stats.workers": "Travailleurs Acharnés",
+      "efficiency.title": "L'efficacité du travail de notre cabinet est assurée par",
+      "efficiency.list1": "La vaste expérience de notre équipe",
+      "efficiency.list2": "Le haut potentiel intellectuel de nos avocats",
+      "efficiency.list3": "Notre respect strict des principes de confiance totale et de confidentialité dans le travail avec nos clients",
+      "efficiency.list4": "Une approche individuelle pour chaque cas et client",
+      "efficiency.text": "Nous vous remercions d'avoir choisi nos avocats pour représenter vos intérêts juridiques. En retour, nous vous assurons que nous ferons tout notre possible pour que vos droits, libertés et intérêts légitimes soient respectés en République de Moldavie.",
+      "awards.title": "Récompenses",
+      "awards.text": "Selon Chambers & Partners : « Les pairs attestent rapidement que cette association d'avocats compte parmi ses rangs certains des litigeurs les plus talentueux du pays. Les avocats représentent des clients moldaves ainsi que des parties étrangères devant les tribunaux nationaux et la CEDH. L'équipe gère des litiges commerciaux, de propriété intellectuelle, bancaires et fiscaux, et est également bien connue pour son expérience en droit pénal. Les sources commentent les compétences exceptionnelles d'Igor Clima en matière de litiges et sa connaissance du fonctionnement des tribunaux. Stepan Zghibarțî est une figure notable, admirée pour sa longue expérience. »",
+      "awards.chambers.title": "CHAMBERS&PARTNERS- CHAMBERS EUROPE",
+      "awards.chambers.text": "2019 « Résolution des litiges : Moldavie -Cabinets-Band 1- Cabinet d'Avocats Associés «CORECT» »",
+      "awards.bestlawyers.title": "BEST LAWYERS",
+      "awards.bestlawyers.text": "1-BEST LAWYERS-2013-2014 « République de Moldavie-Litiges, Corporations et Fusions & Acquisitions-Cabinet-Cabinet d'Avocats Associés «CORECT» »",
+      "awards.corporate.title": "Corporate INTL",
+      "awards.corporate.text": "1-LEGAL AWARDS-2012 « 2012 Cabinet d'Avocats de l'Année pour la Résolution des Litiges en Moldavie »-Annexe n° 3",
+      "testimonials.title": "Publications",
+      "testimonials.item1.title": "M. AV. FALĂ NICOLAE EN TANT QUE FORMATEUR DANS LE CADRE DE...",
+      "testimonials.item1.text": "M. av. Fală Nicolae, expert senior et formateur dans le cadre du projet européen « Soutien au processus de réforme de l'administration publique en République de Moldavie », en tant que formateur lors de l'événement « Code administratif – Opportunités et défis », organisé par A.O....",
+      "testimonials.item2.title": "COMMUNIQUÉ DE M. IGOR CLIMA DU 28.02.2019.",
+      "testimonials.item2.text": "Le 28.02.2019, M. Av. Igor Clima a participé en tant qu'orateur à la conférence nationale « Modifications du CPC : Antivirus contre l'abus de droit », organisée par Juridice Moldova, couvrant l'aspect procédural sur le thème « L'exception de la prescription du droit matériel à l'action ».",
+      "testimonials.readmore": "Lire la suite",
+      "footer.sitename": "B.A.A. „Corect”",
+      "footer.address1": "str. Mitropolit Gavriil Bănulescu Bodoni 14/4",
+      "footer.address2": "Chișinău, Moldavie.",
+      "footer.phone.title": "Téléphone :",
+      "footer.email.title": "Email :",
+      "footer.links.title": "Liens utiles",
+      "footer.links.home": "Accueil",
+      "footer.links.about": "À propos de nous",
+      "footer.links.team": "Notre équipe",
+      "footer.links.publications": "Publications",
+      "footer.copyright": "Droit d'auteur",
+      "footer.rights": "Tous droits réservés",
+      "footer.designed": "Conçu par"
+    },
+    de: {
+      "title.about": "Über uns - BAA «CORECT»",
+      "nav.home": "Startseite",
+      "nav.about": "Über uns",
+      "nav.team": "Unser Team",
+      "nav.publications": "Publikationen",
+      "nav.contacts": "Kontakte",
+      "nav.language": "Sprache: Deutsch",
+      "page.title": "BAA CORECT",
+      "page.established": "Gegründet 1993",
+      "about.established": "Gegründet 1993",
+      "about.story.title": "Unsere Geschichte",
+      "about.story.text1": "Die Anwaltskanzlei «CORECT» wurde 1993 in Chișinău gegründet und hat als Hauptziele die Bereitstellung juristischer Unterstützung für moldauische und ausländische Unternehmen in komplexen Unternehmenstransaktionen und Handelsangelegenheiten in der Republik Moldau sowie den Schutz der Rechte, Freiheiten und legitimen Interessen moldauischer Bürger.",
+      "about.story.text2": "Unsere Anwaltskanzlei ist eine private Vereinigung von Anwälten. Ihre 11 Mitglieder verfügen über eine umfangreiche Erfahrung im juristischen Bereich (als Richter, Staatsanwälte und Anwälte) von jeweils über 20 Jahren.",
+      "about.story.text3": "Unsere Anwälte haben in jüngerer Vergangenheit leitende Positionen in der staatlichen Verwaltung und Institutionen der Republik Moldau sowie in internationalen juristischen Organisationen innegehabt, wie zum Beispiel:",
+      "about.story.list1": "Erster Vizepremierminister der Regierung der Republik Moldau;",
+      "about.story.list2": "Justizminister;",
+      "about.story.list3": "Parlamentsmitglieder (3 Anwälte);",
+      "about.story.list4": "Richter am Internationalen Gerichtshof für Menschenrechte in Straßburg;",
+      "about.story.list5": "Richter am Obersten Gerichtshof der Republik Moldau (2 Anwälte);",
+      "about.story.list6": "Staatsanwälte bei der Generalstaatsanwaltschaft der Republik Moldau (3 Anwälte);",
+      "about.story.text4": "Unser Team zeichnet sich durch eine äußerst ernsthafte und sorgfältige Herangehensweise an jeden einzelnen Kunden aus, mit dem Ziel, deren juristische Probleme so schnell wie möglich zu lösen. Wir bieten Beratung und Expertise in verschiedenen Rechtsgebieten, gestützt auf die notwendigen Eigenschaften und Kompetenzen, um eine effektive Rechtsberatung und Vertretung vor Gericht für unsere Kunden zu gewährleisten.",
+      "stats.title": "Statistiken",
+      "stats.clients": "Zufriedene Kunden",
+      "stats.projects": "Projekte",
+      "stats.support": "Stunden der Unterstützung",
+      "stats.workers": "Engagierte Mitarbeiter",
+      "efficiency.title": "Die Effizienz der Arbeit unserer Kanzlei wird gewährleistet durch",
+      "efficiency.list1": "Die umfangreiche Erfahrung unseres Teams",
+      "efficiency.list2": "Das hohe intellektuelle Potenzial unserer Anwälte",
+      "efficiency.list3": "Unser striktes Einhalten der Prinzipien vollständigen Vertrauens und Vertraulichkeit im Umgang mit unseren Kunden",
+      "efficiency.list4": "Ein individueller Ansatz für jeden Fall und Kunden",
+      "efficiency.text": "Wir danken Ihnen, dass Sie unsere Anwälte gewählt haben, um Ihre juristischen Interessen zu vertreten. Im Gegenzug versichern wir Ihnen, dass wir alles Mögliche tun werden, damit Ihre Rechte, Freiheiten und legitimen Interessen in der Republik Moldau respektiert werden.",
+      "awards.title": "Auszeichnungen",
+      "awards.text": "Laut Chambers & Partners: „Kollegen bezeugen schnell, dass diese Anwaltsvereinigung einige der talentiertesten Prozessanwälte des Landes in ihren Reihen hat. Die Anwälte vertreten moldauische Kunden sowie ausländische Parteien vor den nationalen Gerichten und dem EGMR. Das Team bearbeitet Handels-, IP-, Bank- und Steuerstreitigkeiten und ist auch für seine Erfahrung im Strafrecht bekannt. Quellen kommentieren die herausragenden Fähigkeiten von Igor Clima im Prozessrecht und sein Wissen über die Funktionsweise der Gerichte. Stepan Zghibarțî ist eine bemerkenswerte Persönlichkeit, die für seine langjährige Erfahrung bewundert wird.“",
+      "awards.chambers.title": "CHAMBERS&PARTNERS- CHAMBERS EUROPE",
+      "awards.chambers.text": "2019 „Streitbeilegung: Moldau -Kanzleien-Band 1- Anwaltskanzlei «CORECT»“",
+      "awards.bestlawyers.title": "BEST LAWYERS",
+      "awards.bestlawyers.text": "1-BEST LAWYERS-2013-2014 „Republik Moldau-Prozessführung, Unternehmen und Fusionen & Übernahmen-Kanzlei-Anwaltskanzlei «CORECT»“",
+      "awards.corporate.title": "Corporate INTL",
+      "awards.corporate.text": "1-LEGAL AWARDS-2012 „2012 Kanzlei des Jahres für Streitbeilegung in Moldau“-Anhang Nr. 3",
+      "testimonials.title": "Publikationen",
+      "testimonials.item1.title": "HERRN RECHTSANWALT FALĂ NICOLAE ALS TRAINER IM RAHMEN...",
+      "testimonials.item1.text": "Herr Rechtsanwalt Fală Nicolae, Senior Experte und Trainer im Rahmen des europäischen Projekts „Unterstützung des Reformprozesses der öffentlichen Verwaltung in der Republik Moldau“, als Trainer im Rahmen der Veranstaltung „Verwaltungskodex – Chancen und Herausforderungen“, organisiert von A.O....",
+      "testimonials.item2.title": "MITTEILUNG VON HERRN IGOR CLIMA VOM 28.02.2019.",
+      "testimonials.item2.text": "Am 28.02.2019 nahm Herr Rechtsanwalt Igor Clima als Redner an der nationalen Konferenz „Änderungen der ZPO: Antivirus gegen Rechtsmissbrauch“ teil, organisiert von Juridice Moldova, und behandelte den prozessualen Aspekt zum Thema „Ausnahme der Verjährung des materiellen Anspruchs auf Klage“.",
+      "testimonials.readmore": "Mehr lesen",
+      "footer.sitename": "B.A.A. „Corect”",
+      "footer.address1": "str. Mitropolit Gavriil Bănulescu Bodoni 14/4",
+      "footer.address2": "Chișinău, Moldau.",
+      "footer.phone.title": "Telefon:",
+      "footer.email.title": "E-Mail:",
+      "footer.links.title": "Nützliche Links",
+      "footer.links.home": "Startseite",
+      "footer.links.about": "Über uns",
+      "footer.links.team": "Unser Team",
+      "footer.links.publications": "Publikationen",
+      "footer.copyright": "Urheberrecht",
+      "footer.rights": "Alle Rechte vorbehalten",
+      "footer.designed": "Entworfen von"
+    }
+  };
+
+  function setLanguage(lang) {
+    localStorage.setItem('preferredLanguage', lang);
+    changeLanguage(lang);
+  }
+
+  function changeLanguage(lang) {
+    const selectedLang = lang || localStorage.getItem('preferredLanguage') || 'de';
+    document.getElementById('active-language').innerHTML = translations[selectedLang]['nav.language'];
+
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach(element => {
+      const key = element.getAttribute('data-translate');
+      if (translations[selectedLang] && translations[selectedLang][key]) {
+        element.innerHTML = translations[selectedLang][key];
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('preferredLanguage') || 'de';
+    changeLanguage(savedLang);
+  });
+</script>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9396f00a9fa0b0ee',t:'MTc0NjE4MjgxNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 
 </html>

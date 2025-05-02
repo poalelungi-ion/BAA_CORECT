@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="de">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - UpConstruction Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>BAA «CORECT» - Startseite</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -15,703 +14,712 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
 </head>
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-         <img src="assets/img/logo.png" alt="">
-        <h1 class="sitename">BAA «CORECT»</h1> <span>.</span>
-      </a>
+    <a href="index.html" class="logo d-flex align-items-center">
+      <img src="assets/img/logo.png" alt="">
+      <h1 class="sitename">BAA «CORECT»</h1> <span>.</span>
+    </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-<!--          <li><a href="services.html">Services</a></li>-->
-          <li><a href="projects.html">Our Team </a></li>
-          <li><a href="blog.html">Publications</a></li>
-          <li class="dropdown"><a href="contact.html"><span>Contacts</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Stepan Zghibarțî</a></li>
-              <li><a href="#">Buzu Nicolae</a></li>
-              <li><a href="#">Victor Berlinski</a></li>
-              <li><a href="#">Alexei Barbăneagră</a></li>
-            </ul>
-          </li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html" class="active" data-translate="nav.home">Startseite</a></li>
+        <li><a href="about.html" data-translate="nav.about">Über uns</a></li>
+        <li><a href="services.html" data-translate="nav.services">Dienstleistungen</a></li>
+        <li><a href="projects.html" data-translate="nav.team">Unser Team</a></li>
+        <li><a href="blog.html" data-translate="nav.publications">Publikationen</a></li>
+        <li class="dropdown"><a href="contact.html"><span data-translate="nav.contacts">Kontakte</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="#">Stepan Zghibarțî</a></li>
+            <li><a href="#">Buzu Nicolae</a></li>
+            <li><a href="#">Victor Berlinski</a></li>
+            <li><a href="#">Alexei Barbăneagră</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#"><span id="active-language" data-translate="nav.language">Sprache: Deutsch</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="#" onclick="setLanguage('en')">English</a></li>
+            <li><a href="#" onclick="setLanguage('ro')">Română</a></li>
+            <li><a href="#" onclick="setLanguage('fr')">Français</a></li>
+            <li><a href="#" onclick="setLanguage('de')">Deutsch</a></li>
+          </ul>
+        </li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
 
-    </div>
-  </header>
+  </div>
+</header>
 
-  <main class="main">
+<main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
-
-      <div class="info d-flex align-items-center">
-        <div class="container">
-          <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <div class="col-lg-6 text-center">
-              <h2 class="">Dear Clients</h2>
-              <p>Our team’s mission is to offer quality legal counsel and representation, inspired, individualised and sustainable solution to the legal disputes brought before us, and to anticipate the potential risk zones and the optimal ways of avoiding them. In the name of ALF «CORECT», we would like to thank you for the confidence you offer us, since productive and lengthy relationships are based on trust.</p>
-              <a href="#get-started" class="btn-get-started">Get Started</a>
-            </div>
+  <!-- Hero Section -->
+  <section id="hero" class="hero section">
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6 text-center">
+            <h2 data-translate="hero.title">Sehr geehrte Kunden</h2>
+            <p data-translate="hero.text">Die Mission unseres Teams ist es, qualitativ hochwertige Rechtsberatung und Vertretung anzubieten, inspirierte, individualisierte und nachhaltige Lösungen für die uns vorgelegten Rechtsstreitigkeiten zu finden und potenzielle Risikozonen sowie optimale Wege zu ihrer Vermeidung zu antizipieren. Im Namen der ALF «CORECT» möchten wir Ihnen für das Vertrauen danken, das Sie uns entgegenbringen, da produktive und langfristige Beziehungen auf Vertrauen basieren.</p>
+            <a href="#get-started" class="btn-get-started" data-translate="hero.button">Loslegen</a>
           </div>
         </div>
       </div>
+    </div>
 
-      <div id="section-fqREP4OWmC-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-
-        <div class="carousel-item">
-          <img src="assets/img/hero-carousel/1476844403881.jpg" alt="">
-        </div>
-
-        <div class="carousel-item active">
-          <img src="assets/img/hero-carousel/1476844403881.jpg" alt="">
-        </div>
-
-        <div class="carousel-item">
-          <img src="assets/img/hero-carousel/1476844403881.jpg" alt="">
-        </div>
-
-        <a class="carousel-control-prev" href="#section-fqREP4OWmC-carousel" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-        </a>
-
-        <a class="carousel-control-next" href="#section-fqREP4OWmC-carousel" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-        </a>
-
+    <div id="section-fqREP4OWmC-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-item">
+        <img src="assets/img/hero-carousel/1476844403881.jpg" alt="">
       </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- Features Section -->
-    <section id="features" class="features section">
-
-      <div class="container">
-
-        <ul class="nav nav-tabs row g-2 d-flex" data-aos="fade-up" data-aos-delay="100" role="tablist">
-
-          <li class="nav-item col-3" role="presentation">
-            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1" aria-selected="true" role="tab">
-              <h4>About Us</h4>
-            </a>
-          </li><!-- End tab nav item -->
-
-          <li class="nav-item col-3" role="presentation">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2" aria-selected="false" tabindex="-1" role="tab">
-              <h4>Services</h4>
-            </a>
-          </li><!-- End tab nav item -->
-
-          <li class="nav-item col-3" role="presentation">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3" aria-selected="false" tabindex="-1" role="tab">
-              <h4>Our Vision</h4>
-            </a>
-          </li><!-- End tab nav item -->
-
-          <li class="nav-item col-3" role="presentation">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-4" aria-selected="false" tabindex="-1" role="tab">
-              <h4>Our Values</h4>
-            </a>
-          </li><!-- End tab nav item -->
-
-        </ul>
-
-        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="tab-pane fade active show" id="features-tab-1" role="tabpanel">
-            <div class="row">
-
-              <h3>About Us</h3>
-              <p class="fst-italic">
-                Established in 1993 in Chisinau, the Associated Lawyers’ Firm «CORECT» is a premier legal institution dedicated to providing comprehensive legal services to both Moldovan and international clients. Our firm specializes in navigating the complexities of corporate and commercial law, as well as safeguarding the rights and interests of Moldovan citizens. With a team of 11 seasoned attorneys, each boasting over 20 years of experience in the legal field, we are committed to delivering exceptional legal representation.
-              </p>
-
-              <p>
-                Our attorneys bring a wealth of experience from their prior roles as judges, prosecutors, and senior officials within the state administration and international legal organizations. Notably, our team includes individuals who have served as:
-              </p>
-              <ul>
-                <li><i class="bi bi-check2-all"></i> <span>First Vice-Prime Minister of the Government of the Republic of Moldova;</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>Minister of Justice;</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>Members of Parliament (3 attorneys);</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>Judges of the Supreme Court of the Republic of Moldova (2 attorneys);</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>Judge at the International Court of Human Rights in Strasbourg;</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>Prosecutors at the General Prosecutor’s Office of the Republic of Moldova (3 attorneys);</span></li>
-              </ul>
-
-              <p>
-                At CORECT, we are driven by a commitment to excellence, diligence, and a deep understanding of our clients' needs. Our legal team approaches each case with a tailored strategy, ensuring that we provide effective legal advice and representation across a broad spectrum of legal issues. We pride ourselves on our ability to handle complex cases with professionalism and integrity.
-              </p>
-
-              <p>
-                The effectiveness of our firm is underpinned by:
-              </p>
-              <ul>
-                <li><i class="bi bi-check2-all"></i> <span>Our team's extensive legal experience, which enables us to navigate even the most challenging legal landscapes.</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>The intellectual rigor and strategic thinking of our attorneys, which drive our success in both litigation and advisory roles.</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>A steadfast commitment to trust and confidentiality, which forms the cornerstone of our client relationships.</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>An individualized approach to every case, ensuring that our legal solutions are as unique as the clients we serve.</span></li>
-              </ul>
-
-              <p>
-                Thank you for entrusting us with your legal matters. We are dedicated to upholding your rights, freedoms, and legitimate interests with the utmost integrity and professionalism in the Republic of Moldova.
-              </p>
-
-            </div>
-          </div><!-- End tab content item -->
-
-          <div class="tab-pane fade" id="features-tab-2" role="tabpanel">
-            <div class="row">
-
-              <h3>Services</h3>
-              <p class="fst-italic">
-                At the Associated Lawyers’ Firm «CORECT», we offer a comprehensive range of legal services designed to meet the diverse needs of both individuals and businesses. Our expertise spans across various areas of law, including civil, commercial, criminal, administrative, tax, and customs law. We also specialize in the protection of intellectual property and provide strategic legal support in numerous other legal domains.
-              </p>
-
-              <p>
-                Our key services include, but are not limited to:
-              </p>
-              <ul>
-                <li><i class="bi bi-check2-all"></i> <span>Providing expert legal advice and drafting legal opinions on complex legal matters, both at the national and international levels.</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>Preparing and reviewing legal documents, including contracts, corporate statutes, and internal organizational structures for companies and institutions of all legal forms.</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>Representing clients in interactions with government entities, public administration bodies, law enforcement agencies, and regulatory authorities, including tax agencies.</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>Advocating on behalf of clients in legal disputes with other individuals and legal entities, ensuring their rights and interests are protected.</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>Drafting claims, appeals, and other legal documentation related to Alternative Dispute Resolution (ADR) and litigation.</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>Providing legal assistance throughout all stages of legal proceedings, including representation in court, legal negotiations, and the preparation of legal expertise reports.</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>Offering specialized support in corporate law, including the establishment, reorganization, and liquidation of legal entities, as well as the management of changes to statutory documents.</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>Representing clients in civil, commercial, administrative, and criminal cases before all courts in the Republic of Moldova, including specialized economic courts and courts of general jurisdiction.</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>Providing legal representation and assistance to victims, plaintiffs, or defendants in criminal cases, from the investigation stage through to trial.</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>Advocating for clients' rights before the European Court of Human Rights and other international legal bodies.</span></li>
-              </ul>
-
-              <p>
-                Our firm is committed to delivering results-driven legal solutions that are tailored to the unique needs of each client, ensuring that their legal challenges are addressed with the highest level of expertise and professionalism.
-              </p>
-
-            </div>
-          </div><!-- End tab content item -->
-
-          <div class="tab-pane fade" id="features-tab-3" role="tabpanel">
-            <div class="row">
-
-              <h3>Our Vision</h3>
-
-              <p>
-                At the Associated Lawyers’ Firm «CORECT», our vision is to build lasting relationships with our clients based on trust, integrity, and a deep understanding of their legal needs. Our team of attorneys is committed to thinking ahead and providing proactive legal solutions that address potential issues before they escalate to litigation. We believe in fostering open communication and transparency with our clients, ensuring that they are informed and empowered throughout the legal process.
-              </p>
-
-              <p>
-                Our approach to legal practice is rooted in fairness, honesty, and a commitment to achieving the best possible outcomes for our clients. We strive to resolve legal matters efficiently, whether through negotiation, mediation, or, when necessary, litigation. Our team takes pride in our ability to deliver clear, concise, and practical legal advice that is tailored to the unique circumstances of each client.
-              </p>
-
-              <p>
-                We are dedicated to exploring innovative legal solutions that not only meet the immediate needs of our clients but also contribute to their long-term success. By continuously adapting to the evolving legal landscape, we ensure that our services remain relevant and effective in addressing the challenges faced by our clients.
-              </p>
-
-            </div>
-          </div><!-- End tab content item -->
-
-          <div class="tab-pane fade" id="features-tab-4" role="tabpanel">
-            <div class="row">
-
-              <h3>Our Values</h3>
-              <p class="fst-italic">
-                The Associated Lawyers’ Firm «CORECT» operates under a set of core values that define who we are and how we serve our clients. Our values are the foundation of our commitment to providing high-quality legal services with professionalism and integrity.
-              </p>
-
-              <p>
-                <i class="bi bi-check2-all"></i> <strong>Ethics and Confidentiality:</strong> At CORECT, we uphold the highest standards of professional ethics, confidentiality, and loyalty. Our attorneys are bound by strict ethical guidelines that ensure the privacy and security of our clients' information at all times. We guarantee absolute confidentiality in all matters, and our clients can trust that their legal affairs will be handled with the utmost discretion, even after the conclusion of our services.
-              </p>
-
-              <p>
-                <i class="bi bi-check2-all"></i> <strong>Dedication and Transparency:</strong> We are committed to providing dedicated and transparent legal services, keeping our clients informed at every step of their legal journey. We understand that navigating legal matters can be complex and stressful, and we strive to make the process as clear and straightforward as possible. Our attorneys are always available to answer questions and provide updates, ensuring that our clients have the knowledge they need to make informed decisions.
-              </p>
-
-              <p>
-                <i class="bi bi-check2-all"></i> <strong>Integrity:</strong> Integrity is at the heart of everything we do. We believe in maintaining honesty, consistency, and respect for professional ethics in all aspects of our legal practice. Our attorneys are committed to acting in the best interests of our clients, offering sound legal advice and representation that they can rely on. We take pride in our reputation for integrity and professionalism, and we work tirelessly to uphold these values in every case we handle.
-              </p>
-
-              <p>
-                <i class="bi bi-check2-all"></i> <strong>Client-Centered Approach:</strong> Our clients are at the center of everything we do. We take the time to understand their unique legal needs and objectives, and we work collaboratively to develop strategies that best serve their interests. Our client-centered approach ensures that our legal services are tailored to meet the specific needs of each individual or business we represent, and we are committed to achieving the best possible outcomes for our clients.
-              </p>
-
-            </div>
-          </div><!-- End tab content item -->
-
-        </div>
-
+      <div class="carousel-item active">
+        <img src="assets/img/hero-carousel/1476844403881.jpg" alt="">
       </div>
+      <div class="carousel-item">
+        <img src="assets/img/hero-carousel/1476844403881.jpg" alt="">
+      </div>
+      <a class="carousel-control-prev" href="#section-fqREP4OWmC-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#section-fqREP4OWmC-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+    </div>
+  </section><!-- /Hero Section -->
 
-    </section><!-- End Features Section -->
+  <!-- Features Section -->
+  <section id="features" class="features section">
+    <div class="container">
+      <ul class="nav nav-tabs row g-2 d-flex" data-aos="fade-up" data-aos-delay="100" role="tablist">
+        <li class="nav-item col-3" role="presentation">
+          <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1" aria-selected="true" role="tab">
+            <h4 data-translate="features.about">Über uns</h4>
+          </a>
+        </li>
+        <li class="nav-item col-3" role="presentation">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2" aria-selected="false" tabindex="-1" role="tab">
+            <h4 data-translate="features.services">Dienstleistungen</h4>
+          </a>
+        </li>
+        <li class="nav-item col-3" role="presentation">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3" aria-selected="false" tabindex="-1" role="tab">
+            <h4 data-translate="features.vision">Unsere Vision</h4>
+          </a>
+        </li>
+        <li class="nav-item col-3" role="presentation">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-4" aria-selected="false" tabindex="-1" role="tab">
+            <h4 data-translate="features.values">Unsere Werte</h4>
+          </a>
+        </li>
+      </ul>
 
+      <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+        <div class="tab-pane fade active show" id="features-tab-1" role="tabpanel">
+          <div class="row">
+            <h3 data-translate="features.about">Über uns</h3>
+            <p class="fst-italic" data-translate="features.about.text1">
+              Gegründet 1993 in Chișinău, ist die Anwaltskanzlei «CORECT» eine führende juristische Institution, die sich der Bereitstellung umfassender juristischer Dienstleistungen für представления молдавских и международных клиентов widmet. Unsere Kanzlei ist spezialisiert auf die Bewältigung der Komplexitäten des Gesellschafts- und Handelsrechts sowie auf den Schutz der Rechte und Interessen moldawischer Bürger. Mit einem Team von 11 erfahrenen Anwälten, die jeweils über 20 Jahre Erfahrung im juristischen Bereich verfügen, sind wir bestrebt, eine außergewöhnliche rechtliche Vertretung zu bieten.
+            </p>
+            <p data-translate="features.about.text2">
+              Unsere Anwälte bringen eine Fülle von Erfahrungen aus ihren früheren Rollen als Richter, Staatsanwälte und hochrangige Beamte in der staatlichen Verwaltung und internationalen juristischen Organisationen mit. Besonders hervorzuheben ist, dass unser Team Personen umfasst, die folgende Positionen innehatten:
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.about.list1">Erster Vizepremierminister der Regierung der Republik Moldau;</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.about.list2">Justizminister;</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.about.list3">Parlamentsmitglieder (3 Anwälte);</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.about.list4">Richter am Obersten Gerichtshof der Republik Moldau (2 Anwälte);</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.about.list5">Richter am Internationalen Gerichtshof für Menschenrechte in Straßburg;</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.about.list6">Staatsanwälte bei der Generalstaatsanwaltschaft der Republik Moldau (3 Anwälte);</span></li>
+            </ul>
+            <p data-translate="features.about.text3">
+              Bei CORECT sind wir von einem Engagement für Exzellenz, Sorgfalt und einem tiefen Verständnis der Bedürfnisse unserer Kunden getrieben. Unser juristisches Team geht jeden Fall mit einer maßgeschneiderten Strategie an, um sicherzustellen, dass wir effektive Rechtsberatung und Vertretung in einem breiten Spektrum juristischer Fragen bieten. Wir sind stolz auf unsere Fähigkeit, komplexe Fälle mit Professionalität und Integrität zu handhaben.
+            </p>
+            <p data-translate="features.about.text4">
+              Die Effektivität unserer Kanzlei wird untermauert durch:
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.about.list7">Die umfassende juristische Erfahrung unseres Teams, die es uns ermöglicht, selbst die anspruchsvollsten juristischen Landschaften zu navigieren.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.about.list8">Die intellektuelle Strenge und das strategische Denken unserer Anwälte, die unseren Erfolg sowohl in streitigen als auch in beratenden Rollen vorantreiben.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.about.list9">Ein unerschütterliches Engagement für Vertrauen und Vertraulichkeit, das den Grundstein unserer Kundenbeziehungen bildet.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.about.list10">Ein individueller Ansatz für jeden Fall, der sicherstellt, dass unsere juristischen Lösungen so einzigartig sind wie die Kunden, die wir bedienen.</span></li>
+            </ul>
+            <p data-translate="features.about.text5">
+              Vielen Dank, dass Sie uns Ihre juristischen Angelegenheiten anvertrauen. Wir sind bestrebt, Ihre Rechte, Freiheiten und legitimen Interessen mit höchster Integrität und Professionalität in der Republik Moldau zu wahren.
+            </p>
+            <p data-translate="features.about.text6">
+              Unsere Kanzlei ist seit über drei Jahrzehnten ein vertrauenswürdiger Partner und bietet juristische Unterstützung für Unternehmen, Einzelpersonen und öffentliche Institutionen. Wir sind stolz darauf, zum juristischen Rahmen Moldaus beizutragen und unsere Kunden mit unerschütterlichem Engagement zu bedienen.
+            </p>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="features-tab-2" role="tabpanel">
+          <div class="row">
+            <h3 data-translate="features.services">Dienstleistungen</h3>
+            <p class="fst-italic" data-translate="features.services.text1">
+              In der Anwaltskanzlei «CORECT» bieten wir ein umfassendes Spektrum an juristischen Dienstleistungen, die darauf ausgelegt sind, die vielfältigen Bedürfnisse von Einzelpersonen und Unternehmen zu erfüllen. Unsere Expertise erstreckt sich über verschiedene Rechtsgebiete, einschließlich Zivil-, Handels-, Straf-, Verwaltungs-, Steuer- und Zollrecht. Wir sind auch auf den Schutz des geistigen Eigentums spezialisiert und bieten strategische juristische Unterstützung in zahlreichen anderen Rechtsbereichen.
+            </p>
+            <p data-translate="features.services.text2">
+              Unsere wichtigsten Dienstleistungen umfassen, sind aber nicht beschränkt auf:
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.services.list1">Bereitstellung fachkundiger Rechtsberatung und Erstellung juristischer Gutachten zu komplexen Rechtsfragen, sowohl auf nationaler als auch auf internationaler Ebene.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.services.list2">Erstellung und Überprüfung juristischer Dokumente, einschließlich Verträge, Unternehmenssatzungen und interne Organisationsstrukturen für Unternehmen und Institutionen aller Rechtsformen.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.services.list3">Vertretung von Kunden in Interaktionen mit staatlichen Stellen, öffentlichen Verwaltungsorganen, Strafverfolgungsbehörden und Regulierungsbehörden, einschließlich Steuerbehörden.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.services.list4">Vertretung der Interessen von Kunden in Rechtsstreitigkeiten mit anderen Einzelpersonen und juristischen Personen, um deren Rechte und Interessen zu schützen.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.services.list5">Erstellung von Klagen, Berufungen und anderen juristischen Dokumenten im Zusammenhang mit alternativer Streitbeilegung (ADR) und Gerichtsverfahren.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.services.list6">Bereitstellung juristischer Unterstützung während aller Phasen von Gerichtsverfahren, einschließlich Vertretung vor Gericht, juristischer Verhandlungen und der Erstellung von juristischen Expertenberichten.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.services.list7">Angebot spezialisierter Unterstützung im Gesellschaftsrecht, einschließlich der Gründung, Umstrukturierung und Liquidation juristischer Personen sowie der Verwaltung von Änderungen an gesetzlichen Dokumenten.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.services.list8">Vertretung von Kunden in zivil-, handels-, verwaltungs- und strafrechtlichen Fällen vor allen Gerichten der Republik Moldau, einschließlich spezialisierter Wirtschaftsgerichte und Gerichte allgemeiner Zuständigkeit.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.services.list9">Bereitstellung juristischer Vertretung und Unterstützung für Opfer, Kläger oder Beklagte in Strafsachen, von der Ermittlungsphase bis zum Prozess.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.services.list10">Vertretung der Rechte von Kunden vor dem Europäischen Gerichtshof für Menschenrechte und anderen internationalen juristischen Einrichtungen.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.services.list11">Beratung zu Fusionen und Übernahmen, um die Einhaltung moldauischer und internationaler Vorschriften sicherzustellen.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-translate="features.services.list12">Bereitstellung juristischer Unterstützung für Immobilientransaktionen, einschließlich Due Diligence und Vertragsentwurf.</span></li>
+            </ul>
+            <p data-translate="features.services.text3">
+              Unsere Kanzlei ist bestrebt, ergebnisorientierte juristische Lösungen zu liefern, die auf die individuellen Bedürfnisse jedes Kunden zugeschnitten sind, um sicherzustellen, dass ihre juristischen Herausforderungen mit höchstem Maß an Fachwissen und Professionalität angegangen werden.
+            </p>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="features-tab-3" role="tabpanel">
+          <div class="row">
+            <h3 data-translate="features.vision">Unsere Vision</h3>
+            <p data-translate="features.vision.text1">
+              In der Anwaltskanzlei «CORECT» ist unsere Vision, dauerhafte Beziehungen zu unseren Kunden aufzubauen, die auf Vertrauen, Integrität und einem tiefen Verständnis ihrer rechtlichen Bedürfnisse basieren. Unser Team von Anwälten ist bestrebt, vorausschauend zu denken und proaktive rechtliche Lösungen anzubieten, die potenzielle Probleme angehen, bevor sie zu Gerichtsstreitigkeiten eskalieren. Wir glauben an die Förderung offener Kommunikation und Transparenz mit unseren Kunden, um sicherzustellen, dass sie während des gesamten rechtlichen Prozesses informiert und gestärkt sind.
+            </p>
+            <p data-translate="features.vision.text2">
+              Unser Ansatz in der juristischen Praxis ist in Fairness, Ehrlichkeit und dem Engagement verwurzelt, die bestmöglichen Ergebnisse für unsere Kunden zu erzielen. Wir streben danach, rechtliche Angelegenheiten effizient zu lösen, sei es durch Verhandlungen, Mediation oder, wenn nötig, durch Gerichtsverfahren. Unser Team ist stolz auf seine Fähigkeit, klare, präzise und praktische Rechtsberatung zu bieten, die auf die individuellen Umstände jedes Kunden zugeschnitten ist.
+            </p>
+            <p data-translate="features.vision.text3">
+              Wir widmen uns der Erforschung innovativer rechtlicher Lösungen, die nicht nur die unmittelbaren Bedürfnisse unserer Kunden erfüllen, sondern auch zu ihrem langfristigen Erfolg beitragen. Durch kontinuierliche Anpassung an die sich entwickelnde Rechtslandschaft stellen wir sicher, dass unsere Dienstleistungen relevant und effektiv bleiben, um die Herausforderungen unserer Kunden zu bewältigen.
+            </p>
+            <p data-translate="features.vision.text4">
+              Wir streben danach, die führende Anwaltskanzlei in Moldau zu sein, anerkannt für unsere Expertise, Integrität und kundenorientierte Herangehensweise, während wir zur Entwicklung eines fairen und transparenten Rechtssystems beitragen.
+            </p>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="features-tab-4" role="tabpanel">
+          <div class="row">
+            <h3 data-translate="features.values">Unsere Werte</h3>
+            <p class="fst-italic" data-translate="features.values.text1">
+              Die Anwaltskanzlei «CORECT» arbeitet nach einem Satz von Grundwerten, die definieren, wer wir sind und wie wir unsere Kunden bedienen. Unsere Werte sind die Grundlage unseres Engagements, hochwertige juristische Dienstleistungen mit Professionalität und Integrität zu erbringen.
+            </p>
+            <p data-translate="features.values.text2">
+              <i class="bi bi-check2-all"></i> <strong data-translate="features.values.ethics.title">Ethik und Vertraulichkeit:</strong> Bei CORECT halten wir die höchsten Standards an professioneller Ethik, Vertraulichkeit und Loyalität ein. Unsere Anwälte sind an strenge ethische Richtlinien gebunden, die die Privatsphäre und Sicherheit der Informationen unserer Kunden jederzeit gewährleisten. Wir garantieren absolute Vertraulichkeit in allen Angelegenheiten, und unsere Kunden können darauf vertrauen, dass ihre rechtlichen Angelegenheiten mit größter Diskretion behandelt werden, auch nach Abschluss unserer Dienstleistungen.
+            </p>
+            <p data-translate="features.values.text3">
+              <i class="bi bi-check2-all"></i> <strong data-translate="features.values.dedication.title">Hingabe und Transparenz:</strong> Wir sind bestrebt, engagierte und transparente juristische Dienstleistungen zu erbringen und unsere Kunden in jedem Schritt ihres rechtlichen Weges informiert zu halten. Wir verstehen, dass die Navigation durch rechtliche Angelegenheiten komplex und stressig sein kann, und wir bemühen uns, den Prozess so klar und unkompliziert wie möglich zu gestalten. Unsere Anwälte stehen stets zur Verfügung, um Fragen zu beantworten und Updates zu liefern, um sicherzustellen, dass unsere Kunden das Wissen haben, das sie benötigen, um fundierte Entscheidungen zu treffen.
+            </p>
+            <p data-translate="features.values.text4">
+              <i class="bi bi-check2-all"></i> <strong data-translate="features.values.integrity.title">Integrität:</strong> Integrität steht im Mittelpunkt von allem, was wir tun. Wir glauben an die Aufrechterhaltung von Ehrlichkeit, Beständigkeit und Respekt vor beruflicher Ethik in allen Aspekten unserer juristischen Praxis. Unsere Anwälte sind bestrebt, im besten Interesse unserer Kunden zu handeln und verlässliche Rechtsberatung und Vertretung anzubieten, auf die sie sich verlassen können. Wir sind stolz auf unseren Ruf für Integrität und Professionalität und arbeiten unermüdlich daran, diese Werte in jedem Fall, den wir bearbeiten, aufrechtzuerhalten.
+            </p>
+            <p data-translate="features.values.text5">
+              <i class="bi bi-check2-all"></i> <strong data-translate="features.values.client.title">Kundenorientierter Ansatz:</strong> Unsere Kunden stehen im Mittelpunkt von allem, was wir tun. Wir nehmen uns die Zeit, ihre individuellen rechtlichen Bedürfnisse und Ziele zu verstehen, und arbeiten gemeinsam daran, Strategien zu entwickeln, die ihren Interessen am besten dienen. Unser kundenorientierter Ansatz stellt sicher, dass unsere juristischen Dienstleistungen auf die spezifischen Bedürfnisse jedes Einzelnen oder Unternehmens, das wir vertreten, zugeschnitten sind, und wir sind bestrebt, die bestmöglichen Ergebnisse für unsere Kunden zu erzielen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- /Features Section -->
 
-
-
-
-
-<!--    &lt;!&ndash; Projects Section &ndash;&gt;-->
-<!--    <section id="projects" class="projects section">-->
-
-<!--      &lt;!&ndash; Section Title &ndash;&gt;-->
-<!--      <div class="container section-title" data-aos="fade-up">-->
-<!--        <h2 class="">Projects</h2>-->
-<!--        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>-->
-<!--      </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
-
-<!--      <div class="container">-->
-
-<!--        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">-->
-
-<!--          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">-->
-<!--            <li data-filter="*" class="filter-active">All</li>-->
-<!--            <li data-filter=".filter-remodeling">Remodeling</li>-->
-<!--            <li data-filter=".filter-construction">Construction</li>-->
-<!--            <li data-filter=".filter-repairs">Repairs</li>-->
-<!--            <li data-filter=".filter-design">Design</li>-->
-<!--          </ul>&lt;!&ndash; End Portfolio Filters &ndash;&gt;-->
-
-<!--          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">-->
-
-<!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">-->
-<!--              <div class="portfolio-content h-100">-->
-<!--                <img src="assets/img/projects/remodeling-1.jpg" class="img-fluid" alt="">-->
-<!--                <div class="portfolio-info">-->
-<!--                  <h4>App 1</h4>-->
-<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-<!--                  <a href="assets/img/projects/remodeling-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-<!--                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-<!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">-->
-<!--              <div class="portfolio-content h-100">-->
-<!--                <img src="assets/img/projects/construction-1.jpg" class="img-fluid" alt="">-->
-<!--                <div class="portfolio-info">-->
-<!--                  <h4>Product 1</h4>-->
-<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-<!--                  <a href="assets/img/projects/construction-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-<!--                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-<!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">-->
-<!--              <div class="portfolio-content h-100">-->
-<!--                <img src="assets/img/projects/repairs-1.jpg" class="img-fluid" alt="">-->
-<!--                <div class="portfolio-info">-->
-<!--                  <h4>Branding 1</h4>-->
-<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-<!--                  <a href="assets/img/projects/repairs-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-<!--                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-<!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">-->
-<!--              <div class="portfolio-content h-100">-->
-<!--                <img src="assets/img/projects/design-1.jpg" class="img-fluid" alt="">-->
-<!--                <div class="portfolio-info">-->
-<!--                  <h4>Books 1</h4>-->
-<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-<!--                  <a href="assets/img/projects/design-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-<!--                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-<!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">-->
-<!--              <div class="portfolio-content h-100">-->
-<!--                <img src="assets/img/projects/remodeling-2.jpg" class="img-fluid" alt="">-->
-<!--                <div class="portfolio-info">-->
-<!--                  <h4>App 2</h4>-->
-<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-<!--                  <a href="assets/img/projects/remodeling-2.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-<!--                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-<!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">-->
-<!--              <div class="portfolio-content h-100">-->
-<!--                <img src="assets/img/projects/construction-2.jpg" class="img-fluid" alt="">-->
-<!--                <div class="portfolio-info">-->
-<!--                  <h4>Product 2</h4>-->
-<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-<!--                  <a href="assets/img/projects/construction-2.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-<!--                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-<!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">-->
-<!--              <div class="portfolio-content h-100">-->
-<!--                <img src="assets/img/projects/repairs-2.jpg" class="img-fluid" alt="">-->
-<!--                <div class="portfolio-info">-->
-<!--                  <h4>Branding 2</h4>-->
-<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-<!--                  <a href="assets/img/projects/repairs-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-<!--                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-<!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">-->
-<!--              <div class="portfolio-content h-100">-->
-<!--                <img src="assets/img/projects/design-2.jpg" class="img-fluid" alt="">-->
-<!--                <div class="portfolio-info">-->
-<!--                  <h4>Books 2</h4>-->
-<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-<!--                  <a href="assets/img/projects/design-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-<!--                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-<!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">-->
-<!--              <div class="portfolio-content h-100">-->
-<!--                <img src="assets/img/projects/remodeling-3.jpg" class="img-fluid" alt="">-->
-<!--                <div class="portfolio-info">-->
-<!--                  <h4>App 3</h4>-->
-<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-<!--                  <a href="assets/img/projects/remodeling-3.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-<!--                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-<!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">-->
-<!--              <div class="portfolio-content h-100">-->
-<!--                <img src="assets/img/projects/construction-3.jpg" class="img-fluid" alt="">-->
-<!--                <div class="portfolio-info">-->
-<!--                  <h4>Product 3</h4>-->
-<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-<!--                  <a href="assets/img/projects/construction-3.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-<!--                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-<!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">-->
-<!--              <div class="portfolio-content h-100">-->
-<!--                <img src="assets/img/projects/repairs-3.jpg" class="img-fluid" alt="">-->
-<!--                <div class="portfolio-info">-->
-<!--                  <h4>Branding 3</h4>-->
-<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-<!--                  <a href="assets/img/projects/repairs-3.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-<!--                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-<!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">-->
-<!--              <div class="portfolio-content h-100">-->
-<!--                <img src="assets/img/projects/design-3.jpg" class="img-fluid" alt="">-->
-<!--                <div class="portfolio-info">-->
-<!--                  <h4>Books 3</h4>-->
-<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-<!--                  <a href="assets/img/projects/design-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-<!--                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-<!--          </div>&lt;!&ndash; End Portfolio Container &ndash;&gt;-->
-
-<!--        </div>-->
-
-<!--      </div>-->
-
-<!--    </section>&lt;!&ndash; /Projects Section &ndash;&gt;-->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Publications</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials section">
+    <div class="container section-title" data-aos="fade-up">
+      <h2 data-translate="testimonials.title">Publikationen</h2>
+    </div>
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper">
+        <script type="application/json" class="swiper-config">
+          {
+            "loop": true,
+            "speed": 600,
+            "autoplay": {
+              "delay": 5000
+            },
+            "slidesPerView": "auto",
+            "pagination": {
+              "el": ".swiper-pagination",
+              "type": "bullets",
+              "clickable": true
+            },
+            "breakpoints": {
+              "320": {
+                "slidesPerView": 1,
+                "spaceBetween": 40
               },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 20
-                }
+              "1200": {
+                "slidesPerView": 2,
+                "spaceBetween": 20
               }
             }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <article class="position-relative h-100">
-                    <div class="post-img position-relative overflow-hidden">
-                      <img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt="">
-                    </div>
-
-                    <div class="post-content d-flex flex-column">
-                      <h3 class="post-title">DL. AV. FALĂ NICOLAE ÎN CALITATE DE FORMATOR ÎN CADRUL...</h3>
-                      <p>
-                        Dl. av. Fală Nicolae, Senior Expert și Trainer în cadrul proiectului european „Support to the public administration reform process in the Republic of Moldova”, în calitate de formator în cadrul evenimentului „Codul Administrativ – Oportunități și Provocări”, organizat de A.O....
-                      </p>
-                      <hr>
-                      <a href="#" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-                    </div>
-                  </article>
-                </div>
+          }
+        </script>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <article class="position-relative h-100">
+                  <div class="post-img position-relative overflow-hidden">
+                    <img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt="">
+                  </div>
+                  <div class="post-content d-flex flex-column">
+                    <h3 class="post-title" data-translate="testimonials.item1.title">HERRN RECHTSANWALT FALĂ NICOLAE ALS TRAINER IM RAHMEN...</h3>
+                    <p data-translate="testimonials.item1.text">
+                      Herr Rechtsanwalt Fală Nicolae, Senior Experte und Trainer im Rahmen des europäischen Projekts „Unterstützung des Reformprozesses der öffentlichen Verwaltung in der Republik Moldau“, als Trainer im Rahmen der Veranstaltung „Verwaltungskodex – Chancen und Herausforderungen“, organisiert von A.O....
+                    </p>
+                    <hr>
+                    <a href="#" class="readmore stretched-link"><span data-translate="testimonials.readmore">Mehr lesen</span><i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </article>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <article class="position-relative h-100">
-                    <div class="post-img position-relative overflow-hidden">
-                      <img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt="">
-                    </div>
-
-                    <div class="post-content d-flex flex-column">
-                      <h3 class="post-title">COMUNICAT DL. IGOR CLIMA DIN 28.02.2019.</h3>
-                      <p>
-                        La data de 28.02.2019, dl. Av. Igor Clima a participat în calitate de vorbitor la conferința națională ,,Modificările CPC: Antivirus împotriva abuzului de drept”, organizată de Juridice Moldova, acoperind palierul procesual la subiectul „Excepția prescripției dreptului material la acțiune”.
-                      </p>
-                      <hr>
-                      <a href="#" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-                    </div>
-                  </article>
-                </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <article class="position-relative h-100">
+                  <div class="post-img position-relative overflow-hidden">
+                    <img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt="">
+                  </div>
+                  <div class="post-content d-flex flex-column">
+                    <h3 class="post-title" data-translate="testimonials.item2.title">MITTEILUNG VON HERRN IGOR CLIMA VOM 28.02.2019.</h3>
+                    <p data-translate="testimonials.item2.text">
+                      Am 28.02.2019 nahm Herr Rechtsanwalt Igor Clima als Redner an der nationalen Konferenz „Änderungen der ZPO: Antivirus gegen Rechtsmissbrauch“ teil, organisiert von Juridice Moldova, und behandelte den prozessualen Aspekt zum Thema „Ausnahme der Verjährung des materiellen Anspruchs auf Klage“.
+                    </p>
+                    <hr>
+                    <a href="#" class="readmore stretched-link"><span data-translate="testimonials.readmore">Mehr lesen</span><i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </article>
               </div>
-            </div><!-- End testimonial item -->
-
-
+            </div>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
-
-<!--    &lt;!&ndash; Recent Blog Posts Section &ndash;&gt;-->
-<!--    <section id="recent-blog-posts" class="recent-blog-posts section">-->
-
-<!--      &lt;!&ndash; Section Title &ndash;&gt;-->
-<!--      <div class="container section-title" data-aos="fade-up">-->
-<!--        <h2 class="">Recent Blog Posts</h2>-->
-<!--&lt;!&ndash;        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>&ndash;&gt;-->
-<!--      </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
-
-<!--      <div class="container">-->
-
-<!--        <div class="row gy-5">-->
-
-<!--          <div class="col-xl-4 col-md-6">-->
-<!--            <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">-->
-
-<!--              <div class="post-img position-relative overflow-hidden">-->
-<!--                <img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt="">-->
-<!--                <span class="post-date">December 12</span>-->
-<!--              </div>-->
-
-<!--              <div class="post-content d-flex flex-column">-->
-
-<!--                <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis</h3>-->
-
-<!--                <div class="meta d-flex align-items-center">-->
-<!--                  <div class="d-flex align-items-center">-->
-<!--                    <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>-->
-<!--                  </div>-->
-<!--                  <span class="px-3 text-black-50">/</span>-->
-<!--                  <div class="d-flex align-items-center">-->
-<!--                    <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>-->
-<!--                  </div>-->
-<!--                </div>-->
-
-<!--                <hr>-->
-
-<!--                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>-->
-
-<!--              </div>-->
-
-<!--            </div>-->
-<!--          </div>&lt;!&ndash; End post item &ndash;&gt;-->
-
-<!--          <div class="col-xl-4 col-md-6">-->
-<!--            <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="200">-->
-
-<!--              <div class="post-img position-relative overflow-hidden">-->
-<!--                <img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt="">-->
-<!--                <span class="post-date">July 17</span>-->
-<!--              </div>-->
-
-<!--              <div class="post-content d-flex flex-column">-->
-
-<!--                <h3 class="post-title">Et repellendus molestiae qui est sed omnis</h3>-->
-
-<!--                <div class="meta d-flex align-items-center">-->
-<!--                  <div class="d-flex align-items-center">-->
-<!--                    <i class="bi bi-person"></i> <span class="ps-2">Mario Douglas</span>-->
-<!--                  </div>-->
-<!--                  <span class="px-3 text-black-50">/</span>-->
-<!--                  <div class="d-flex align-items-center">-->
-<!--                    <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>-->
-<!--                  </div>-->
-<!--                </div>-->
-
-<!--                <hr>-->
-
-<!--                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>-->
-
-<!--              </div>-->
-
-<!--            </div>-->
-<!--          </div>&lt;!&ndash; End post item &ndash;&gt;-->
-
-<!--          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">-->
-<!--            <div class="post-item position-relative h-100">-->
-
-<!--              <div class="post-img position-relative overflow-hidden">-->
-<!--                <img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt="">-->
-<!--                <span class="post-date">September 05</span>-->
-<!--              </div>-->
-
-<!--              <div class="post-content d-flex flex-column">-->
-
-<!--                <h3 class="post-title">Quia assumenda est et veritati tirana ploder</h3>-->
-
-<!--                <div class="meta d-flex align-items-center">-->
-<!--                  <div class="d-flex align-items-center">-->
-<!--                    <i class="bi bi-person"></i> <span class="ps-2">Lisa Hunter</span>-->
-<!--                  </div>-->
-<!--                  <span class="px-3 text-black-50">/</span>-->
-<!--                  <div class="d-flex align-items-center">-->
-<!--                    <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>-->
-<!--                  </div>-->
-<!--                </div>-->
-
-<!--                <hr>-->
-
-<!--                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>-->
-
-<!--              </div>-->
-
-<!--            </div>-->
-<!--          </div>&lt;!&ndash; End post item &ndash;&gt;-->
-
-<!--        </div>-->
-
-<!--      </div>-->
-
-<!--    </section>&lt;!&ndash; /Recent Blog Posts Section &ndash;&gt;-->
-
-  </main>
-
-  <footer id="footer" class="footer">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">B.A.A. „Corect”</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>str. Mitropolit Gavriil Bănulescu Bodoni 14/4 </p>
-            <p>Chișinău, Moldova.</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+373 69 105 693</span></p>
-            <p><strong>Email:</strong> <span>buzunicolae@gmail.com</span></p>
-          </div>
-
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Publications</a></li>
-          </ul>
-        </div>
-
-
-
+        <div class="swiper-pagination"></div>
       </div>
     </div>
+  </section><!-- /Testimonials Section -->
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">B.A.A. „Corect”</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
+</main>
 
-        Designed by <a href="#">Poalelungi Ion</a>
+<footer id="footer" class="footer">
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6 footer-about">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <span class="sitename">B.A.A. „Corect“</span>
+        </a>
+        <div class="footer-contact pt-3">
+          <p data-translate="footer.address1">str. Mitropolit Gavriil Bănulescu Bodoni 14/4</p>
+          <p data-translate="footer.address2">Chișinău, Moldau.</p>
+          <p class="mt-3"><strong data-translate="footer.phone.title">Telefon:</strong> <span>+373 69 105 693</span></p>
+          <p><strong data-translate="footer.email.title">E-Mail:</strong> <span><a href="mailto:office@baacorect.md">office@baacorect.md</a></span></p>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4 data-translate="footer.links.title">Nützliche Links</h4>
+        <ul>
+          <li><a href="#" data-translate="footer.links.home">Startseite</a></li>
+          <li><a href="#" data-translate="footer.links.about">Über uns</a></li>
+          <li><a href="#" data-translate="footer.links.services">Dienstleistungen</a></li>
+          <li><a href="#" data-translate="footer.links.team">Unser Team</a></li>
+          <li><a href="#" data-translate="footer.links.publications">Publikationen</a></li>
+        </ul>
       </div>
     </div>
+  </div>
+  <div class="container copyright text-center mt-4">
+    <p>© <span data-translate="footer.copyright">Urheberrecht</span> <strong class="px-1 sitename">B.A.A. „Corect“</strong> <span data-translate="footer.rights">Alle Rechte vorbehalten</span></p>
+    <div class="credits">
+      <span data-translate="footer.designed">Entworfen von</span> <a href="#">Poalelungi Ion</a>
+    </div>
+  </div>
+</footer>
 
-  </footer>
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<!-- Preloader -->
+<div id="preloader"></div>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<!-- Translation Script -->
+<script>
+  const translations = {
+    en: {
+      "nav.home": "Home",
+      "nav.about": "About",
+      "nav.services": "Services",
+      "nav.team": "Our Team",
+      "nav.publications": "Publications",
+      "nav.contacts": "Contacts",
+      "nav.language": "Language: English",
+      "hero.title": "Dear Clients",
+      "hero.text": "Our team’s mission is to offer quality legal counsel and representation, inspired, individualised and sustainable solution to the legal disputes brought before us, and to anticipate the potential risk zones and the optimal ways of avoiding them. In the name of ALF «CORECT», we would like to thank you for the confidence you offer us, since productive and lengthy relationships are based on trust.",
+      "hero.button": "Get Started",
+      "features.about": "About Us",
+      "features.about.text1": "Established in 1993 in Chisinau, the Associated Lawyers’ Firm «CORECT» is a premier legal institution dedicated to providing comprehensive legal services to both Moldovan and international clients. Our firm specializes in navigating the complexities of corporate and commercial law, as well as safeguarding the rights and interests of Moldovan citizens. With a team of 11 seasoned attorneys, each boasting over 20 years of experience in the legal field, we are committed to delivering exceptional legal representation.",
+      "features.about.text2": "Our attorneys bring a wealth of experience from their prior roles as judges, prosecutors, and senior officials within the state administration and international legal organizations. Notably, our team includes individuals who have served as:",
+      "features.about.list1": "First Vice-Prime Minister of the Government of the Republic of Moldova;",
+      "features.about.list2": "Minister of Justice;",
+      "features.about.list3": "Members of Parliament (3 attorneys);",
+      "features.about.list4": "Judges of the Supreme Court of the Republic of Moldova (2 attorneys);",
+      "features.about.list5": "Judge at the International Court of Human Rights in Strasbourg;",
+      "features.about.list6": "Prosecutors at the General Prosecutor’s Office of the Republic of Moldova (3 attorneys);",
+      "features.about.text3": "At CORECT, we are driven by a commitment to excellence, diligence, and a deep understanding of our clients' needs. Our legal team approaches each case with a tailored strategy, ensuring that we provide effective legal advice and representation across a broad spectrum of legal issues. We pride ourselves on our ability to handle complex cases with professionalism and integrity.",
+      "features.about.text4": "The effectiveness of our firm is underpinned by:",
+      "features.about.list7": "Our team's extensive legal experience, which enables us to navigate even the most challenging legal landscapes.",
+      "features.about.list8": "The intellectual rigor and strategic thinking of our attorneys, which drive our success in both litigation and advisory roles.",
+      "features.about.list9": "A steadfast commitment to trust and confidentiality, which forms the cornerstone of our client relationships.",
+      "features.about.list10": "An individualized approach to every case, ensuring that our legal solutions are as unique as the clients we serve.",
+      "features.about.text5": "Thank you for entrusting us with your legal matters. We are dedicated to upholding your rights, freedoms, and legitimate interests with the utmost integrity and professionalism in the Republic of Moldova.",
+      "features.about.text6": "Our firm has been a trusted partner for over three decades, providing legal support to businesses, individuals, and public institutions. We are proud to contribute to the legal framework of Moldova and to serve our clients with unwavering dedication.",
+      "features.services": "Services",
+      "features.services.text1": "At the Associated Lawyers’ Firm «CORECT», we offer a comprehensive range of legal services designed to meet the diverse needs of both individuals and businesses. Our expertise spans across various areas of law, including civil, commercial, criminal, administrative, tax, and customs law. We also specialize in the protection of intellectual property and provide strategic legal support in numerous other legal domains.",
+      "features.services.text2": "Our key services include, but are not limited to:",
+      "features.services.list1": "Providing expert legal advice and drafting legal opinions on complex legal matters, both at the national and international levels.",
+      "features.services.list2": "Preparing and reviewing legal documents, including contracts, corporate statutes, and internal organizational structures for companies and institutions of all legal forms.",
+      "features.services.list3": "Representing clients in interactions with government entities, public administration bodies, law enforcement agencies, and regulatory authorities, including tax agencies.",
+      "features.services.list4": "Advocating on behalf of clients in legal disputes with other individuals and legal entities, ensuring their rights and interests are protected.",
+      "features.services.list5": "Drafting claims, appeals, and other legal documentation related to Alternative Dispute Resolution (ADR) and litigation.",
+      "features.services.list6": "Providing legal assistance throughout all stages of legal proceedings, including representation in court, legal negotiations, and the preparation of legal expertise reports.",
+      "features.services.list7": "Offering specialized support in corporate law, including the establishment, reorganization, and liquidation of legal entities, as well as the management of changes to statutory documents.",
+      "features.services.list8": "Representing clients in civil, commercial, administrative, and criminal cases before all courts in the Republic of Moldova, including specialized economic courts and courts of general jurisdiction.",
+      "features.services.list9": "Providing legal representation and assistance to victims, plaintiffs, or defendants in criminal cases, from the investigation stage through to trial.",
+      "features.services.list10": "Advocating for clients' rights before the European Court of Human Rights and other international legal bodies.",
+      "features.services.list11": "Advising on mergers and acquisitions, ensuring compliance with Moldovan and international regulations.",
+      "features.services.list12": "Providing legal support for real estate transactions, including due diligence and contract drafting.",
+      "features.services.text3": "Our firm is committed to delivering results-driven legal solutions that are tailored to the unique needs of each client, ensuring that their legal challenges are addressed with the highest level of expertise and professionalism.",
+      "features.vision": "Our Vision",
+      "features.vision.text1": "At the Associated Lawyers’ Firm «CORECT», our vision is to build lasting relationships with our clients based on trust, integrity, and a deep understanding of their legal needs. Our team of attorneys is committed to thinking ahead and providing proactive legal solutions that address potential issues before they escalate to litigation. We believe in fostering open communication and transparency with our clients, ensuring that they are informed and empowered throughout the legal process.",
+      "features.vision.text2": "Our approach to legal practice is rooted in fairness, honesty, and a commitment to achieving the best possible outcomes for our clients. We strive to resolve legal matters efficiently, whether through negotiation, mediation, or, when necessary, litigation. Our team takes pride in our ability to deliver clear, concise, and practical legal advice that is tailored to the unique circumstances of each client.",
+      "features.vision.text3": "We are dedicated to exploring innovative legal solutions that not only meet the immediate needs of our clients but also contribute to their long-term success. By continuously adapting to the evolving legal landscape, we ensure that our services remain relevant and effective in addressing the challenges faced by our clients.",
+      "features.vision.text4": "We aim to be the leading legal firm in Moldova, recognized for our expertise, integrity, and client-centric approach, while contributing to the development of a fair and transparent legal system.",
+      "features.values": "Our Values",
+      "features.values.text1": "The Associated Lawyers’ Firm «CORECT» operates under a set of core values that define who we are and how we serve our clients. Our values are the foundation of our commitment to providing high-quality legal services with professionalism and integrity.",
+      "features.values.text2": "<i class='bi bi-check2-all'></i> <strong>Ethics and Confidentiality:</strong> At CORECT, we uphold the highest standards of professional ethics, confidentiality, and loyalty. Our attorneys are bound by strict ethical guidelines that ensure the privacy and security of our clients' information at all times. We guarantee absolute confidentiality in all matters, and our clients can trust that their legal affairs will be handled with the utmost discretion, even after the conclusion of our services.",
+      "features.values.text3": "<i class='bi bi-check2-all'></i> <strong>Dedication and Transparency:</strong> We are committed to providing dedicated and transparent legal services, keeping our clients informed at every step of their legal journey. We understand that navigating legal matters can be complex and stressful, and we strive to make the process as clear and straightforward as possible. Our attorneys are always available to answer questions and provide updates, ensuring that our clients have the knowledge they need to make informed decisions.",
+      "features.values.text4": "<i class='bi bi-check2-all'></i> <strong>Integrity:</strong> Integrity is at the heart of everything we do. We believe in maintaining honesty, consistency, and respect for professional ethics in all aspects of our legal practice. Our attorneys are committed to acting in the best interests of our clients, offering sound legal advice and representation that they can rely on. We take pride in our reputation for integrity and professionalism, and we work tirelessly to uphold these values in every case we handle.",
+      "features.values.text5": "<i class='bi bi-check2-all'></i> <strong>Client-Centered Approach:</strong> Our clients are at the center of everything we do. We take the time to understand their unique legal needs and objectives, and we work collaboratively to develop strategies that best serve their interests. Our client-centered approach ensures that our legal services are tailored to meet the specific needs of each individual or business we represent, and we are committed to achieving the best possible outcomes for our clients.",
+      "features.values.ethics.title": "Ethics and Confidentiality",
+      "features.values.dedication.title": "Dedication and Transparency",
+      "features.values.integrity.title": "Integrity",
+      "features.values.client.title": "Client-Centered Approach",
+      "testimonials.title": "Publications",
+      "testimonials.item1.title": "DL. AV. FALĂ NICOLAE ÎN CALITATE DE FORMATOR ÎN CADRUL...",
+      "testimonials.item1.text": "Dl. av. Fală Nicolae, Senior Expert și Trainer în cadrul proiectului european „Support to the public administration reform process in the Republic of Moldova”, în calitate de formator în cadrul evenimentului „Codul Administrativ – Oportunități și Provocări”, organizat de A.O....",
+      "testimonials.item2.title": "COMUNICAT DL. IGOR CLIMA DIN 28.02.2019.",
+      "testimonials.item2.text": "La data de 28.02.2019, dl. Av. Igor Clima a participat în calitate de vorbitor la conferința națională ,,Modificările CPC: Antivirus împotriva abuzului de drept”, organizată de Juridice Moldova, acoperind palierul procesual la subiectul „Excepția prescripției dreptului material la acțiune”.",
+      "testimonials.readmore": "Read More",
+      "footer.address1": "str. Mitropolit Gavriil Bănulescu Bodoni 14/4",
+      "footer.address2": "Chișinău, Moldova.",
+      "footer.phone.title": "Phone:",
+      "footer.email.title": "Email:",
+      "footer.links.title": "Useful Links",
+      "footer.links.home": "Home",
+      "footer.links.about": "About us",
+      "footer.links.services": "Services",
+      "footer.links.team": "Our Team",
+      "footer.links.publications": "Publications",
+      "footer.copyright": "Copyright",
+      "footer.rights": "All Rights Reserved",
+      "footer.designed": "Designed by"
+    },
+    ro: {
+      "nav.home": "Acasă",
+      "nav.about": "Despre",
+      "nav.services": "Servicii",
+      "nav.team": "Echipa Noastră",
+      "nav.publications": "Publicații",
+      "nav.contacts": "Contacte",
+      "nav.language": "Limbă: Română",
+      "hero.title": "Dragi Clienți",
+      "hero.text": "Misiunea echipei noastre este de a oferi consiliere și reprezentare juridică de calitate, soluții inspirate, individualizate și sustenabile pentru litigiile juridice aduse în fața noastră și de a anticipa zonele de risc potențiale și modalitățile optime de evitare a acestora. În numele ALF «CORECT», dorim să vă mulțumim pentru încrederea pe care ne-o acordați, deoarece relațiile productive și de lungă durată se bazează pe încredere.",
+      "hero.button": "Începeți",
+      "features.about": "Despre Noi",
+      "features.about.text1": "Înființată în 1993 la Chișinău, Biroul Asociat de Avocați «CORECT» este o instituție juridică de prim rang dedicată furnizării de servicii juridice complete atât clienților moldoveni, cât și internaționali. Firma noastră este specializată în navigarea complexităților dreptului corporativ și comercial, precum și în protejarea drepturilor și intereselor cetățenilor moldoveni. Cu o echipă de 11 avocați experimentați, fiecare având peste 20 de ani de experiență în domeniul juridic, ne angajăm să oferim o reprezentare juridică excepțională.",
+      "features.about.text2": "Avocații noștri aduc o bogăție de experiență din rolurile lor anterioare ca judecători, procurori și oficiali de rang înalt în administrația de stat și organizații juridice internaționale. În mod notabil, echipa noastră include persoane care au ocupat funcții precum:",
+      "features.about.list1": "Prim-viceprim-ministru al Guvernului Republicii Moldova;",
+      "features.about.list2": "Ministru al Justiției;",
+      "features.about.list3": "Membri ai Parlamentului (3 avocați);",
+      "features.about.list4": "Judecători ai Curții Supreme a Republicii Moldova (2 avocați);",
+      "features.about.list5": "Judecător la Curtea Internațională a Drepturilor Omului de la Strasbourg;",
+      "features.about.list6": "Procurori la Parchetul General al Republicii Moldova (3 avocați);",
+      "features.about.text3": "La CORECT, suntem motivați de angajamentul pentru excelență, diligență și o înțelegere profundă a nevoilor clienților noștri. Echipa noastră juridică abordează fiecare caz cu o strategie personalizată, asigurându-ne că oferim consiliere și reprezentare juridică eficiente într-un spectru larg de probleme juridice. Ne mândrim cu capacitatea noastră de a gestiona cazuri complexe cu profesionalism și integritate.",
+      "features.about.text4": "Eficacitatea firmei noastre este susținută de:",
+      "features.about.list7": "Experiența juridică extinsă a echipei noastre, care ne permite să navigăm chiar și în cele mai provocatoare peisaje juridice.",
+      "features.about.list8": "Rigoarea intelectuală și gândirea strategică a avocaților noștri, care conduc la succesul nostru atât în roluri de litigiu, cât și de consiliere.",
+      "features.about.list9": "Un angajament ferm pentru încredere și confidențialitate, care formează piatra de temelie a relațiilor noastre cu clienții.",
+      "features.about.list10": "O abordare individualizată pentru fiecare caz, asigurând că soluțiile noastre juridice sunt la fel de unice ca și clienții pe care îi servim.",
+      "features.about.text5": "Vă mulțumim că ne încredințați problemele dumneavoastră juridice. Ne dedicăm susținerii drepturilor, libertăților și intereselor dumneavoastră legitime cu cea mai mare integritate și profesionalism în Republica Moldova.",
+      "features.about.text6": "Firma noastră a fost un partener de încredere timp de peste trei decenii, oferind sprijin juridic afacerilor, persoanelor fizice și instituțiilor publice. Suntem mândri să contribuim la cadrul juridic al Moldovei și să servim clienții noștri cu o dedicare neclintită.",
+      "features.services": "Servicii",
+      "features.services.text1": "La Biroul Asociat de Avocați «CORECT», oferim o gamă completă de servicii juridice concepute pentru a satisface nevoile diverse ale persoanelor fizice și juridice. Expertiza noastră acoperă diverse domenii ale dreptului, inclusiv drept civil, comercial, penal, administrativ, fiscal și vamal. De asemenea, suntem specializați în protecția proprietății intelectuale și oferim suport juridic strategic în numeroase alte domenii juridice.",
+      "features.services.text2": "Serviciile noastre cheie includ, dar nu se limitează la:",
+      "features.services.list1": "Furnizarea de consiliere juridică de specialitate și redactarea de opinii juridice privind probleme juridice complexe, atât la nivel național, cât și internațional.",
+      "features.services.list2": "Pregătirea și revizuirea documentelor juridice, inclusiv contracte, statute corporative și structuri organizaționale interne pentru companii și instituții de toate formele juridice.",
+      "features.services.list3": "Reprezentarea clienților în interacțiunile cu entitățile guvernamentale, organele administrației publice, agențiile de aplicare a legii și autoritățile de reglementare, inclusiv agențiile fiscale.",
+      "features.services.list4": "Susținerea clienților în litigiile juridice cu alte persoane fizice și juridice, asigurând protecția drepturilor și intereselor acestora.",
+      "features.services.list5": "Redactarea cererilor, apelurilor și altor documente juridice legate de soluționarea alternativă a disputelor (ADR) și litigii.",
+      "features.services.list6": "Oferirea de asistență juridică pe parcursul tuturor etapelor procedurilor juridice, inclusiv reprezentarea în instanță, negocierile juridice și pregătirea rapoartelor de expertiză juridică.",
+      "features.services.list7": "Oferirea de suport specializat în dreptul corporativ, inclusiv înființarea, reorganizarea și lichidarea entităților juridice, precum și gestionarea modificărilor aduse documentelor statutare.",
+      "features.services.list8": "Reprezentarea clienților în cazuri civile, comerciale, administrative și penale în fața tuturor instanțelor din Republica Moldova, inclusiv instanțele economice specializate și instanțele de jurisdicție generală.",
+      "features.services.list9": "Furnizarea de reprezentare și asistență juridică victimelor, reclamanților sau pârâților în cazuri penale, de la etapa de investigare până la proces.",
+      "features.services.list10": "Susținerea drepturilor clienților în fața Curții Europene a Drepturilor Omului și a altor organisme juridice internaționale.",
+      "features.services.list11": "Consilierea privind fuziunile și achizițiile, asigurând conformitatea cu reglementările moldovenești și internaționale.",
+      "features.services.list12": "Oferirea de suport juridic pentru tranzacțiile imobiliare, inclusiv due diligence și redactarea contractelor.",
+      "features.services.text3": "Firma noastră se angajează să livreze soluții juridice orientate spre rezultate, care sunt adaptate nevoilor unice ale fiecărui client, asigurând că provocările lor juridice sunt abordate cu cel mai înalt nivel de expertiză și profesionalism.",
+      "features.vision": "Viziunea Noastră",
+      "features.vision.text1": "La Biroul Asociat de Avocați «CORECT», viziunea noastră este de a construi relații de lungă durată cu clienții noștri bazate pe încredere, integritate și o înțelegere profundă a nevoilor lor juridice. Echipa noastră de avocați este dedicată gândirii proactive și furnizării de soluții juridice care abordează problemele potențiale înainte ca acestea să escaladeze în litigii. Credem în promovarea unei comunicări deschise și transparente cu clienții noștri, asigurându-ne că aceștia sunt informați și împuterniciți pe parcursul procesului juridic.",
+      "features.vision.text2": "Abordarea noastră față de practica juridică este înrădăcinată în corectitudine, onestitate și angajamentul de a obține cele mai bune rezultate posibile pentru clienții noștri. Ne străduim să rezolvăm problemele juridice în mod eficient, fie prin negociere, mediere sau, atunci când este necesar, litigii. Echipa noastră se mândrește cu capacitatea de a oferi consiliere juridică clară, concisă și practică, adaptată circumstanțelor unice ale fiecărui client.",
+      "features.vision.text3": "Suntem dedicați explorării soluțiilor juridice inovatoare care nu doar satisfac nevoile imediate ale clienților noștri, ci contribuie și la succesul lor pe termen lung. Adaptându-ne continuu la peisajul juridic în evoluție, ne asigurăm că serviciile noastre rămân relevante și eficiente în abordarea provocărilor cu care se confruntă clienții noștri.",
+      "features.vision.text4": "Ne propunem să fim firma juridică de top din Moldova, recunoscută pentru expertiza, integritatea și abordarea centrată pe client, contribuind în același timp la dezvoltarea unui sistem juridic echitabil și transparent.",
+      "features.values": "Valorile Noastre",
+      "features.values.text1": "Biroul Asociat de Avocați «CORECT» funcționează sub un set de valori de bază care definesc cine suntem și cum ne servim clienții. Valorile noastre sunt fundamentul angajamentului nostru de a furniza servicii juridice de înaltă calitate cu profesionalism și integritate.",
+      "features.values.text2": "<i class='bi bi-check2-all'></i> <strong>Etică și Confidențialitate:</strong> La CORECT, respectăm cele mai înalte standarde de etică profesională, confidențialitate și loialitate. Avocații noștri sunt supuși unor linii directoare etice stricte care asigură confidențialitatea și securitatea informațiilor clienților noștri în orice moment. Garantăm confidențialitatea absolută în toate problemele, iar clienții noștri pot avea încredere că afacerile lor juridice vor fi tratate cu cea mai mare discreție, chiar și după încheierea serviciilor noastre.",
+      "features.values.text3": "<i class='bi bi-check2-all'></i> <strong>Dedicare și Transparență:</strong> Ne angajăm să oferim servicii juridice dedicate și transparente, ținându-ne clienții informați la fiecare pas al parcursului lor juridic. Înțelegem că navigarea în probleme juridice poate fi complexă și stresantă, și ne străduim să facem procesul cât mai clar și simplu posibil. Avocații noștri sunt întotdeauna disponibili să răspundă la întrebări și să ofere actualizări, asigurându-ne că clienții noștri au cunoștințele necesare pentru a lua decizii informate.",
+      "features.values.text4": "<i class='bi bi-check2-all'></i> <strong>Integritate:</strong> Integritatea este în centrul a tot ceea ce facem. Credem în menținerea onestității, consecvenței și respectului pentru etica profesională în toate aspectele practicii noastre juridice. Avocații noștri se angajează să acționeze în interesul clienților noștri, oferind consiliere juridică și reprezentare de încredere pe care se pot baza. Ne mândrim cu reputația noastră de integritate și profesionalism și lucrăm neobosit pentru a susține aceste valori în fiecare caz pe care îl gestionăm.",
+      "features.values.text5": "<i class='bi bi-check2-all'></i> <strong>Abordare Centrată pe Client:</strong> Clienții noștri sunt în centrul a tot ceea ce facem. Ne luăm timp să înțelegem nevoile și obiectivele lor juridice unice și lucrăm în colaborare pentru a dezvolta strategii care să servească cel mai bine intereselor lor. Abordarea noastră centrată pe client asigură că serviciile noastre juridice sunt adaptate pentru a răspunde nevoilor specifice ale fiecărui individ sau afacere pe care o reprezentăm, și ne angajăm să obținem cele mai bune rezultate posibile pentru clienții noștri.",
+      "features.values.ethics.title": "Etică și Confidențialitate",
+      "features.values.dedication.title": "Dedicare și Transparență",
+      "features.values.integrity.title": "Integritate",
+      "features.values.client.title": "Abordare Centrată pe Client",
+      "testimonials.title": "Publicații",
+      "testimonials.item1.title": "DL. AV. FALĂ NICOLAE ÎN CALITATE DE FORMATOR ÎN CADRUL...",
+      "testimonials.item1.text": "Dl. av. Fală Nicolae, Senior Expert și Trainer în cadrul proiectului european „Support to the public administration reform process in the Republic of Moldova”, în calitate de formator în cadrul evenimentului „Codul Administrativ – Oportunități și Provocări”, organizat de A.O....",
+      "testimonials.item2.title": "COMUNICAT DL. IGOR CLIMA DIN 28.02.2019.",
+      "testimonials.item2.text": "La data de 28.02.2019, dl. Av. Igor Clima a participat în calitate de vorbitor la conferința națională ,,Modificările CPC: Antivirus împotriva abuzului de drept”, organizată de Juridice Moldova, acoperind palierul procesual la subiectul „Excepția prescripției dreptului material la acțiune”.",
+      "testimonials.readmore": "Citește mai mult",
+      "footer.address1": "str. Mitropolit Gavriil Bănulescu Bodoni 14/4",
+      "footer.address2": "Chișinău, Moldova.",
+      "footer.phone.title": "Telefon:",
+      "footer.email.title": "Email:",
+      "footer.links.title": "Linkuri Utile",
+      "footer.links.home": "Acasă",
+      "footer.links.about": "Despre noi",
+      "footer.links.services": "Servicii",
+      "footer.links.team": "Echipa Noastră",
+      "footer.links.publications": "Publicații",
+      "footer.copyright": "Drepturi de autor",
+      "footer.rights": "Toate drepturile rezervate",
+      "footer.designed": "Proiectat de"
+    },
+    fr: {
+      "nav.home": "Accueil",
+      "nav.about": "À propos",
+      "nav.services": "Services",
+      "nav.team": "Notre équipe",
+      "nav.publications": "Publications",
+      "nav.contacts": "Contacts",
+      "nav.language": "Langue: Français",
+      "hero.title": "Chers clients",
+      "hero.text": "La mission de notre équipe est de fournir des conseils juridiques et une représentation de qualité, des solutions inspirées, individualisées et durables aux litiges juridiques qui nous sont soumis, et d'anticiper les zones de risque potentielles et les moyens optimaux de les éviter. Au nom de l'ALF «CORECT», nous souhaitons vous remercier pour la confiance que vous nous accordez, car des relations productives et durables reposent sur la confiance.",
+      "hero.button": "Commencer",
+      "features.about": "À propos de nous",
+      "features.about.text1": "Fondé en 1993 à Chișinău, le cabinet d'avocats associés «CORECT» est une institution juridique de premier plan dédiée à fournir des services juridiques complets aux clients moldaves et internationaux. Notre cabinet est spécialisé dans la navigation des complexités du droit des sociétés et commercial, ainsi que dans la protection des droits et intérêts des citoyens moldaves. Avec une équipe de 11 avocats chevronnés, chacun bénéficiant de plus de 20 ans d'expérience dans le domaine juridique, nous nous engageons à offrir une représentation juridique exceptionnelle.",
+      "features.about.text2": "Nos avocats apportent une richesse d'expérience de leurs rôles précédents en tant que juges, procureurs et hauts fonctionnaires au sein de l'administration publique et d'organisations juridiques internationales. Notamment, notre équipe comprend des personnes ayant occupé les postes suivants :",
+      "features.about.list1": "Premier Vice-Premier Ministre du Gouvernement de la République de Moldavie ;",
+      "features.about.list2": "Ministre de la Justice ;",
+      "features.about.list3": "Membres du Parlement (3 avocats) ;",
+      "features.about.list4": "Juges de la Cour Suprême de la République de Moldavie (2 avocats) ;",
+      "features.about.list5": "Juge à la Cour Internationale des Droits de l'Homme à Strasbourg ;",
+      "features.about.list6": "Procureurs au Bureau du Procureur Général de la République de Moldavie (3 avocats) ;",
+      "features.about.text3": "Chez CORECT, nous sommes motivés par un engagement envers l'excellence, la diligence et une compréhension profonde des besoins de nos clients. Notre équipe juridique aborde chaque cas avec une stratégie personnalisée, garantissant que nous fournissons des conseils et une représentation juridiques efficaces dans un large éventail de questions juridiques. Nous sommes fiers de notre capacité à gérer des cas complexes avec professionnalisme et intégrité.",
+      "features.about.text4": "L'efficacité de notre cabinet repose sur :",
+      "features.about.list7": "L'expérience juridique étendue de notre équipe, qui nous permet de naviguer même dans les paysages juridiques les plus difficiles.",
+      "features.about.list8": "La rigueur intellectuelle et la pensée stratégique de nos avocats, qui conduisent à notre succès dans les rôles de litige et de conseil.",
+      "features.about.list9": "Un engagement inébranlable envers la confiance et la confidentialité, qui forme la pierre angulaire de nos relations avec les clients.",
+      "features.about.list10": "Une approche individualisée pour chaque cas, garantissant que nos solutions juridiques sont aussi uniques que les clients que nous servons.",
+      "features.about.text5": "Merci de nous confier vos affaires juridiques. Nous sommes dédiés à défendre vos droits, libertés et intérêts légitimes avec la plus grande intégrité et professionnalisme en République de Moldavie.",
+      "features.about.text6": "Notre cabinet est un partenaire de confiance depuis plus de trois décennies, offrant un soutien juridique aux entreprises, aux particuliers et aux institutions publiques. Nous sommes fiers de contribuer au cadre juridique de la Moldavie et de servir nos clients avec un dévouement sans faille.",
+      "features.services": "Services",
+      "features.services.text1": "Au cabinet d'avocats associés «CORECT», nous offrons une gamme complète de services juridiques conçus pour répondre aux besoins divers des particuliers et des entreprises. Notre expertise couvre divers domaines du droit, y compris le droit civil, commercial, pénal, administratif, fiscal et douanier. Nous sommes également spécialisés dans la protection de la propriété intellectuelle et fournissons un soutien juridique stratégique dans de nombreux autres domaines juridiques.",
+      "features.services.text2": "Nos services clés incluent, mais ne se limitent pas à :",
+      "features.services.list1": "Fournir des conseils juridiques d'experts et rédiger des avis juridiques sur des questions juridiques complexes, tant au niveau national qu'international.",
+      "features.services.list2": "Préparer et examiner des documents juridiques, y compris des contrats, des statuts d'entreprise et des structures organisationnelles internes pour les entreprises et institutions de toutes formes juridiques.",
+      "features.services.list3": "Représenter les clients dans leurs interactions avec les entités gouvernementales, les organes de l'administration publique, les agences de maintien de l'ordre et les autorités réglementaires, y compris les agences fiscales.",
+      "features.services.list4": "Défendre les intérêts des clients dans les litiges juridiques avec d'autres particuliers et entités juridiques, garantissant la protection de leurs droits et intérêts.",
+      "features.services.list5": "Rédiger des réclamations, des appels et autres documents juridiques liés à la résolution alternative des différends (ADR) et aux litiges.",
+      "features.services.list6": "Fournir une assistance juridique tout au long des étapes des procédures judiciaires, y compris la représentation en cour, les négociations juridiques et la préparation de rapports d'expertise juridique.",
+      "features.services.list7": "Offrir un soutien spécialisé en droit des sociétés, y compris la création, la réorganisation et la liquidation d'entités juridiques, ainsi que la gestion des modifications des documents statutaires.",
+      "features.services.list8": "Représenter les clients dans des affaires civiles, commerciales, administratives et pénales devant tous les tribunaux de la République de Moldavie, y compris les tribunaux économiques spécialisés et les tribunaux de juridiction générale.",
+      "features.services.list9": "Fournir une représentation et une assistance juridique aux victimes, plaignants ou défendeurs dans des affaires pénales, de l'étape de l'enquête jusqu'au procès.",
+      "features.services.list10": "Défendre les droits des clients devant la Cour Européenne des Droits de l'Homme et d'autres organismes juridiques internationaux.",
+      "features.services.list11": "Conseiller sur les fusions et acquisitions, garantissant le respect des réglementations moldaves et internationales.",
+      "features.services.list12": "Fournir un soutien juridique pour les transactions immobilières, y compris la due diligence et la rédaction de contrats.",
+      "features.services.text3": "Notre cabinet s'engage à fournir des solutions juridiques axées sur les résultats, adaptées aux besoins uniques de chaque client, garantissant que leurs défis juridiques sont abordés avec le plus haut niveau d'expertise et de professionnalisme.",
+      "features.vision": "Notre vision",
+      "features.vision.text1": "Au cabinet d'avocats associés «CORECT», notre vision est de construire des relations durables avec nos clients basées sur la confiance, l'intégrité et une compréhension profonde de leurs besoins juridiques. Notre équipe d'avocats s'engage à anticiper et à fournir des solutions juridiques proactives qui abordent les problèmes potentiels avant qu'ils ne dégénèrent en litiges. Nous croyons en la promotion d'une communication ouverte et transparente avec nos clients, garantissant qu'ils sont informés et autonomes tout au long du processus juridique.",
+      "features.vision.text2": "Notre approche de la pratique juridique est enracinée dans l'équité, l'honnêteté et l'engagement à obtenir les meilleurs résultats possibles pour nos clients. Nous nous efforçons de résoudre les affaires juridiques efficacement, que ce soit par la négociation, la médiation ou, lorsque nécessaire, le litige. Notre équipe est fière de sa capacité à fournir des conseils juridiques clairs, concis et pratiques, adaptés aux circonstances uniques de chaque client.",
+      "features.vision.text3": "Nous sommes dédiés à explorer des solutions juridiques innovantes qui non seulement répondent aux besoins immédiats de nos clients, mais contribuent également à leur succès à long terme. En nous adaptant continuellement à l'évolution du paysage juridique, nous garantissons que nos services restent pertinents et efficaces pour relever les défis auxquels nos clients sont confrontés.",
+      "features.vision.text4": "Nous visons à être le principal cabinet juridique en Moldavie, reconnu pour notre expertise, notre intégrité et notre approche centrée sur le client, tout en contribuant au développement d'un système juridique équitable et transparent.",
+      "features.values": "Nos valeurs",
+      "features.values.text1": "Le cabinet d'avocats associés «CORECT» opère selon un ensemble de valeurs fondamentales qui définissent qui nous sommes et comment nous servons nos clients. Nos valeurs sont le fondement de notre engagement à fournir des services juridiques de haute qualité avec professionnalisme et intégrité.",
+      "features.values.text2": "<i class='bi bi-check2-all'></i> <strong>Éthique et confidentialité :</strong> Chez CORECT, nous respectons les normes les plus élevées d'éthique professionnelle, de confidentialité et de loyauté. Nos avocats sont liés par des directives éthiques strictes qui garantissent la confidentialité et la sécurité des informations de nos clients à tout moment. Nous garantissons une confidentialité absolue dans toutes les affaires, et nos clients peuvent avoir confiance que leurs affaires juridiques seront traitées avec la plus grande discrétion, même après la fin de nos services.",
+      "features.values.text3": "<i class='bi bi-check2-all'></i> <strong>Dévouement et transparence :</strong> Nous nous engageons à fournir des services juridiques dévoués et transparents, tenant nos clients informés à chaque étape de leur parcours juridique. Nous comprenons que naviguer dans les affaires juridiques peut être complexe et stressant, et nous nous efforçons de rendre le processus aussi clair et simple que possible. Nos avocats sont toujours disponibles pour répondre aux questions et fournir des mises à jour, garantissant que nos clients ont les connaissances nécessaires pour prendre des décisions éclairées.",
+      "features.values.text4": "<i class='bi bi-check2-all'></i> <strong>Intégrité :</strong> L'intégrité est au cœur de tout ce que nous faisons. Nous croyons en la préservation de l'honnêteté, de la cohérence et du respect des éthiques professionnelles dans tous les aspects de notre pratique juridique. Nos avocats s'engagent à agir dans le meilleur intérêt de nos clients, offrant des conseils juridiques et une représentation fiables sur lesquels ils peuvent compter. Nous sommes fiers de notre réputation d'intégrité et de professionnalisme, et nous travaillons sans relâche pour maintenir ces valeurs dans chaque cas que nous traitons.",
+      "features.values.text5": "<i class='bi bi-check2-all'></i> <strong>Approche centrée sur le client :</strong> Nos clients sont au centre de tout ce que nous faisons. Nous prenons le temps de comprendre leurs besoins et objectifs juridiques uniques, et nous travaillons en collaboration pour développer des stratégies qui servent au mieux leurs intérêts. Notre approche centrée sur le client garantit que nos services juridiques sont adaptés pour répondre aux besoins spécifiques de chaque individu ou entreprise que nous représentons, et nous nous engageons à obtenir les meilleurs résultats possibles pour nos clients.",
+      "features.values.ethics.title": "Éthique et confidentialité",
+      "features.values.dedication.title": "Dévouement et transparence",
+      "features.values.integrity.title": "Intégrité",
+      "features.values.client.title": "Approche centrée sur le client",
+      "testimonials.title": "Publications",
+      "testimonials.item1.title": "M. AV. FALĂ NICOLAE EN TANT QUE FORMATEUR DANS LE CADRE DE...",
+      "testimonials.item1.text": "M. av. Fală Nicolae, expert senior et formateur dans le cadre du projet européen « Soutien au processus de réforme de l'administration publique en République de Moldavie », en tant que formateur lors de l'événement « Code administratif – Opportunités et défis », organisé par A.O....",
+      "testimonials.item2.title": "COMMUNIQUÉ DE M. IGOR CLIMA DU 28.02.2019.",
+      "testimonials.item2.text": "Le 28.02.2019, M. Av. Igor Clima a participé en tant qu'orateur à la conférence nationale « Modifications du CPC : Antivirus contre l'abus de droit », organisée par Juridice Moldova, couvrant l'aspect procédural sur le thème « L'exception de la prescription du droit matériel à l'action ».",
+      "testimonials.readmore": "Lire la suite",
+      "footer.address1": "str. Mitropolit Gavriil Bănulescu Bodoni 14/4",
+      "footer.address2": "Chișinău, Moldavie.",
+      "footer.phone.title": "Téléphone :",
+      "footer.email.title": "Email :",
+      "footer.links.title": "Liens utiles",
+      "footer.links.home": "Accueil",
+      "footer.links.about": "À propos de nous",
+      "footer.links.services": "Services",
+      "footer.links.team": "Notre équipe",
+      "footer.links.publications": "Publications",
+      "footer.copyright": "Droit d'auteur",
+      "footer.rights": "Tous droits réservés",
+      "footer.designed": "Conçu par"
+    },
+    de: {
+      "nav.home": "Startseite",
+      "nav.about": "Über uns",
+      "nav.services": "Dienstleistungen",
+      "nav.team": "Unser Team",
+      "nav.publications": "Publikationen",
+      "nav.contacts": "Kontakte",
+      "nav.language": "Sprache: Deutsch",
+      "hero.title": "Sehr geehrte Kunden",
+      "hero.text": "Die Mission unseres Teams ist es, qualitativ hochwertige Rechtsberatung und Vertretung anzubieten, inspirierte, individualisierte und nachhaltige Lösungen für die uns vorgelegten Rechtsstreitigkeiten zu finden und potenzielle Risikozonen sowie optimale Wege zu ihrer Vermeidung zu antizipieren. Im Namen der ALF «CORECT» möchten wir Ihnen für das Vertrauen danken, das Sie uns entgegenbringen, da produktive und langfristige Beziehungen auf Vertrauen basieren.",
+      "hero.button": "Loslegen",
+      "features.about": "Über uns",
+      "features.about.text1": "Gegründet 1993 in Chișinău, ist die Anwaltskanzlei «CORECT» eine führende juristische Institution, die sich der Bereitstellung umfassender juristischer Dienstleistungen für moldawische und internationale Kunden widmet. Unsere Kanzlei ist spezialisiert auf die Bewältigung der Komplexitäten des Gesellschafts- und Handelsrechts sowie auf den Schutz der Rechte und Interessen moldawischer Bürger. Mit einem Team von 11 erfahrenen Anwälten, die jeweils über 20 Jahre Erfahrung im juristischen Bereich verfügen, sind wir bestrebt, eine außergewöhnliche rechtliche Vertretung zu bieten.",
+      "features.about.text2": "Unsere Anwälte bringen eine Fülle von Erfahrungen aus ihren früheren Rollen als Richter, Staatsanwälte und hochrangige Beamte in der staatlichen Verwaltung und internationalen juristischen Organisationen mit. Besonders hervorzuheben ist, dass unser Team Personen umfasst, die folgende Positionen innehatten:",
+      "features.about.list1": "Erster Vizepremierminister der Regierung der Republik Moldau;",
+      "features.about.list2": "Justizminister;",
+      "features.about.list3": "Parlamentsmitglieder (3 Anwälte);",
+      "features.about.list4": "Richter am Obersten Gerichtshof der Republik Moldau (2 Anwälte);",
+      "features.about.list5": "Richter am Internationalen Gerichtshof für Menschenrechte in Straßburg;",
+      "features.about.list6": "Staatsanwälte bei der Generalstaatsanwaltschaft der Republik Moldau (3 Anwälte);",
+      "features.about.text3": "Bei CORECT sind wir von einem Engagement für Exzellenz, Sorgfalt und einem tiefen Verständnis der Bedürfnisse unserer Kunden getrieben. Unser juristisches Team geht jeden Fall mit einer maßgeschneiderten Strategie an, um sicherzustellen, dass wir effektive Rechtsberatung und Vertretung in einem breiten Spektrum juristischer Fragen bieten. Wir sind stolz auf unsere Fähigkeit, komplexe Fälle mit Professionalität und Integrität zu handhaben.",
+      "features.about.text4": "Die Effektivität unserer Kanzlei wird untermauert durch:",
+      "features.about.list7": "Die umfassende juristische Erfahrung unseres Teams, die es uns ermöglicht, selbst die anspruchsvollsten juristischen Landschaften zu navigieren.",
+      "features.about.list8": "Die intellektuelle Strenge und das strategische Denken unserer Anwälte, die unseren Erfolg sowohl in streitigen als auch in beratenden Rollen vorantreiben.",
+      "features.about.list9": "Ein unerschütterliches Engagement für Vertrauen und Vertraulichkeit, das den Grundstein unserer Kundenbeziehungen bildet.",
+      "features.about.list10": "Ein individueller Ansatz für jeden Fall, der sicherstellt, dass unsere juristischen Lösungen so einzigartig sind wie die Kunden, die wir bedienen.",
+      "features.about.text5": "Vielen Dank, dass Sie uns Ihre juristischen Angelegenheiten anvertrauen. Wir sind bestrebt, Ihre Rechte, Freiheiten und legitimen Interessen mit höchster Integrität und Professionalität in der Republik Moldau zu wahren.",
+      "features.about.text6": "Unsere Kanzlei ist seit über drei Jahrzehnten ein vertrauenswürdiger Partner und bietet juristische Unterstützung für Unternehmen, Einzelpersonen und öffentliche Institutionen. Wir sind stolz darauf, zum juristischen Rahmen Moldaus beizutragen und unsere Kunden mit unerschütterlichem Engagement zu bedienen.",
+      "features.services": "Dienstleistungen",
+      "features.services.text1": "In der Anwaltskanzlei «CORECT» bieten wir ein umfassendes Spektrum an juristischen Dienstleistungen, die darauf ausgelegt sind, die vielfältigen Bedürfnisse von Einzelpersonen und Unternehmen zu erfüllen. Unsere Expertise erstreckt sich über verschiedene Rechtsgebiete, einschließlich Zivil-, Handels-, Straf-, Verwaltungs-, Steuer- und Zollrecht. Wir sind auch auf den Schutz des geistigen Eigentums spezialisiert und bieten strategische juristische Unterstützung in zahlreichen anderen Rechtsbereichen.",
+      "features.services.text2": "Unsere wichtigsten Dienstleistungen umfassen, sind aber nicht beschränkt auf:",
+      "features.services.list1": "Bereitstellung fachkundiger Rechtsberatung und Erstellung juristischer Gutachten zu komplexen Rechtsfragen, sowohl auf nationaler als auch auf internationaler Ebene.",
+      "features.services.list2": "Erstellung und Überprüfung juristischer Dokumente, einschließlich Verträge, Unternehmenssatzungen und interne Organisationsstrukturen für Unternehmen und Institutionen aller Rechtsformen.",
+      "features.services.list3": "Vertretung von Kunden in Interaktionen mit staatlichen Stellen, öffentlichen Verwaltungsorganen, Strafverfolgungsbehörden und Regulierungsbehörden, einschließlich Steuerbehörden.",
+      "features.services.list4": "Vertretung der Interessen von Kunden in Rechtsstreitigkeiten mit anderen Einzelpersonen und juristischen Personen, um deren Rechte und Interessen zu schützen.",
+      "features.services.list5": "Erstellung von Klagen, Berufungen und anderen juristischen Dokumenten im Zusammenhang mit alternativer Streitbeilegung (ADR) und Gerichtsverfahren.",
+      "features.services.list6": "Bereitstellung juristischer Unterstützung während aller Phasen von Gerichtsverfahren, einschließlich Vertretung vor Gericht, juristischer Verhandlungen und der Erstellung von juristischen Expertenberichten.",
+      "features.services.list7": "Angebot spezialisierter Unterstützung im Gesellschaftsrecht, einschließlich der Gründung, Umstrukturierung und Liquidation juristischer Personen sowie der Verwaltung von Änderungen an gesetzlichen Dokumenten.",
+      "features.services.list8": "Vertretung von Kunden in zivil-, handels-, verwaltungs- und strafrechtlichen Fällen vor allen Gerichten der Republik Moldau, einschließlich spezialisierter Wirtschaftsgerichte und Gerichte allgemeiner Zuständigkeit.",
+      "features.services.list9": "Bereitstellung juristischer Vertretung und Unterstützung für Opfer, Kläger oder Beklagte in Strafsachen, von der Ermittlungsphase bis zum Prozess.",
+      "features.services.list10": "Vertretung der Rechte von Kunden vor dem Europäischen Gerichtshof für Menschenrechte und anderen internationalen juristischen Einrichtungen.",
+      "features.services.list11": "Beratung zu Fusionen und Übernahmen, um die Einhaltung moldauischer und internationaler Vorschriften sicherzustellen.",
+      "features.services.list12": "Bereitstellung juristischer Unterstützung für Immobilientransaktionen, einschließlich Due Diligence und Vertragsentwurf.",
+      "features.services.text3": "Unsere Kanzlei ist bestrebt, ergebnisorientierte juristische Lösungen zu liefern, die auf die individuellen Bedürfnisse jedes Kunden zugeschnitten sind, um sicherzustellen, dass ihre juristischen Herausforderungen mit höchstem Maß an Fachwissen und Professionalität angegangen werden.",
+      "features.vision": "Unsere Vision",
+      "features.vision.text1": "In der Anwaltskanzlei «CORECT» ist unsere Vision, dauerhafte Beziehungen zu unseren Kunden aufzubauen, die auf Vertrauen, Integrität und einem tiefen Verständnis ihrer rechtlichen Bedürfnisse basieren. Unser Team von Anwälten ist bestrebt, vorausschauend zu denken und proaktive rechtliche Lösungen anzubieten, die potenzielle Probleme angehen, bevor sie zu Gerichtsstreitigkeiten eskalieren. Wir glauben an die Förderung offener Kommunikation und Transparenz mit unseren Kunden, um sicherzustellen, dass sie während des gesamten rechtlichen Prozesses informiert und gestärkt sind.",
+      "features.vision.text2": "Unser Ansatz in der juristischen Praxis ist in Fairness, Ehrlichkeit und dem Engagement verwurzelt, die bestmöglichen Ergebnisse für unsere Kunden zu erzielen. Wir streben danach, rechtliche Angelegenheiten effizient zu lösen, sei es durch Verhandlungen, Mediation oder, wenn nötig, durch Gerichtsverfahren. Unser Team ist stolz auf seine Fähigkeit, klare, präzise und praktische Rechtsberatung zu bieten, die auf die individuellen Umstände jedes Kunden zugeschnitten ist.",
+      "features.vision.text3": "Wir widmen uns der Erforschung innovativer rechtlicher Lösungen, die nicht nur die unmittelbaren Bedürfnisse unserer Kunden erfüllen, sondern auch zu ihrem langfristigen Erfolg beitragen. Durch kontinuierliche Anpassung an die sich entwickelnde Rechtslandschaft stellen wir sicher, dass unsere Dienstleistungen relevant und effektiv bleiben, um die Herausforderungen unserer Kunden zu bewältigen.",
+      "features.vision.text4": "Wir streben danach, die führende Anwaltskanzlei in Moldau zu sein, anerkannt für unsere Expertise, Integrität und kundenorientierte Herangehensweise, während wir zur Entwicklung eines fairen und transparenten Rechtssystems beitragen.",
+      "features.values": "Unsere Werte",
+      "features.values.text1": "Die Anwaltskanzlei «CORECT» arbeitet nach einem Satz von Grundwerten, die definieren, wer wir sind und wie wir unsere Kunden bedienen. Unsere Werte sind die Grundlage unseres Engagements, hochwertige juristische Dienstleistungen mit Professionalität und Integrität zu erbringen.",
+      "features.values.text2": "<i class='bi bi-check2-all'></i> <strong>Ethik und Vertraulichkeit:</strong> Bei CORECT halten wir die höchsten Standards an professioneller Ethik, Vertraulichkeit und Loyalität ein. Unsere Anwälte sind an strenge ethische Richtlinien gebunden, die die Privatsphäre und Sicherheit der Informationen unserer Kunden jederzeit gewährleisten. Wir garantieren absolute Vertraulichkeit in allen Angelegenheiten, und unsere Kunden können darauf vertrauen, dass ihre rechtlichen Angelegenheiten mit größter Diskretion behandelt werden, auch nach Abschluss unserer Dienstleistungen.",
+      "features.values.text3": "<i class='bi bi-check2-all'></i> <strong>Hingabe und Transparenz:</strong> Wir sind bestrebt, engagierte und transparente juristische Dienstleistungen zu erbringen und unsere Kunden in jedem Schritt ihres rechtlichen Weges informiert zu halten. Wir verstehen, dass die Navigation durch rechtliche Angelegenheiten komplex und stressig sein kann, und wir bemühen uns, den Prozess so klar und unkompliziert wie möglich zu gestalten. Unsere Anwälte stehen stets zur Verfügung, um Fragen zu beantworten und Updates zu liefern, um sicherzustellen, dass unsere Kunden das Wissen haben, das sie benötigen, um fundierte Entscheidungen zu treffen.",
+      "features.values.text4": "<i class='bi bi-check2-all'></i> <strong>Integrität:</strong> Integrität steht im Mittelpunkt von allem, was wir tun. Wir glauben an die Aufrechterhaltung von Ehrlichkeit, Beständigkeit und Respekt vor beruflicher Ethik in allen Aspekten unserer juristischen Praxis. Unsere Anwälte sind bestrebt, im besten Interesse unserer Kunden zu handeln und verlässliche Rechtsberatung und Vertretung anzubieten, auf die sie sich verlassen können. Wir sind stolz auf unseren Ruf für Integrität und Professionalität und arbeiten unermüdlich daran, diese Werte in jedem Fall, den wir bearbeiten, aufrechtzuerhalten.",
+      "features.values.text5": "<i class='bi bi-check2-all'></i> <strong>Kundenorientierter Ansatz:</strong> Unsere Kunden stehen im Mittelpunkt von allem, was wir tun. Wir nehmen uns die Zeit, ihre individuellen rechtlichen Bedürfnisse und Ziele zu verstehen, und arbeiten gemeinsam daran, Strategien zu entwickeln, die ihren Interessen am besten dienen. Unser kundenorientierter Ansatz stellt sicher, dass unsere juristischen Dienstleistungen auf die spezifischen Bedürfnisse jedes Einzelnen oder Unternehmens, das wir vertreten, zugeschnitten sind, und wir sind bestrebt, die bestmöglichen Ergebnisse für unsere Kunden zu erzielen.",
+      "features.values.ethics.title": "Ethik und Vertraulichkeit",
+      "features.values.dedication.title": "Hingabe und Transparenz",
+      "features.values.integrity.title": "Integrität",
+      "features.values.client.title": "Kundenorientierter Ansatz",
+      "testimonials.title": "Publikationen",
+      "testimonials.item1.title": "HERRN RECHTSANWALT FALĂ NICOLAE ALS TRAINER IM RAHMEN...",
+      "testimonials.item1.text": "Herr Rechtsanwalt Fală Nicolae, Senior Experte und Trainer im Rahmen des europäischen Projekts „Unterstützung des Reformprozesses der öffentlichen Verwaltung in der Republik Moldau“, als Trainer im Rahmen der Veranstaltung „Verwaltungskodex – Chancen und Herausforderungen“, organisiert von A.O....",
+      "testimonials.item2.title": "MITTEILUNG VON HERRN IGOR CLIMA VOM 28.02.2019.",
+      "testimonials.item2.text": "Am 28.02.2019 nahm Herr Rechtsanwalt Igor Clima als Redner an der nationalen Konferenz „Änderungen der ZPO: Antivirus gegen Rechtsmissbrauch“ teil, organisiert von Juridice Moldova, und behandelte den prozessualen Aspekt zum Thema „Ausnahme der Verjährung des materiellen Anspruchs auf Klage“.",
+      "testimonials.readmore": "Mehr lesen",
+      "footer.address1": "str. Mitropolit Gavriil Bănulescu Bodoni 14/4",
+      "footer.address2": "Chișinău, Moldau.",
+      "footer.phone.title": "Telefon:",
+      "footer.email.title": "E-Mail:",
+      "footer.links.title": "Nützliche Links",
+      "footer.links.home": "Startseite",
+      "footer.links.about": "Über uns",
+      "footer.links.services": "Dienstleistungen",
+      "footer.links.team": "Unser Team",
+      "footer.links.publications": "Publikationen",
+      "footer.copyright": "Urheberrecht",
+      "footer.rights": "Alle Rechte vorbehalten",
+      "footer.designed": "Entworfen von"
+    }
+  };
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  function setLanguage(lang) {
+    localStorage.setItem('preferredLanguage', lang);
+    changeLanguage(lang);
+  }
+
+  function changeLanguage(lang) {
+    const selectedLang = lang || localStorage.getItem('preferredLanguage') || 'de';
+    document.getElementById('active-language').innerHTML = translations[selectedLang]['nav.language'];
+
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach(element => {
+      const key = element.getAttribute('data-translate');
+      if (translations[selectedLang] && translations[selectedLang][key]) {
+        element.innerHTML = translations[selectedLang][key];
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('preferredLanguage') || 'de';
+    changeLanguage(savedLang);
+  });
+</script>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
 
 </body>
-
 </html>

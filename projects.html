@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Our Team</title>
+  <title data-translate="title.team">Our Team - BAA «CORECT»</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -28,27 +28,129 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Custom CSS for Team Section -->
+  <style>
+    .team .member {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .team .member-img {
+      position: relative;
+      overflow: hidden;
+    }
+    .team .member-img img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: all 0.3s ease;
+    }
+    .team .member-info {
+      text-align: center;
+      padding: 20px;
+      background: #fff;
+    }
+    .team .member-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      transition: opacity 0.3s ease;
+      padding: 20px;
+      text-align: center;
+    }
+    .team .member:hover .member-overlay {
+      opacity: 1;
+    }
+    .team .member-overlay h4 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .team .member-overlay p {
+      font-size: 16px;
+      margin: 0;
+    }
+    .team .member-overlay ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+    .team .member-overlay ul li {
+      font-size: 14px;
+    }
+    .modal-content {
+      border-radius: 0;
+      padding: 20px;
+    }
+    .modal-body img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .modal-body h4 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .modal-body .position {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    .modal-body p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .modal-body ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+    .modal-body ul li {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .modal-body .social a {
+      font-size: 20px;
+      margin: 0 10px;
+      color: #333;
+    }
+    @media (max-width: 768px) {
+      .team .member-overlay {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .team .member:active .member-overlay {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  </style>
 </head>
 
 <body class="projects-page">
 
 <header id="header" class="header d-flex align-items-center fixed-top">
   <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
     <a href="index.html" class="logo d-flex align-items-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <img src="assets/img/logo.png" alt="" >
+      <img src="assets/img/logo.png" alt="">
       <h1 class="sitename">BAA «CORECT»</h1> <span>.</span>
     </a>
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <!--          <li><a href="services.html">Services</a></li>-->
-        <li><a href="projects.html"  class="active">Our Team </a></li>
-        <li><a href="blog.html">Publications</a></li>
-        <li class="dropdown"><a href="contact.html"><span>Contacts</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <li><a href="index.html" data-translate="nav.home">Startseite</a></li>
+        <li><a href="about.html" data-translate="nav.about">Über uns</a></li>
+        <li><a href="projects.html" class="active" data-translate="nav.team">Unser Team</a></li>
+        <li><a href="blog.html" data-translate="nav.publications">Publikationen</a></li>
+        <li class="dropdown"><a href="contact.html"><span data-translate="nav.contacts">Kontakte</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
             <li><a href="#">Stepan Zghibarțî</a></li>
             <li><a href="#">Buzu Nicolae</a></li>
@@ -56,419 +158,389 @@
             <li><a href="#">Alexei Barbăneagră</a></li>
           </ul>
         </li>
+        <li class="dropdown"><a href="#"><span id="active-language" data-translate="nav.language">Sprache: Deutsch</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="#" onclick="setLanguage('en')">English</a></li>
+            <li><a href="#" onclick="setLanguage('ro')">Română</a></li>
+            <li><a href="#" onclick="setLanguage('fr')">Français</a></li>
+            <li><a href="#" onclick="setLanguage('de')">Deutsch</a></li>
+          </ul>
+        </li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>
-
   </div>
 </header>
 
-  <main class="main">
+<main class="main">
+  <!-- Page Title -->
+  <div class="page-title" data-aos="fade" style="background-image: url(assets/img/colectiv3.jpg);">
+    <div class="container position-relative">
+      <h1 data-translate="team.title">Our Team</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="index.html" data-translate="nav.home">Startseite</a></li>
+          <li class="current" data-translate="nav.team">Unser Team</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
 
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade" style="background-image: url(assets/img/colectiv3.jpg);">
-      <div class="container position-relative">
-        <h1>Our Team</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Our Team</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Team Section -->
-    <section id="team" class="team section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>OUR TEAM</h2>
-<!--        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>-->
-      </div><!-- End Section Title -->
-
-      <div class="container">
-        <div class="row gy-5">
-
-          <!-- Team Member 1 -->
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
-            <div class="member-img">
-              <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-              <div class="social">
-                <a href="#"><i class="bi bi-window-dock"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info text-center">
-              <h4>Stepan Zghibarțî</h4>
-              <span>Associate Lawyer</span>
-              <p>Mr. Stepan Zghibarțî is a prominent figure in the legal field of the Republic of Moldova, highly respected among lawyers and magistrates alike. He is a renowned legal defender in matters of:
+  <!-- Team Section -->
+  <section id="team" class="team section">
+    <div class="container section-title" data-aos="fade-up">
+      <h2 data-translate="team.title">OUR TEAM</h2>
+    </div>
+    <div class="container">
+      <div class="row gy-5">
+        <!-- Team Member 1 -->
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+          <div class="member-img">
+            <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+            <div class="member-overlay">
+              <h4 data-translate="team.stepan.name">Stepan Zghibarțî</h4>
+              <p data-translate="team.stepan.description">Mr. Stepan Zghibarțî is an exceptional figure in the legal landscape of the Republic of Moldova, with a remarkable career and a solid reputation built on vast experience and a profound commitment to his profession.</p>
               <ul>
-                <li>Business law</li>
-                <li>Investments</li>
-                <li>Commercial law</li>
-                <li>Real estate operations</li>
+                <li data-translate="team.stepan.expertise1">Business law</li>
+                <li data-translate="team.stepan.expertise2">Investments</li>
+                <li data-translate="team.stepan.expertise3">Real estate operations</li>
+                <li data-translate="team.stepan.expertise4">Commercial law</li>
               </ul>
-              </p>
             </div>
-          </div><!-- End Team Member -->
-
-          <!-- Team Member 2 -->
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
-            <div class="member-img">
-              <img src="assets/img/team/OIP.jfif" class="img-fluid" alt="">
-              <div class="social">
-                <a href="buzu_nicolae/index.html"><i class="bi bi-window-dock"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info text-center">
-              <h4><a href="buzu_nicolae/buzu.html">Buzu Nicolae</a></h4>
-              <span>Associate Lawyer</span>
-              <p>Mr. Nicolae Buzu has almost two decades of professional experience, providing successful legal counsel and representation in complex cases, including:
-              <ul>
-                <li>Civil law</li>
-                <li>Commercial law</li>
-                <li>Bankruptcy matters</li>
-                <li>Corporate law</li>
-                <li>Intellectual property law</li>
-              </ul>
-              </p>
-            </div>
-          </div><!-- End Team Member -->
-
-          <!-- Team Member 3 -->
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
-            <div class="member-img">
-              <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-              <div class="social">
-                <a href="#"><i class="bi bi-window-dock"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info text-center">
-              <h4>Victor Berlinski</h4>
-              <span>Associate Lawyer</span>
-              <p>Mr. Victor Berlinski is known for his clarity of legal counsel and effective representation, focusing on:
-              <ul>
-                <li>Criminal law</li>
-                <li>Civil law</li>
-                <li>Bankruptcy matters</li>
-              </ul>
-              </p>
-            </div>
-          </div><!-- End Team Member -->
-
-          <!-- Team Member 4 -->
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
-            <div class="member-img">
-              <img src="assets/img/team/mitu.jpg" class="img-fluid" alt="">
-              <div class="social">
-                <a href="#"><i class="bi bi-window-dock"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info text-center">
-              <h4>Ștefan Mîțu</h4>
-              <span>Associate Lawyer</span>
-              <p>Professional, loyal, and just, Mr. Ștefan Mîțu is known for his impeccable reputation in:
-              <ul>
-                <li>Civil law</li>
-                <li>Corporate law</li>
-              </ul>
-              </p>
-            </div>
-          </div><!-- End Team Member -->
-
-          <!-- Team Member 5 -->
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
-            <div class="member-img">
-              <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-              <div class="social">
-                <a href="#"><i class="bi bi-window-dock"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info text-center">
-              <h4>Nicolae Andronic</h4>
-              <span>Associate Lawyer</span>
-              <p>Mr. Nicolae Andronic offers individualized and sustainable legal solutions with expertise in:
-              <ul>
-                <li>Criminal law</li>
-                <li>Administrative law</li>
-              </ul>
-              </p>
-            </div>
-          </div><!-- End Team Member -->
-
-          <!-- Team Member 6 -->
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
-            <div class="member-img">
-              <img src="assets/img/team/team-5.jpg" class="img-fluid" alt="">
-              <div class="social">
-                <a href="#"><i class="bi bi-window-dock"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info text-center">
-              <h4>Igor Clima</h4>
-              <span>Associate Lawyer</span>
-              <p>Mr. Igor Clima provides prompt and sustainable legal solutions in areas including:
-              <ul>
-                <li>Civil law</li>
-                <li>Commercial law</li>
-                <li>Fiscal law</li>
-                <li>Financial law</li>
-                <li>Intellectual property law</li>
-              </ul>
-              </p>
-            </div>
-          </div><!-- End Team Member -->
-
-          <!-- Team Member 7 -->
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
-            <div class="member-img">
-              <img src="assets/img/team/OIP.jpg" class="img-fluid" alt="">
-              <div class="social">
-                <a href="#"><i class="bi bi-window-dock"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info text-center">
-              <h4>Pavlovschi Stanislav</h4>
-              <span>Associate Lawyer</span>
-              <p>Mr. Stanislav Pavlovschi has an extensive legal career with experience as a judge at the ECHR and involvement in European legal reform programs. He specializes in:
-              <ul>
-                <li>Civil law</li>
-                <li>Criminal law</li>
-                <li>Administrative law</li>
-                <li>Commercial law</li>
-                <li>Human rights</li>
-              </ul>
-              </p>
-            </div>
-          </div><!-- End Team Member -->
-
-          <!-- Team Member 8 -->
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
-            <div class="member-img">
-              <img src="assets/img/team/arhiliuc2018.jpg" class="img-fluid" alt="">
-              <div class="social">
-                <a href="#"><i class="bi bi-window-dock"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info text-center">
-              <h4>Ion Arhiliuc</h4>
-              <span>Associate Lawyer</span>
-              <p>With extensive professional experience, Mr. Ion Arhiliuc has served as a judge for 32 years, including 7 years as a judge of the Criminal Panel of the Supreme Court of Justice. His expertise includes:
-              <ul>
-                <li>Criminal law</li>
-                <li>Civil law</li>
-                <li>Human rights</li>
-                <li>Filing claims before the ECHR</li>
-              </ul>
-              </p>
-            </div>
-          </div><!-- End Team Member -->
-
-          <!-- Team Member 9 -->
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
-            <div class="member-img">
-              <img src="assets/img/team/fala2018.jpg" class="img-fluid" alt="">
-              <div class="social">
-                <a href="#"><i class="bi bi-window-dock"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info text-center">
-              <h4>Fală Nicolae</h4>
-              <span>Associate Lawyer</span>
-              <p>Mr. Fală Nicolae combines legal activity with scientific and jurisprudential approaches, specializing in:
-              <ul>
-                <li>Civil law</li>
-                <li>Civil procedure law</li>
-                <li>Commercial law</li>
-                <li>Administrative procedure law</li>
-              </ul>
-              </p>
-            </div>
-          </div><!-- End Team Member -->
-
-          <!-- Team Member 10 -->
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
-            <div class="member-img">
-              <img src="assets/img/team/buzui2018.jpg" class="img-fluid" alt="">
-              <div class="social">
-                <a href="#"><i class="bi bi-window-dock"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info text-center">
-              <h4>Buzu Irina</h4>
-              <span>Associate Lawyer</span>
-              <p>Specializes in:
-              <ul>
-                <li>Legal assistance and representation in intellectual property disputes</li>
-                <li>Trademark and industrial design registration</li>
-                <li>Artificial intelligence and cybersecurity</li>
-                <li>Digitalization of intellectual property</li>
-                <li>GDPR</li>
-                <li>Refugee and migration law</li>
-                <li>Tech law</li>
-              </ul>
-              </p>
-            </div>
-          </div><!-- End Team Member -->
-
-          <!-- Team Member 11 -->
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
-            <div class="member-img">
-              <img src="assets/img/team/profile-img.jpg" class="img-fluid" alt="">
-              <div class="social">
-                <a href="poalelungi_mihai_/poalelungi.html"><i class="bi bi-window-dock"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info text-center">
-              <h4><a href="poalelungi_mihai_/poalelungi.html">Poalelungi Mihai</a></h4>
-              <span>Associate Lawyer</span>
-              <p>Areas of competence:
-              <ul>
-                <li>Constitutional law</li>
-                <li>Human rights law</li>
-                <li>European law</li>
-                <li>Civil law</li>
-                <li>Commercial law</li>
-                <li>Administrative procedure law</li>
-                <li>Civil procedure law</li>
-              </ul>
-              </p>
-            </div>
-          </div><!-- End Team Member -->
-
-          <!-- Team Member 12 -->
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
-            <div class="member-img">
-              <img src="assets/img/team/spacvadim.jpg" class="img-fluid" alt="">
-              <div class="social">
-                <a href="#"><i class="bi bi-window-dock"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info text-center">
-              <h4>Șpac Vadim</h4>
-              <span>Associate Lawyer</span>
-              <p>Areas of competence:
-              <ul>
-                <li>Civil law</li>
-                <li>Commercial law</li>
-                <li>Civil procedural law</li>
-                <li>Real rights</li>
-                <li>Administrative procedural law</li>
-              </ul>
-              </p>
-            </div>
-          </div><!-- End Team Member -->
-
-          <!-- Team Member 13 -->
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
-            <div class="member-img">
-              <img src="assets/img/team/Clima-Vladislav.png" class="img-fluid" alt="">
-              <div class="social">
-                <a href="#"><i class="bi bi-window-dock"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info text-center">
-              <h4>Clima Vladislav</h4>
-              <span>Associate Lawyer</span>
-              <p>Areas of competence:</p>
-            </div>
-          </div><!-- End Team Member -->
-
-        </div><!-- End Row -->
-      </div><!-- End Container -->
-
-
-
-
-
-
-
-
-
-      </div>
-
-      </div>
-
-
-
-    </section><!-- /Team Section -->
-
-  </main>
-
-  <footer id="footer" class="footer">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">B.A.A. „Corect”</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>str. Mitropolit Gavriil Bănulescu Bodoni 14/4 </p>
-            <p>Chișinău, Moldova.</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+373 69 105 693</span></p>
-            <p><strong>Email:</strong> <span>buzunicolae@gmail.com</span></p>
           </div>
-
+          <div class="member-info text-center">
+            <h4 data-translate="team.stepan.name">Stepan Zghibarțî</h4>
+            <span data-translate="team.position">Associate Lawyer</span>
+          </div>
         </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Publications</a></li>
-          </ul>
+        <!-- Team Member 2 -->
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+          <div class="member-img">
+            <img src="assets/img/team/OIP.jfif" class="img-fluid" alt="">
+            <div class="member-overlay">
+              <h4 data-translate="team.nicolae_buzu.name">Nicolae Buzu</h4>
+              <p data-translate="team.nicolae_buzu.description">Mr. Nicolae Buzu is an accomplished professional with nearly two decades of experience in the legal field, recognized for his exceptional skills in providing high-quality legal counsel and representation.</p>
+              <ul>
+                <li data-translate="team.nicolae_buzu.expertise1">Civil law</li>
+                <li data-translate="team.nicolae_buzu.expertise2">Commercial law</li>
+                <li data-translate="team.nicolae_buzu.expertise3">Bankruptcy matters</li>
+                <li data-translate="team.nicolae_buzu.expertise4">Corporate law</li>
+                <li data-translate="team.nicolae_buzu.expertise5">Intellectual property law</li>
+              </ul>
+            </div>
+          </div>
+          <div class="member-info text-center">
+            <h4><a href="buzu_nicolae/buzu.html" data-translate="team.nicolae_buzu.name">Nicolae Buzu</a></h4>
+            <span data-translate="team.position">Associate Lawyer</span>
+          </div>
         </div>
-
-
-
+        <!-- Team Member 3 -->
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
+          <div class="member-img">
+            <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+            <div class="member-overlay">
+              <h4 data-translate="team.victor.name">Victor Berlinski</h4>
+              <p data-translate="team.victor.description">Mr. Victor Berlinski is an exceptional professional known for his remarkable ability to provide clear, effective, and results-oriented legal counsel.</p>
+              <ul>
+                <li data-translate="team.victor.expertise1">Criminal law</li>
+                <li data-translate="team.victor.expertise2">Civil law</li>
+                <li data-translate="team.victor.expertise3">Bankruptcy matters</li>
+              </ul>
+            </div>
+          </div>
+          <div class="member-info text-center">
+            <h4 data-translate="team.victor.name">Victor Berlinski</h4>
+            <span data-translate="team.position">Associate Lawyer</span>
+          </div>
+        </div>
+        <!-- Team Member 4 -->
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
+          <div class="member-img">
+            <img src="assets/img/team/mitu.jpg" class="img-fluid" alt="">
+            <div class="member-overlay">
+              <h4 data-translate="team.stefan.name">Ștefan Mîțu</h4>
+              <p data-translate="team.stefan.description">Mr. Ștefan Mîțu is a true legal professional, known for his unwavering loyalty to clients and the integrity that defines him.</p>
+              <ul>
+                <li data-translate="team.stefan.expertise1">Civil law</li>
+                <li data-translate="team.stefan.expertise2">Corporate law</li>
+              </ul>
+            </div>
+          </div>
+          <div class="member-info text-center">
+            <h4 data-translate="team.stefan.name">Ștefan Mîțu</h4>
+            <span data-translate="team.position">Associate Lawyer</span>
+          </div>
+        </div>
+        <!-- Team Member 5 -->
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
+          <div class="member-img">
+            <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+            <div class="member-overlay">
+              <h4 data-translate="team.stanislav.name">Stanislav Pavlovschi</h4>
+              <p data-translate="team.stanislav.description">Mr. Stanislav Pavlovschi is a leading figure in the legal field, with a prestigious career that places him among the most respected lawyers in the Republic of Moldova.</p>
+              <ul>
+                <li data-translate="team.stanislav.expertise1">Civil law</li>
+                <li data-translate="team.stanislav.expertise2">Criminal law</li>
+                <li data-translate="team.stanislav.expertise3">Administrative law</li>
+                <li data-translate="team.stanislav.expertise4">Commercial law</li>
+                <li data-translate="team.stanislav.expertise5">Human rights</li>
+              </ul>
+            </div>
+          </div>
+          <div class="member-info text-center">
+            <h4 data-translate="team.stanislav.name">Stanislav Pavlovschi</h4>
+            <span data-translate="team.position">Associate Lawyer</span>
+          </div>
+        </div>
+        <!-- Team Member 6 -->
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
+          <div class="member-img">
+            <img src="assets/img/team/team-5.jpg" class="img-fluid" alt="">
+            <div class="member-overlay">
+              <h4 data-translate="team.nicolae_andronic.name">Nicolae Andronic</h4>
+              <p data-translate="team.nicolae_andronic.description">Mr. Nicolae Andronic is an exceptional professional whose thorough legal knowledge and vast experience in litigation place him among the most respected lawyers of the moment.</p>
+              <ul>
+                <li data-translate="team.nicolae_andronic.expertise1">Criminal law</li>
+                <li data-translate="team.nicolae_andronic.expertise2">Administrative law</li>
+              </ul>
+            </div>
+          </div>
+          <div class="member-info text-center">
+            <h4 data-translate="team.nicolae_andronic.name">Nicolae Andronic</h4>
+            <span data-translate="team.position">Associate Lawyer</span>
+          </div>
+        </div>
+        <!-- Team Member 7 -->
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="700">
+          <div class="member-img">
+            <img src="assets/img/team/OIP.jpg" class="img-fluid" alt="">
+            <div class="member-overlay">
+              <h4 data-translate="team.igor.name">Igor Clima</h4>
+              <p data-translate="team.igor.description">Mr. Igor Clima is an accomplished professional with a deep and personalized approach to each case, demonstrating a clear understanding of each client's values and needs.</p>
+              <ul>
+                <li data-translate="team.igor.expertise1">Civil law</li>
+                <li data-translate="team.igor.expertise2">Commercial law</li>
+                <li data-translate="team.igor.expertise3">Fiscal law</li>
+                <li data-translate="team.igor.expertise4">Financial law</li>
+                <li data-translate="team.igor.expertise5">Intellectual property law</li>
+              </ul>
+            </div>
+          </div>
+          <div class="member-info text-center">
+            <h4 data-translate="team.igor.name">Igor Clima</h4>
+            <span data-translate="team.position">Associate Lawyer</span>
+          </div>
+        </div>
+        <!-- Team Member 8 -->
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="800">
+          <div class="member-img">
+            <img src="assets/img/team/fala2018.jpg" class="img-fluid" alt="">
+            <div class="member-overlay">
+              <h4 data-translate="team.nicolae_fala.name">Nicolae Fală</h4>
+              <p data-translate="team.nicolae_fala.description">Mr. Nicolae Fală is a professional whose methodological approaches and legal strategies are based on a rare combination of in-depth knowledge, epistemological thinking, and scientific principles applied to legal practice.</p>
+              <ul>
+                <li data-translate="team.nicolae_fala.expertise1">Civil law</li>
+                <li data-translate="team.nicolae_fala.expertise2">Civil procedure law</li>
+                <li data-translate="team.nicolae_fala.expertise3">Real rights</li>
+                <li data-translate="team.nicolae_fala.expertise4">Commercial law</li>
+                <li data-translate="team.nicolae_fala.expertise5">Administrative procedure law</li>
+              </ul>
+            </div>
+          </div>
+          <div class="member-info text-center">
+            <h4 data-translate="team.nicolae_fala.name">Nicolae Fală</h4>
+            <span data-translate="team.position">Associate Lawyer</span>
+          </div>
+        </div>
+        <!-- Team Member 9 -->
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="900">
+          <div class="member-img">
+            <img src="assets/img/team/arhiliuc2018.jpg" class="img-fluid" alt="">
+            <div class="member-overlay">
+              <h4 data-translate="team.ion.name">Ion Arhiliuc</h4>
+              <p data-translate="team.ion.description">Mr. Ion Arhiliuc is a professional with an impressive legal career, with 32 years of experience in jurisprudence, including as a judge in the Criminal Panel of the Supreme Court of Justice.</p>
+              <ul>
+                <li data-translate="team.ion.expertise1">Criminal law</li>
+                <li data-translate="team.ion.expertise2">Civil law</li>
+                <li data-translate="team.ion.expertise3">Human rights</li>
+                <li data-translate="team.ion.expertise4">Filing claims before the ECHR</li>
+              </ul>
+            </div>
+          </div>
+          <div class="member-info text-center">
+            <h4 data-translate="team.ion.name">Ion Arhiliuc</h4>
+            <span data-translate="team.position">Associate Lawyer</span>
+          </div>
+        </div>
+        <!-- Team Member 10 -->
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="1000">
+          <div class="member-img">
+            <img src="assets/img/team/buzui2018.jpg" class="img-fluid" alt="">
+            <div class="member-overlay">
+              <h4 data-translate="team.irina.name">Irina Buzu</h4>
+              <p data-translate="team.irina.description">Ms. Irina Buzu is an accomplished professional with solid and in-depth expertise in specific areas of modern law, recognized for her exceptional skills in legal assistance and representation in intellectual property and technology matters.</p>
+              <ul>
+                <li data-translate="team.irina.expertise1">Trademark and industrial design registration</li>
+                <li data-translate="team.irina.expertise2">Artificial intelligence and cybersecurity</li>
+                <li data-translate="team.irina.expertise3">Digitalization of intellectual property</li>
+                <li data-translate="team.irina.expertise4">GDPR</li>
+                <li data-translate="team.irina.expertise5">Refugee and migration law</li>
+                <li data-translate="team.irina.expertise6">Tech law</li>
+              </ul>
+            </div>
+          </div>
+          <div class="member-info text-center">
+            <h4 data-translate="team.irina.name">Irina Buzu</h4>
+            <span data-translate="team.position">Associate Lawyer</span>
+          </div>
+        </div>
+        <!-- Team Member 11 -->
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="1100">
+          <div class="member-img">
+            <img src="assets/img/team/profile-img.jpg" class="img-fluid" alt="">
+            <div class="member-overlay">
+              <h4 data-translate="team.mihail.name">Mihail Poalelungi</h4>
+              <p data-translate="team.mihail.description">Mr. Mihail Poalelungi is a top legal expert whose profound knowledge and strategic vision place him at the forefront of the legal profession.</p>
+              <ul>
+                <li data-translate="team.mihail.expertise1">Constitutional law</li>
+                <li data-translate="team.mihail.expertise2">Human rights law</li>
+                <li data-translate="team.mihail.expertise3">European law</li>
+                <li data-translate="team.mihail.expertise4">Civil law</li>
+                <li data-translate="team.mihail.expertise5">Commercial law</li>
+                <li data-translate="team.mihail.expertise6">Administrative procedure law</li>
+                <li data-translate="team.mihail.expertise7">Civil procedure law</li>
+              </ul>
+            </div>
+          </div>
+          <div class="member-info text-center">
+            <h4><a href="poalelungi_mihai_/poalelungi.html" data-translate="team.mihail.name">Mihail Poalelungi</a></h4>
+            <span data-translate="team.position">Associate Lawyer</span>
+          </div>
+        </div>
+        <!-- Team Member 12 -->
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="1200">
+          <div class="member-img">
+            <img src="assets/img/team/spacvadim.jpg" class="img-fluid" alt="">
+            <div class="member-overlay">
+              <h4 data-translate="team.vadim.name">Vadim Șpac</h4>
+              <p data-translate="team.vadim.description">Mr. Vadim Șpac is an exceptional professional recognized for his ability to navigate successfully through the complexity of various legal fields, providing precise and effective legal solutions.</p>
+              <ul>
+                <li data-translate="team.vadim.expertise1">Civil law</li>
+                <li data-translate="team.vadim.expertise2">Commercial law</li>
+                <li data-translate="team.vadim.expertise3">Civil procedural law</li>
+                <li data-translate="team.vadim.expertise4">Real rights</li>
+                <li data-translate="team.vadim.expertise5">Administrative procedural law</li>
+              </ul>
+            </div>
+          </div>
+          <div class="member-info text-center">
+            <h4 data-translate="team.vadim.name">Vadim Șpac</h4>
+            <span data-translate="team.position">Associate Lawyer</span>
+          </div>
+        </div>
+        <!-- Team Member 13 -->
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="1300">
+          <div class="member-img">
+            <img src="assets/img/team/Clima-Vladislav.png" class="img-fluid" alt="">
+            <div class="member-overlay">
+              <h4 data-translate="team.vladislav.name">Vladislav Clima</h4>
+              <p data-translate="team.vladislav.description">Mr. Vladislav Clima is a professional with an impressive legal career, appreciated for his strategic, thorough, and effective approach to resolving the most complex cases.</p>
+              <ul>
+                <li data-translate="team.vladislav.expertise1">Civil law</li>
+                <li data-translate="team.vladislav.expertise2">Commercial law</li>
+                <li data-translate="team.vladislav.expertise3">Civil procedural law</li>
+                <li data-translate="team.vladislav.expertise4">Administrative law</li>
+              </ul>
+            </div>
+          </div>
+          <div class="member-info text-center">
+            <h4 data-translate="team.vladislav.name">Vladislav Clima</h4>
+            <span data-translate="team.position">Associate Lawyer</span>
+          </div>
+        </div>
+        <!-- Team Member 14 -->
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="1400">
+          <div class="member-img">
+            <img src="assets/img/team/rotari.jpg" class="img-fluid" alt="">
+            <div class="member-overlay">
+              <h4 data-translate="team.oleg.name">Oleg Rotari</h4>
+              <p data-translate="team.oleg.description">Mr. Oleg Rotari is a professional with an exceptional legal career, having a remarkable background as a former lawyer at the European Court of Human Rights (ECHR) and as a representative of the Government of the Republic of Moldova before this institution.</p>
+              <ul>
+                <li data-translate="team.oleg.expertise1">Human rights</li>
+                <li data-translate="team.oleg.expertise2">International jurisprudence</li>
+                <li data-translate="team.oleg.expertise3">Diplomatic representation</li>
+                <li data-translate="team.oleg.expertise4">Legal analysis and strategy</li>
+                <li data-translate="team.oleg.expertise5">Public international law and European law</li>
+              </ul>
+            </div>
+          </div>
+          <div class="member-info text-center">
+            <h4 data-translate="team.oleg.name">Oleg Rotari</h4>
+            <span data-translate="team.position">Associate Lawyer</span>
+          </div>
+        </div>
       </div>
     </div>
+  </section><!-- /Team Section -->
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">B.A.A. „Corect”</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-
-        Designed by <a href="#">Poalelungi Ion</a>
+  <!-- Modal for Team Member Details -->
+  <div class="modal fade" id="teamMemberModal" tabindex="-1" aria-labelledby="teamMemberModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="teamMemberModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="" alt="" class="img-fluid">
+          <h4 class="member-name"></h4>
+          <p class="position"></p>
+          <p class="description"></p>
+          <ul class="expertise"></ul>
+          <div class="social">
+            <a href="#"><i class="bi bi-window-dock"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</main>
 
-  </footer>
+<footer id="footer" class="footer">
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6 footer-about">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <span class="sitename" data-translate="footer.sitename">B.A.A. „Corect”</span>
+        </a>
+        <div class="footer-contact pt-3">
+          <p data-translate="footer.address1">str. Mitropolit Gavriil Bănulescu Bodoni 14/4</p>
+          <p data-translate="footer.address2">Chișinău, Moldova.</p>
+          <p class="mt-3"><strong data-translate="footer.phone.title">Phone:</strong> <span>+373 69 105 693</span></p>
+          <p><strong data-translate="footer.email.title">Email:</strong> <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d5b7a0afa0bbbcb6bab9b4b095b2b8b4bcb9fbb6bab8">[email&#160;protected]</a></span></p>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4 data-translate="footer.links.title">Useful Links</h4>
+        <ul>
+          <li><a href="#" data-translate="footer.links.home">Startseite</a></li>
+          <li><a href="#" data-translate="footer.links.about">Über uns</a></li>
+          <li><a href="#" data-translate="footer.links.team">Unser Team</a></li>
+          <li><a href="#" data-translate="footer.links.publications">Publikationen</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container copyright text-center mt-4">
+    <p>© <span data-translate="footer.copyright">Copyright</span> <strong class="px-1 sitename" data-translate="footer.sitename">B.A.A. „Corect”</strong> <span data-translate="footer.rights">All Rights Reserved</span></p>
+    <div class="credits">
+      <span data-translate="footer.designed">Designed by</span> <a href="#">Poalelungi Ion</a>
+    </div>
+  </div>
+</footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -489,6 +561,495 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+<script>const translations = {
+  en: {
+    "title.team": "Our Team - BAA «CORECT»",
+    "nav.home": "Home",
+    "nav.about": "About",
+    "nav.team": "Our Team",
+    "nav.publications": "Publications",
+    "nav.contacts": "Contacts",
+    "nav.language": "Language: English",
+    "team.title": "Our Team",
+    "team.position": "Associate Lawyer",
+    "team.stepan.name": "Stepan Zghibarțî",
+    "team.stepan.description": "Mr. Stepan Zghibarțî is an exceptional figure in the legal landscape of the Republic of Moldova, with a remarkable career and a solid reputation built on vast experience and a profound commitment to his profession.",
+    "team.stepan.expertise1": "Business law",
+    "team.stepan.expertise2": "Investments",
+    "team.stepan.expertise3": "Real estate operations",
+    "team.stepan.expertise4": "Commercial law",
+    "team.nicolae_buzu.name": "Nicolae Buzu",
+    "team.nicolae_buzu.description": "Mr. Nicolae Buzu is an accomplished professional with nearly two decades of experience in the legal field, recognized for his exceptional skills in providing high-quality legal counsel and representation.",
+    "team.nicolae_buzu.expertise1": "Civil law",
+    "team.nicolae_buzu.expertise2": "Commercial law",
+    "team.nicolae_buzu.expertise3": "Bankruptcy matters",
+    "team.nicolae_buzu.expertise4": "Corporate law",
+    "team.nicolae_buzu.expertise5": "Intellectual property law",
+    "team.victor.name": "Victor Berlinski",
+    "team.victor.description": "Mr. Victor Berlinski is an exceptional professional known for his remarkable ability to provide clear, effective, and results-oriented legal counsel.",
+    "team.victor.expertise1": "Criminal law",
+    "team.victor.expertise2": "Civil law",
+    "team.victor.expertise3": "Bankruptcy matters",
+    "team.stefan.name": "Ștefan Mîțu",
+    "team.stefan.description": "Mr. Ștefan Mîțu is a true legal professional, known for his unwavering loyalty to clients and the integrity that defines him.",
+    "team.stefan.expertise1": "Civil law",
+    "team.stefan.expertise2": "Corporate law",
+    "team.stanislav.name": "Stanislav Pavlovschi",
+    "team.stanislav.description": "Mr. Stanislav Pavlovschi is a leading figure in the legal field, with a prestigious career that places him among the most respected lawyers in the Republic of Moldova.",
+    "team.stanislav.expertise1": "Civil law",
+    "team.stanislav.expertise2": "Criminal law",
+    "team.stanislav.expertise3": "Administrative law",
+    "team.stanislav.expertise4": "Commercial law",
+    "team.stanislav.expertise5": "Human rights",
+    "team.nicolae_andronic.name": "Nicolae Andronic",
+    "team.nicolae_andronic.description": "Mr. Nicolae Andronic is an exceptional professional whose thorough legal knowledge and vast experience in litigation place him among the most respected lawyers of the moment.",
+    "team.nicolae_andronic.expertise1": "Criminal law",
+    "team.nicolae_andronic.expertise2": "Administrative law",
+    "team.igor.name": "Igor Clima",
+    "team.igor.description": "Mr. Igor Clima is an accomplished professional with a deep and personalized approach to each case, demonstrating a clear understanding of each client's values and needs.",
+    "team.igor.expertise1": "Civil law",
+    "team.igor.expertise2": "Commercial law",
+    "team.igor.expertise3": "Fiscal law",
+    "team.igor.expertise4": "Financial law",
+    "team.igor.expertise5": "Intellectual property law",
+    "team.nicolae_fala.name": "Nicolae Fală",
+    "team.nicolae_fala.description": "Mr. Nicolae Fală is a professional whose methodological approaches and legal strategies are based on a rare combination of in-depth knowledge, epistemological thinking, and scientific principles applied to legal practice.",
+    "team.nicolae_fala.expertise1": "Civil law",
+    "team.nicolae_fala.expertise2": "Civil procedure law",
+    "team.nicolae_fala.expertise3": "Real rights",
+    "team.nicolae_fala.expertise4": "Commercial law",
+    "team.nicolae_fala.expertise5": "Administrative procedure law",
+    "team.ion.name": "Ion Arhiliuc",
+    "team.ion.description": "Mr. Ion Arhiliuc is a professional with an impressive legal career, with 32 years of experience in jurisprudence, including as a judge in the Criminal Panel of the Supreme Court of Justice.",
+    "team.ion.expertise1": "Criminal law",
+    "team.ion.expertise2": "Civil law",
+    "team.ion.expertise3": "Human rights",
+    "team.ion.expertise4": "Filing claims before the ECHR",
+    "team.irina.name": "Irina Buzu",
+    "team.irina.description": "Ms. Irina Buzu is an accomplished professional with solid and in-depth expertise in specific areas of modern law, recognized for her exceptional skills in legal assistance and representation in intellectual property and technology matters.",
+    "team.irina.expertise1": "Trademark and industrial design registration",
+    "team.irina.expertise2": "Artificial intelligence and cybersecurity",
+    "team.irina.expertise3": "Digitalization of intellectual property",
+    "team.irina.expertise4": "GDPR",
+    "team.irina.expertise5": "Refugee and migration law",
+    "team.irina.expertise6": "Tech law",
+    "team.mihail.name": "Mihail Poalelungi",
+    "team.mihail.description": "Mr. Mihail Poalelungi is a top legal expert whose profound knowledge and strategic vision place him at the forefront of the legal profession.",
+    "team.mihail.expertise1": "Constitutional law",
+    "team.mihail.expertise2": "Human rights law",
+    "team.mihail.expertise3": "European law",
+    "team.mihail.expertise4": "Civil law",
+    "team.mihail.expertise5": "Commercial law",
+    "team.mihail.expertise6": "Administrative procedure law",
+    "team.mihail.expertise7": "Civil procedure law",
+    "team.vadim.name": "Vadim Șpac",
+    "team.vadim.description": "Mr. Vadim Șpac is an exceptional professional recognized for his ability to navigate successfully through the complexity of various legal fields, providing precise and effective legal solutions.",
+    "team.vadim.expertise1": "Civil law",
+    "team.vadim.expertise2": "Commercial law",
+    "team.vadim.expertise3": "Civil procedural law",
+    "team.vadim.expertise4": "Real rights",
+    "team.vadim.expertise5": "Administrative procedural law",
+    "team.vladislav.name": "Vladislav Clima",
+    "team.vladislav.description": "Mr. Vladislav Clima is a professional with an impressive legal career, appreciated for his strategic, thorough, and effective approach to resolving the most complex cases.",
+    "team.vladislav.expertise1": "Civil law",
+    "team.vladislav.expertise2": "Commercial law",
+    "team.vladislav.expertise3": "Civil procedural law",
+    "team.vladislav.expertise4": "Administrative law",
+    "team.oleg.name": "Oleg Rotari",
+    "team.oleg.description": "Mr. Oleg Rotari is a professional with an exceptional legal career, having a remarkable background as a former lawyer at the European Court of Human Rights (ECHR) and as a representative of the Government of the Republic of Moldova before this institution.",
+    "team.oleg.expertise1": "Human rights",
+    "team.oleg.expertise2": "International jurisprudence",
+    "team.oleg.expertise3": "Diplomatic representation",
+    "team.oleg.expertise4": "Legal analysis and strategy",
+    "team.oleg.expertise5": "Public international law and European law",
+    "footer.sitename": "B.A.A. „Corect”",
+    "footer.address1": "str. Mitropolit Gavriil Bănulescu Bodoni 14/4",
+    "footer.address2": "Chișinău, Moldova.",
+    "footer.phone.title": "Phone:",
+    "footer.email.title": "Email:",
+    "footer.links.title": "Useful Links",
+    "footer.links.home": "Home",
+    "footer.links.about": "About us",
+    "footer.links.team": "Our Team",
+    "footer.links.publications": "Publications",
+    "footer.copyright": "Copyright",
+    "footer.rights": "All Rights Reserved",
+    "footer.designed": "Designed by"
+  },
+  ro: {
+    "title.team": "Echipa Noastră - BAA «CORECT»",
+    "nav.home": "Acasă",
+    "nav.about": "Despre",
+    "nav.team": "Echipa Noastră",
+    "nav.publications": "Publicații",
+    "nav.contacts": "Contacte",
+    "nav.language": "Limbă: Română",
+    "team.title": "Echipa Noastră",
+    "team.position": "Avocat Asociat",
+    "team.stepan.name": "Stepan Zghibarțî",
+    "team.stepan.description": "Domnul Stepan Zghibarțî este o personalitate de excepție în peisajul juridic al Republicii Moldova, cu o carieră remarcabilă și o reputație solidă construită pe o vastă experiență și un angajament profund față de profesia sa.",
+    "team.stepan.expertise1": "Dreptul afacerilor",
+    "team.stepan.expertise2": "Investiții",
+    "team.stepan.expertise3": "Operațiuni imobiliare",
+    "team.stepan.expertise4": "Drept comercial",
+    "team.nicolae_buzu.name": "Nicolae Buzu",
+    "team.nicolae_buzu.description": "Domnul Nicolae Buzu este un profesionist desăvârșit, cu aproape două decenii de experiență în domeniul juridic, recunoscut pentru abilitățile sale excepționale în asigurarea unui serviciu de asistență și reprezentare juridică de înaltă calitate.",
+    "team.nicolae_buzu.expertise1": "Drept civil",
+    "team.nicolae_buzu.expertise2": "Drept comercial",
+    "team.nicolae_buzu.expertise3": "Cauze de insolvabilitate",
+    "team.nicolae_buzu.expertise4": "Drept corporativ",
+    "team.nicolae_buzu.expertise5": "Dreptul proprietății intelectuale",
+    "team.victor.name": "Victor Berlinski",
+    "team.victor.description": "Domnul Victor Berlinski este un profesionist de excepție, cunoscut pentru abilitatea sa remarcabilă de a oferi asistență juridică clară, eficientă și orientată spre rezultate.",
+    "team.victor.expertise1": "Drept penal",
+    "team.victor.expertise2": "Drept civil",
+    "team.victor.expertise3": "Insolvabilitate",
+    "team.stefan.name": "Ștefan Mîțu",
+    "team.stefan.description": "Domnul Ștefan Mîțu este un adevărat profesionist al dreptului, cunoscut pentru loialitatea sa neclintită față de clienți și pentru integritatea care îl definește.",
+    "team.stefan.expertise1": "Drept civil",
+    "team.stefan.expertise2": "Drept corporativ",
+    "team.stanislav.name": "Stanislav Pavlovschi",
+    "team.stanislav.description": "Domnul Stanislav Pavlovschi este o figură de referință în domeniul juridic, cu o carieră vastă și prestigioasă, care îl plasează în fruntea celor mai respectați avocați ai Republicii Moldova.",
+    "team.stanislav.expertise1": "Drept civil",
+    "team.stanislav.expertise2": "Drept penal",
+    "team.stanislav.expertise3": "Drept administrativ",
+    "team.stanislav.expertise4": "Drept comercial",
+    "team.stanislav.expertise5": "Drepturile omului",
+    "team.nicolae_andronic.name": "Nicolae Andronic",
+    "team.nicolae_andronic.description": "Domnul Nicolae Andronic este un profesionist de excepție, ale cărui cunoștințe juridice temeinice și experiență vastă în litigii îl plasează printre cei mai respectați avocați ai momentului.",
+    "team.nicolae_andronic.expertise1": "Drept penal",
+    "team.nicolae_andronic.expertise2": "Drept administrativ",
+    "team.igor.name": "Igor Clima",
+    "team.igor.description": "Domnul Igor Clima este un profesionist desăvârșit, cu o abordare profundă și personalizată față de fiecare speță, demonstrând o înțelegere clară a valorilor și nevoilor fiecărui client.",
+    "team.igor.expertise1": "Drept civil",
+    "team.igor.expertise2": "Drept comercial",
+    "team.igor.expertise3": "Drept fiscal",
+    "team.igor.expertise4": "Drept financiar",
+    "team.igor.expertise5": "Dreptul proprietății intelectuale",
+    "team.nicolae_fala.name": "Nicolae Fală",
+    "team.nicolae_fala.description": "Domnul Nicolae Fală este un profesionist ale cărui abordări metodologice și strategii juridice sunt bazate pe o combinație rar întâlnită de cunoștințe aprofundate, gândire epistemologică și principii științifice aplicate în practica juridică.",
+    "team.nicolae_fala.expertise1": "Drept civil",
+    "team.nicolae_fala.expertise2": "Drept procesual civil",
+    "team.nicolae_fala.expertise3": "Drepturi reale",
+    "team.nicolae_fala.expertise4": "Drept comercial",
+    "team.nicolae_fala.expertise5": "Drept procesual administrativ",
+    "team.ion.name": "Ion Arhiliuc",
+    "team.ion.description": "Domnul Ion Arhiliuc este un profesionist cu o carieră juridică impresionantă, având o experiență de 32 de ani în domeniul jurisprudenței, inclusiv în calitate de judecător în cadrul Colegiului Penal al Curții Supreme de Justiție.",
+    "team.ion.expertise1": "Drept penal",
+    "team.ion.expertise2": "Drept civil",
+    "team.ion.expertise3": "Drepturile omului",
+    "team.ion.expertise4": "Depunerea cererilor la CEDO",
+    "team.irina.name": "Irina Buzu",
+    "team.irina.description": "Doamna Irina Buzu este o profesionistă desăvârșită, cu o expertiză solidă și profundă în domenii specifice ale dreptului modern, recunoscută pentru abilitățile sale excepționale în asistența juridică și reprezentarea clienților în materie de proprietate intelectuală și tehnologie.",
+    "team.irina.expertise1": "Înregistrarea mărcilor și desenelor industriale",
+    "team.irina.expertise2": "Inteligență artificială și securitate cibernetică",
+    "team.irina.expertise3": "Digitalizarea proprietății intelectuale",
+    "team.irina.expertise4": "GDPR",
+    "team.irina.expertise5": "Dreptul refugiaților și migrației",
+    "team.irina.expertise6": "Dreptul tehnologiilor",
+    "team.mihail.name": "Mihail Poalelungi",
+    "team.mihail.description": "Domnul Mihail Poalelungi este un expert de top în domeniul juridic, ale cărui cunoștințe profunde și viziune strategică îl plasează în fruntea profesiei de avocat.",
+    "team.mihail.expertise1": "Drept constituțional",
+    "team.mihail.expertise2": "Drepturile omului",
+    "team.mihail.expertise3": "Drept european",
+    "team.mihail.expertise4": "Drept civil",
+    "team.mihail.expertise5": "Drept comercial",
+    "team.mihail.expertise6": "Drept procesual administrativ",
+    "team.mihail.expertise7": "Drecht procesual civil",
+    "team.vadim.name": "Vadim Șpac",
+    "team.vadim.description": "Domnul Vadim Șpac este un profesionist de excepție, recunoscut pentru abilitatea sa de a naviga cu succes prin complexitatea diferitelor ramuri ale dreptului, oferind soluții juridice precise și eficiente.",
+    "team.vadim.expertise1": "Drept civil",
+    "team.vadim.expertise2": "Drept comercial",
+    "team.vadim.expertise3": "Drept procesual civil",
+    "team.vadim.expertise4": "Drepturi reale",
+    "team.vadim.expertise5": "Drecht procesual administrativ",
+    "team.vladislav.name": "Vladislav Clima",
+    "team.vladislav.description": "Domnul Vladislav Clima este un profesionist cu o carieră juridică impresionantă, apreciat pentru abordarea sa strategică, profundă și eficientă în rezolvarea celor mai complexe spețe.",
+    "team.vladislav.expertise1": "Drept civil",
+    "team.vladislav.expertise2": "Drept comercial",
+    "team.vladislav.expertise3": "Drept procesual civil",
+    "team.vladislav.expertise4": "Drept administrativ",
+    "team.oleg.name": "Oleg Rotari",
+    "team.oleg.description": "Domnul Oleg Rotari este un profesionist cu o carieră juridică de excepție, având un parcurs remarcabil ca fost jurist la Curtea Europeană a Drepturilor Omului (CtEDO) și ca reprezentant al Guvernului Republicii Moldova în fața acestei instituții.",
+    "team.oleg.expertise1": "Drepturile omului",
+    "team.oleg.expertise2": "Jurisprudență internațională",
+    "team.oleg.expertise3": "Reprezentare diplomatică",
+    "team.oleg.expertise4": "Analiză și strategie juridică",
+    "team.oleg.expertise5": "Drept internațional public și drept european",
+    "footer.sitename": "B.A.A. „Corect”",
+    "footer.address1": "str. Mitropolit Gavriil Bănulescu Bodoni 14/4",
+    "footer.address2": "Chișinău, Moldova.",
+    "footer.phone.title": "Telefon:",
+    "footer.email.title": "Email:",
+    "footer.links.title": "Linkuri Utile",
+    "footer.links.home": "Acasă",
+    "footer.links.about": "Despre noi",
+    "footer.links.team": "Echipa Noastră",
+    "footer.links.publications": "Publicații",
+    "footer.copyright": "Drepturi de autor",
+    "footer.rights": "Toate drepturile rezervate",
+    "footer.designed": "Proiectat de"
+  },
+  fr: {
+    "title.team": "Notre Équipe - BAA «CORECT»",
+    "nav.home": "Accueil",
+    "nav.about": "À propos",
+    "nav.team": "Notre Équipe",
+    "nav.publications": "Publications",
+    "nav.contacts": "Contacts",
+    "nav.language": "Langue: Français",
+    "team.title": "Notre Équipe",
+    "team.position": "Avocat Associé",
+    "team.stepan.name": "Stepan Zghibarțî",
+    "team.stepan.description": "M. Stepan Zghibarțî est une figure exceptionnelle dans le paysage juridique de la République de Moldavie, avec une carrière remarquable et une solide réputation bâtie sur une vaste expérience et un engagement profond envers sa profession.",
+    "team.stepan.expertise1": "Droit des affaires",
+    "team.stepan.expertise2": "Investissements",
+    "team.stepan.expertise3": "Opérations immobilières",
+    "team.stepan.expertise4": "Droit commercial",
+    "team.nicolae_buzu.name": "Nicolae Buzu",
+    "team.nicolae_buzu.description": "M. Nicolae Buzu est un professionnel accompli avec près de deux décennies d'expérience dans le domaine juridique, reconnu pour ses compétences exceptionnelles dans la fourniture de conseils juridiques et de représentation de haute qualité.",
+    "team.nicolae_buzu.expertise1": "Droit civil",
+    "team.nicolae_buzu.expertise2": "Droit commercial",
+    "team.nicolae_buzu.expertise3": "Affaires d'insolvabilité",
+    "team.nicolae_buzu.expertise4": "Droit corporatif",
+    "team.nicolae_buzu.expertise5": "Droit de la propriété intellectuelle",
+    "team.victor.name": "Victor Berlinski",
+    "team.victor.description": "M. Victor Berlinski est un professionnel exceptionnel connu pour sa remarquable capacité à fournir des conseils juridiques clairs, efficaces et orientés vers les résultats.",
+    "team.victor.expertise1": "Droit pénal",
+    "team.victor.expertise2": "Droit civil",
+    "team.victor.expertise3": "Insolvabilité",
+    "team.stefan.name": "Ștefan Mîțu",
+    "team.stefan.description": "M. Ștefan Mîțu est un véritable professionnel du droit, connu pour sa loyauté indéfectible envers ses clients et l'intégrité qui le définit.",
+    "team.stefan.expertise1": "Droit civil",
+    "team.stefan.expertise2": "Droit corporatif",
+    "team.stanislav.name": "Stanislav Pavlovschi",
+    "team.stanislav.description": "M. Stanislav Pavlovschi est une figure de proue dans le domaine juridique, avec une carrière prestigieuse qui le place parmi les avocats les plus respectés de la République de Moldavie.",
+    "team.stanislav.expertise1": "Droit civil",
+    "team.stanislav.expertise2": "Droit pénal",
+    "team.stanislav.expertise3": "Droit administratif",
+    "team.stanislav.expertise4": "Droit commercial",
+    "team.stanislav.expertise5": "Droits humains",
+    "team.nicolae_andronic.name": "Nicolae Andronic",
+    "team.nicolae_andronic.description": "M. Nicolae Andronic est un professionnel exceptionnel dont les connaissances juridiques approfondies et la vaste expérience en litiges le placent parmi les avocats les plus respectés du moment.",
+    "team.nicolae_andronic.expertise1": "Droit pénal",
+    "team.nicolae_andronic.expertise2": "Droit administratif",
+    "team.igor.name": "Igor Clima",
+    "team.igor.description": "M. Igor Clima est un professionnel accompli avec une approche profonde et personnalisée pour chaque cas, démontrant une compréhension claire des valeurs et des besoins de chaque client.",
+    "team.igor.expertise1": "Droit civil",
+    "team.igor.expertise2": "Droit commercial",
+    "team.igor.expertise3": "Droit fiscal",
+    "team.igor.expertise4": "Droit financier",
+    "team.igor.expertise5": "Droit de la propriété intellectuelle",
+    "team.nicolae_fala.name": "Nicolae Fală",
+    "team.nicolae_fala.description": "M. Nicolae Fală est un professionnel dont les approches méthodologiques et les stratégies juridiques sont basées sur une combinaison rare de connaissances approfondies, de pensée épistémologique et de principes scientifiques appliqués à la pratique juridique.",
+    "team.nicolae_fala.expertise1": "Droit civil",
+    "team.nicolae_fala.expertise2": "Droit procédural civil",
+    "team.nicolae_fala.expertise3": "Droits réels",
+    "team.nicolae_fala.expertise4": "Droit commercial",
+    "team.nicolae_fala.expertise5": "Droit procédural administratif",
+    "team.ion.name": "Ion Arhiliuc",
+    "team.ion.description": "M. Ion Arhiliuc est un professionnel avec une carrière juridique impressionnante, avec 32 ans d'expérience en jurisprudence, y compris en tant que juge au Collège Pénal de la Cour Suprême de Justice.",
+    "team.ion.expertise1": "Droit pénal",
+    "team.ion.expertise2": "Droit civil",
+    "team.ion.expertise3": "Droits humains",
+    "team.ion.expertise4": "Dépôt de plaintes devant la CEDH",
+    "team.irina.name": "Irina Buzu",
+    "team.irina.description": "Mme Irina Buzu est une professionnelle accomplie avec une expertise solide et approfondie dans des domaines spécifiques du droit moderne, reconnue pour ses compétences exceptionnelles en assistance juridique et représentation dans les affaires de propriété intellectuelle et de technologie.",
+    "team.irina.expertise1": "Enregistrement des marques et des dessins industriels",
+    "team.irina.expertise2": "Intelligence artificielle et cybersécurité",
+    "team.irina.expertise3": "Digitalisation de la propriété intellectuelle",
+    "team.irina.expertise4": "RGPD",
+    "team.irina.expertise5": "Droit des réfugiés et de la migration",
+    "team.irina.expertise6": "Droit des technologies",
+    "team.mihail.name": "Mihail Poalelungi",
+    "team.mihail.description": "M. Mihail Poalelungi est un expert juridique de premier plan dont les connaissances profondes et la vision stratégique le placent à l'avant-garde de la profession d'avocat.",
+    "team.mihail.expertise1": "Droit constitutionnel",
+    "team.mihail.expertise2": "Droit des droits humains",
+    "team.mihail.expertise3": "Droit européen",
+    "team.mihail.expertise4": "Droit civil",
+    "team.mihail.expertise5": "Droit commercial",
+    "team.mihail.expertise6": "Droit procédural administratif",
+    "team.mihail.expertise7": "Droit procédural civil",
+    "team.vadim.name": "Vadim Șpac",
+    "team.vadim.description": "M. Vadim Șpac est un professionnel exceptionnel reconnu pour sa capacité à naviguer avec succès à travers la complexité de divers domaines juridiques, offrant des solutions juridiques précises et efficaces.",
+    "team.vadim.expertise1": "Droit civil",
+    "team.vadim.expertise2": "Droit commercial",
+    "team.vadim.expertise3": "Droit procédural civil",
+    "team.vadim.expertise4": "Droits réels",
+    "team.vadim.expertise5": "Droit procédural administratif",
+    "team.vladislav.name": "Vladislav Clima",
+    "team.vladislav.description": "M. Vladislav Clima est un professionnel avec une carrière juridique impressionnante, apprécié pour son approche stratégique, approfondie et efficace dans la résolution des cas les plus complexes.",
+    "team.vladislav.expertise1": "Droit civil",
+    "team.vladislav.expertise2": "Droit commercial",
+    "team.vladislav.expertise3": "Droit procédural civil",
+    "team.vladislav.expertise4": "Droit administratif",
+    "team.oleg.name": "Oleg Rotari",
+    "team.oleg.description": "M. Oleg Rotari est un professionnel avec une carrière juridique exceptionnelle, ayant un parcours remarquable en tant qu'ancien avocat à la Cour Européenne des Droits de l'Homme (CEDH) et représentant du Gouvernement de la République de Moldavie devant cette institution.",
+    "team.oleg.expertise1": "Droits humains",
+    "team.oleg.expertise2": "Jurisprudence internationale",
+    "team.oleg.expertise3": "Représentation diplomatique",
+    "team.oleg.expertise4": "Analyse et stratégie juridique",
+    "team.oleg.expertise5": "Droit international public et droit européen",
+    "footer.sitename": "B.A.A. „Corect”",
+    "footer.address1": "str. Mitropolit Gavriil Bănulescu Bodoni 14/4",
+    "footer.address2": "Chișinău, Moldavie.",
+    "footer.phone.title": "Téléphone:",
+    "footer.email.title": "Email:",
+    "footer.links.title": "Liens Utiles",
+    "footer.links.home": "Accueil",
+    "footer.links.about": "À propos de nous",
+    "footer.links.team": "Notre Équipe",
+    "footer.links.publications": "Publications",
+    "footer.copyright": "Droit d'auteur",
+    "footer.rights": "Tous droits réservés",
+    "footer.designed": "Conçu par"
+  },
+  de: {
+    "title.team": "Unser Team - BAA «CORECT»",
+    "nav.home": "Startseite",
+    "nav.about": "Über uns",
+    "nav.team": "Unser Team",
+    "nav.publications": "Publikationen",
+    "nav.contacts": "Kontakte",
+    "nav.language": "Sprache: Deutsch",
+    "team.title": "Unser Team",
+    "team.position": "Assoziierter Anwalt",
+    "team.stepan.name": "Stepan Zghibarțî",
+    "team.stepan.description": "Herr Stepan Zghibarțî ist eine außergewöhnliche Persönlichkeit in der juristischen Landschaft der Republik Moldau, mit einer bemerkenswerten Karriere und einem soliden Ruf, der auf umfassender Erfahrung und einem tiefen Engagement für seinen Beruf basiert.",
+    "team.stepan.expertise1": "Wirtschaftsrecht",
+    "team.stepan.expertise2": "Investitionen",
+    "team.stepan.expertise3": "Immobiliengeschäfte",
+    "team.stepan.expertise4": "Handelsrecht",
+    "team.nicolae_buzu.name": "Nicolae Buzu",
+    "team.nicolae_buzu.description": "Herr Nicolae Buzu ist ein versierter Fachmann mit fast zwei Jahrzehnten Erfahrung im juristischen Bereich, anerkannt für seine außergewöhnlichen Fähigkeiten in der Bereitstellung hochwertiger Rechtsberatung und -vertretung.",
+    "team.nicolae_buzu.expertise1": "Zivilrecht",
+    "team.nicolae_buzu.expertise2": "Handelsrecht",
+    "team.nicolae_buzu.expertise3": "Insolvenzsachen",
+    "team.nicolae_buzu.expertise4": "Gesellschaftsrecht",
+    "team.nicolae_buzu.expertise5": "Recht des geistigen Eigentums",
+    "team.victor.name": "Victor Berlinski",
+    "team.victor.description": "Herr Victor Berlinski ist ein außergewöhnlicher Fachmann, bekannt für seine bemerkenswerte Fähigkeit, klare, effektive und ergebnisorientierte Rechtsberatung zu bieten.",
+    "team.victor.expertise1": "Strafrecht",
+    "team.victor.expertise2": "Zivilrecht",
+    "team.victor.expertise3": "Insolvenzsachen",
+    "team.stefan.name": "Ștefan Mîțu",
+    "team.stefan.description": "Herr Ștefan Mîțu ist ein echter Rechtsprofi, bekannt für seine unerschütterliche Loyalität gegenüber seinen Mandanten und die Integrität, die ihn auszeichnet.",
+    "team.stefan.expertise1": "Zivilrecht",
+    "team.stefan.expertise2": "Gesellschaftsrecht",
+    "team.stanislav.name": "Stanislav Pavlovschi",
+    "team.stanislav.description": "Herr Stanislav Pavlovschi ist eine führende Persönlichkeit im juristischen Bereich, mit einer prestigeträchtigen Karriere, die ihn zu einem der angesehensten Anwälte der Republik Moldau macht.",
+    "team.stanislav.expertise1": "Zivilrecht",
+    "team.stanislav.expertise2": "Strafrecht",
+    "team.stanislav.expertise3": "Verwaltungsrecht",
+    "team.stanislav.expertise4": "Handelsrecht",
+    "team.stanislav.expertise5": "Menschenrechte",
+    "team.nicolae_andronic.name": "Nicolae Andronic",
+    "team.nicolae_andronic.description": "Herr Nicolae Andronic ist ein außergewöhnlicher Fachmann, dessen gründliches juristisches Wissen und umfangreiche Erfahrung in Rechtsstreitigkeiten ihn zu einem der angesehensten Anwälte der Gegenwart machen.",
+    "team.nicolae_andronic.expertise1": "Strafrecht",
+    "team.nicolae_andronic.expertise2": "Verwaltungsrecht",
+    "team.igor.name": "Igor Clima",
+    "team.igor.description": "Herr Igor Clima ist ein versierter Fachmann mit einem tiefen und individuellen Ansatz für jeden Fall, der ein klares Verständnis der Werte und Bedürfnisse jedes Mandanten zeigt.",
+    "team.igor.expertise1": "Zivilrecht",
+    "team.igor.expertise2": "Handelsrecht",
+    "team.igor.expertise3": "Steuerrecht",
+    "team.igor.expertise4": "Finanzrecht",
+    "team.igor.expertise5": "Recht des geistigen Eigentums",
+    "team.nicolae_fala.name": "Nicolae Fală",
+    "team.nicolae_fala.description": "Herr Nicolae Fală ist ein Fachmann, dessen methodische Ansätze und juristische Strategien auf einer seltenen Kombination aus tiefem Wissen, epistemologischem Denken und wissenschaftlichen Prinzipien basieren, die in der juristischen Praxis angewendet werden.",
+    "team.nicolae_fala.expertise1": "Zivilrecht",
+    "team.nicolae_fala.expertise2": "Zivilverfahrensrecht",
+    "team.nicolae_fala.expertise3": "Sachenrecht",
+    "team.nicolae_fala.expertise4": "Handelsrecht",
+    "team.nicolae_fala.expertise5": "Verwaltungsverfahrensrecht",
+    "team.ion.name": "Ion Arhiliuc",
+    "team.ion.description": "Herr Ion Arhiliuc ist ein Fachmann mit einer beeindruckenden juristischen Karriere, mit 32 Jahren Erfahrung in der Rechtsprechung, einschließlich als Richter im Strafsenat des Obersten Gerichtshofs.",
+    "team.ion.expertise1": "Strafrecht",
+    "team.ion.expertise2": "Zivilrecht",
+    "team.ion.expertise3": "Menschenrechte",
+    "team.ion.expertise4": "Einreichung von Klagen vor dem EGMR",
+    "team.irina.name": "Irina Buzu",
+    "team.irina.description": "Frau Irina Buzu ist eine versierte Fachfrau mit fundierter und tiefgehender Expertise in spezifischen Bereichen des modernen Rechts, anerkannt für ihre außergewöhnlichen Fähigkeiten in der juristischen Unterstützung und Vertretung in Angelegenheiten des geistigen Eigentums und der Technologie.",
+    "team.irina.expertise1": "Registrierung von Marken und Industriedesigns",
+    "team.irina.expertise2": "Künstliche Intelligenz und Cybersicherheit",
+    "team.irina.expertise3": "Digitalisierung des geistigen Eigentums",
+    "team.irina.expertise4": "DSGVO",
+    "team.irina.expertise5": "Flüchtlings- und Migrationsrecht",
+    "team.irina.expertise6": "Technologierecht",
+    "team.mihail.name": "Mihail Poalelungi",
+    "team.mihail.description": "Herr Mihail Poalelungi ist ein führender Rechtsexperte, dessen tiefes Wissen und strategische Vision ihn an die Spitze des Anwaltsberufs stellen.",
+    "team.mihail.expertise1": "Verfassungsrecht",
+    "team.mihail.expertise2": "Menschenrechtsgesetz",
+    "team.mihail.expertise3": "Europäisches Recht",
+    "team.mihail.expertise4": "Zivilrecht",
+    "team.mihail.expertise5": "Handelsrecht",
+    "team.mihail.expertise6": "Verwaltungsverfahrensrecht",
+    "team.mihail.expertise7": "Zivilverfahrensrecht",
+    "team.vadim.name": "Vadim Șpac",
+    "team.vadim.description": "Herr Vadim Șpac ist ein außergewöhnlicher Fachmann, anerkannt für seine Fähigkeit, erfolgreich durch die Komplexität verschiedener Rechtsbereiche zu navigieren und präzise und effektive rechtliche Lösungen zu bieten.",
+    "team.vadim.expertise1": "Zivilrecht",
+    "team.vadim.expertise2": "Handelsrecht",
+    "team.vadim.expertise3": "Zivilverfahrensrecht",
+    "team.vadim.expertise4": "Sachenrecht",
+    "team.vadim.expertise5": "Verwaltungsverfahrensrecht",
+    "team.vladislav.name": "Vladislav Clima",
+    "team.vladislav.description": "Herr Vladislav Clima ist ein Fachmann mit einer beeindruckenden juristischen Karriere, geschätzt für seinen strategischen, gründlichen und effektiven Ansatz bei der Lösung der komplexesten Fälle.",
+    "team.vladislav.expertise1": "Zivilrecht",
+    "team.vladislav.expertise2": "Handelsrecht",
+    "team.vladislav.expertise3": "Zivilverfahrensrecht",
+    "team.vladislav.expertise4": "Verwaltungsrecht",
+    "team.oleg.name": "Oleg Rotari",
+    "team.oleg.description": "Herr Oleg Rotari ist ein Fachmann mit einer außergewöhnlichen juristischen Karriere, mit einem bemerkenswerten Hintergrund als ehemaliger Anwalt beim Europäischen Gerichtshof für Menschenrechte (EGMR) und als Vertreter der Regierung der Republik Moldau vor dieser Institution.",
+    "team.oleg.expertise1": "Menschenrechte",
+    "team.oleg.expertise2": "Internationale Rechtsprechung",
+    "team.oleg.expertise3": "Diplomatische Vertretung",
+    "team.oleg.expertise4": "Rechtsanalyse und -strategie",
+    "team.oleg.expertise5": "Öffentliches internationales Recht und europäisches Recht",
+    "footer.sitename": "B.A.A. „Corect”",
+    "footer.address1": "str. Mitropolit Gavriil Bănulescu Bodoni 14/4",
+    "footer.address2": "Chișinău, Moldawien.",
+    "footer.phone.title": "Telefon:",
+    "footer.email.title": "Email:",
+    "footer.links.title": "Nützliche Links",
+    "footer.links.home": "Startseite",
+    "footer.links.about": "Über uns",
+    "footer.links.team": "Unser Team",
+    "footer.links.publications": "Publikationen",
+    "footer.copyright": "Urheberrecht",
+    "footer.rights": "Alle Rechte vorbehalten",
+    "footer.designed": "Gestaltet von"
+  }
+};
+
+function setLanguage(lang) {
+  // Update all elements with data-translate attributes
+  document.querySelectorAll('[data-translate]').forEach(element => {
+    const key = element.getAttribute('data-translate');
+    if (translations[lang] && translations[lang][key]) {
+      element.textContent = translations[lang][key];
+    }
+  });
+
+  // Update the page title
+  const titleKey = 'title.team';
+  if (translations[lang] && translations[lang][titleKey]) {
+    document.title = translations[lang][titleKey];
+  }
+
+  // Update the active language text in the dropdown
+  const activeLanguageElement = document.getElementById('active-language');
+  if (activeLanguageElement && translations[lang] && translations[lang]['nav.language']) {
+    activeLanguageElement.textContent = translations[lang]['nav.language'];
+  }
+
+  // Save the selected language to localStorage
+  localStorage.setItem('selectedLanguage', lang);
+}
+
+// Load the saved language or default to English
+document.addEventListener('DOMContentLoaded', () => {
+  const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+  setLanguage(savedLanguage);
+});</script>
 </body>
 
 </html>
