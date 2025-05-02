@@ -31,60 +31,77 @@
   <!-- Custom CSS for Team Section -->
   <style>
     .team .member {
+      perspective: 1000px;
+      height: 400px; /* Fixed height for consistency */
+    }
+    .team .flip-card {
       position: relative;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-    .team .member-img {
-      position: relative;
-      overflow: hidden;
-    }
-    .team .member-img img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      transition: all 0.3s ease;
-    }
-    .team .member-info {
-      text-align: center;
-      padding: 20px;
-      background: #fff;
-    }
-    .team .member-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      opacity: 0;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .team .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .team .member:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .team .flip-card-front,
+    .team .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: #fff;
-      transition: opacity 0.3s ease;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .team .flip-card-front {
+      z-index: 2;
+    }
+    .team .flip-card-back {
+      transform: rotateY(180deg);
+      background: #f8f9fa;
       padding: 20px;
       text-align: center;
+      overflow-y: auto;
     }
-    .team .member:hover .member-overlay {
-      opacity: 1;
+    .team .flip-card-front img {
+      width: 100%;
+      height: 300px; /* Fixed height for square images */
+      aspect-ratio: 1/1;
+      object-fit: cover;
     }
-    .team .member-overlay h4 {
-      font-size: 24px;
+    .team .flip-card-back h4 {
+      font-size: 20px;
       margin-bottom: 10px;
     }
-    .team .member-overlay p {
-      font-size: 16px;
-      margin: 0;
+    .team .flip-card-back p {
+      font-size: 14px;
+      margin-bottom: 10px;
+      line-height: 1.4;
     }
-    .team .member-overlay ul {
+    .team .flip-card-back ul {
       list-style: none;
       padding: 0;
-      margin: 10px 0 0;
+      margin: 0;
     }
-    .team .member-overlay ul li {
-      font-size: 14px;
+    .team .flip-card-back ul li {
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+    .team .member-info {
+      text-align: center;
+      padding: 10px;
+      background: #fff;
     }
     .modal-content {
       border-radius: 0;
@@ -123,13 +140,26 @@
       color: #333;
     }
     @media (max-width: 768px) {
-      .team .member-overlay {
-        opacity: 0;
-        pointer-events: none;
+      .team .member:hover .flip-card-inner {
+        transform: rotateY(0deg); /* Disable hover on mobile */
       }
-      .team .member:active .member-overlay {
-        opacity: 1;
-        pointer-events: auto;
+      .team .member.active .flip-card-inner {
+        transform: rotateY(180deg); /* Flip on click */
+      }
+      .team .member {
+        height: 350px; /* Adjust height for mobile */
+      }
+      .team .flip-card-front img {
+        height: 250px; /* Adjust image height for mobile */
+      }
+      .team .flip-card-back h4 {
+        font-size: 18px;
+      }
+      .team .flip-card-back p {
+        font-size: 12px;
+      }
+      .team .flip-card-back ul li {
+        font-size: 11px;
       }
     }
   </style>
@@ -179,8 +209,8 @@
       <h1 data-translate="team.title">Our Team</h1>
       <nav class="breadcrumbs">
         <ol>
-          <li><a href="index.html" data-translate="nav.home">Startseite</a></li>
-          <li class="current" data-translate="nav.team">Unser Team</li>
+          <li><a href="index.html" data-translate="nav.home">Home</a></li>
+          <li class="current" data-translate="nav.team">Our Team</li>
         </ol>
       </nav>
     </div>
@@ -194,289 +224,345 @@
     <div class="container">
       <div class="row gy-5">
         <!-- Team Member 1 -->
-        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
-          <div class="member-img">
-            <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-            <div class="member-overlay">
-              <h4 data-translate="team.stepan.name">Stepan Zghibarțî</h4>
-              <p data-translate="team.stepan.description">Mr. Stepan Zghibarțî is an exceptional figure in the legal landscape of the Republic of Moldova, with a remarkable career and a solid reputation built on vast experience and a profound commitment to his profession.</p>
-              <ul>
-                <li data-translate="team.stepan.expertise1">Business law</li>
-                <li data-translate="team.stepan.expertise2">Investments</li>
-                <li data-translate="team.stepan.expertise3">Real estate operations</li>
-                <li data-translate="team.stepan.expertise4">Commercial law</li>
-              </ul>
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100" data-member="stepan">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                <div class="member-info">
+                  <h4 data-translate="team.stepan.name">Stepan Zghibarțî</h4>
+                  <span data-translate="team.position">Associate Lawyer</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h4 data-translate="team.stepan.name">Stepan Zghibarțî</h4>
+                <p data-translate="team.stepan.description">Mr. Stepan Zghibarțî is an exceptional figure in the legal landscape of the Republic of Moldova, with a remarkable career and a solid reputation built on vast experience and a profound commitment to his profession.</p>
+                <ul>
+                  <li data-translate="team.stepan.expertise1">Business law</li>
+                  <li data-translate="team.stepan.expertise2">Investments</li>
+                  <li data-translate="team.stepan.expertise3">Real estate operations</li>
+                  <li data-translate="team.stepan.expertise4">Commercial law</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="member-info text-center">
-            <h4 data-translate="team.stepan.name">Stepan Zghibarțî</h4>
-            <span data-translate="team.position">Associate Lawyer</span>
           </div>
         </div>
         <!-- Team Member 2 -->
-        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
-          <div class="member-img">
-            <img src="assets/img/team/OIP.jfif" class="img-fluid" alt="">
-            <div class="member-overlay">
-              <h4 data-translate="team.nicolae_buzu.name">Nicolae Buzu</h4>
-              <p data-translate="team.nicolae_buzu.description">Mr. Nicolae Buzu is an accomplished professional with nearly two decades of experience in the legal field, recognized for his exceptional skills in providing high-quality legal counsel and representation.</p>
-              <ul>
-                <li data-translate="team.nicolae_buzu.expertise1">Civil law</li>
-                <li data-translate="team.nicolae_buzu.expertise2">Commercial law</li>
-                <li data-translate="team.nicolae_buzu.expertise3">Bankruptcy matters</li>
-                <li data-translate="team.nicolae_buzu.expertise4">Corporate law</li>
-                <li data-translate="team.nicolae_buzu.expertise5">Intellectual property law</li>
-              </ul>
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200" data-member="nicolae_buzu">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/img/team/OIP.jfif" class="img-fluid" alt="">
+                <div class="member-info">
+                  <h4><a href="buzu_nicolae/buzu.html" data-translate="team.nicolae_buzu.name">Nicolae Buzu</a></h4>
+                  <span data-translate="team.position">Associate Lawyer</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h4 data-translate="team.nicolae_buzu.name">Nicolae Buzu</h4>
+                <p data-translate="team.nicolae_buzu.description">Mr. Nicolae Buzu is an accomplished professional with nearly two decades of experience in the legal field, recognized for his exceptional skills in providing high-quality legal counsel and representation.</p>
+                <ul>
+                  <li data-translate="team.nicolae_buzu.expertise1">Civil law</li>
+                  <li data-translate="team.nicolae_buzu.expertise2">Commercial law</li>
+                  <li data-translate="team.nicolae_buzu.expertise3">Bankruptcy matters</li>
+                  <li data-translate="team.nicolae_buzu.expertise4">Corporate law</li>
+                  <li data-translate="team.nicolae_buzu.expertise5">Intellectual property law</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="member-info text-center">
-            <h4><a href="buzu_nicolae/buzu.html" data-translate="team.nicolae_buzu.name">Nicolae Buzu</a></h4>
-            <span data-translate="team.position">Associate Lawyer</span>
           </div>
         </div>
         <!-- Team Member 3 -->
-        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
-          <div class="member-img">
-            <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-            <div class="member-overlay">
-              <h4 data-translate="team.victor.name">Victor Berlinski</h4>
-              <p data-translate="team.victor.description">Mr. Victor Berlinski is an exceptional professional known for his remarkable ability to provide clear, effective, and results-oriented legal counsel.</p>
-              <ul>
-                <li data-translate="team.victor.expertise1">Criminal law</li>
-                <li data-translate="team.victor.expertise2">Civil law</li>
-                <li data-translate="team.victor.expertise3">Bankruptcy matters</li>
-              </ul>
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300" data-member="victor">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                <div class="member-info">
+                  <h4 data-translate="team.victor.name">Victor Berlinski</h4>
+                  <span data-translate="team.position">Associate Lawyer</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h4 data-translate="team.victor.name">Victor Berlinski</h4>
+                <p data-translate="team.victor.description">Mr. Victor Berlinski is an exceptional professional known for his remarkable ability to provide clear, effective, and results-oriented legal counsel.</p>
+                <ul>
+                  <li data-translate="team.victor.expertise1">Criminal law</li>
+                  <li data-translate="team.victor.expertise2">Civil law</li>
+                  <li data-translate="team.victor.expertise3">Bankruptcy matters</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="member-info text-center">
-            <h4 data-translate="team.victor.name">Victor Berlinski</h4>
-            <span data-translate="team.position">Associate Lawyer</span>
           </div>
         </div>
         <!-- Team Member 4 -->
-        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
-          <div class="member-img">
-            <img src="assets/img/team/mitu.jpg" class="img-fluid" alt="">
-            <div class="member-overlay">
-              <h4 data-translate="team.stefan.name">Ștefan Mîțu</h4>
-              <p data-translate="team.stefan.description">Mr. Ștefan Mîțu is a true legal professional, known for his unwavering loyalty to clients and the integrity that defines him.</p>
-              <ul>
-                <li data-translate="team.stefan.expertise1">Civil law</li>
-                <li data-translate="team.stefan.expertise2">Corporate law</li>
-              </ul>
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400" data-member="stefan">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/img/team/mitu.jpg" class="img-fluid" alt="">
+                <div class="member-info">
+                  <h4 data-translate="team.stefan.name">Ștefan Mîțu</h4>
+                  <span data-translate="team.position">Associate Lawyer</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h4 data-translate="team.stefan.name">Ștefan Mîțu</h4>
+                <p data-translate="team.stefan.description">Mr. Ștefan Mîțu is a true legal professional, known for his unwavering loyalty to clients and the integrity that defines him.</p>
+                <ul>
+                  <li data-translate="team.stefan.expertise1">Civil law</li>
+                  <li data-translate="team.stefan.expertise2">Corporate law</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="member-info text-center">
-            <h4 data-translate="team.stefan.name">Ștefan Mîțu</h4>
-            <span data-translate="team.position">Associate Lawyer</span>
           </div>
         </div>
         <!-- Team Member 5 -->
-        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
-          <div class="member-img">
-            <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-            <div class="member-overlay">
-              <h4 data-translate="team.stanislav.name">Stanislav Pavlovschi</h4>
-              <p data-translate="team.stanislav.description">Mr. Stanislav Pavlovschi is a leading figure in the legal field, with a prestigious career that places him among the most respected lawyers in the Republic of Moldova.</p>
-              <ul>
-                <li data-translate="team.stanislav.expertise1">Civil law</li>
-                <li data-translate="team.stanislav.expertise2">Criminal law</li>
-                <li data-translate="team.stanislav.expertise3">Administrative law</li>
-                <li data-translate="team.stanislav.expertise4">Commercial law</li>
-                <li data-translate="team.stanislav.expertise5">Human rights</li>
-              </ul>
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500" data-member="stanislav">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                <div class="member-info">
+                  <h4 data-translate="team.stanislav.name">Stanislav Pavlovschi</h4>
+                  <span data-translate="team.position">Associate Lawyer</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h4 data-translate="team.stanislav.name">Stanislav Pavlovschi</h4>
+                <p data-translate="team.stanislav.description">Mr. Stanislav Pavlovschi is a leading figure in the legal field, with a prestigious career that places him among the most respected lawyers in the Republic of Moldova.</p>
+                <ul>
+                  <li data-translate="team.stanislav.expertise1">Civil law</li>
+                  <li data-translate="team.stanislav.expertise2">Criminal law</li>
+                  <li data-translate="team.stanislav.expertise3">Administrative law</li>
+                  <li data-translate="team.stanislav.expertise4">Commercial law</li>
+                  <li data-translate="team.stanislav.expertise5">Human rights</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="member-info text-center">
-            <h4 data-translate="team.stanislav.name">Stanislav Pavlovschi</h4>
-            <span data-translate="team.position">Associate Lawyer</span>
           </div>
         </div>
         <!-- Team Member 6 -->
-        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
-          <div class="member-img">
-            <img src="assets/img/team/team-5.jpg" class="img-fluid" alt="">
-            <div class="member-overlay">
-              <h4 data-translate="team.nicolae_andronic.name">Nicolae Andronic</h4>
-              <p data-translate="team.nicolae_andronic.description">Mr. Nicolae Andronic is an exceptional professional whose thorough legal knowledge and vast experience in litigation place him among the most respected lawyers of the moment.</p>
-              <ul>
-                <li data-translate="team.nicolae_andronic.expertise1">Criminal law</li>
-                <li data-translate="team.nicolae_andronic.expertise2">Administrative law</li>
-              </ul>
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600" data-member="nicolae_andronic">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/img/team/team-5.jpg" class="img-fluid" alt="">
+                <div class="member-info">
+                  <h4 data-translate="team.nicolae_andronic.name">Nicolae Andronic</h4>
+                  <span data-translate="team.position">Associate Lawyer</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h4 data-translate="team.nicolae_andronic.name">Nicolae Andronic</h4>
+                <p data-translate="team.nicolae_andronic.description">Mr. Nicolae Andronic is an exceptional professional whose thorough legal knowledge and vast experience in litigation place him among the most respected lawyers of the moment.</p>
+                <ul>
+                  <li data-translate="team.nicolae_andronic.expertise1">Criminal law</li>
+                  <li data-translate="team.nicolae_andronic.expertise2">Administrative law</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="member-info text-center">
-            <h4 data-translate="team.nicolae_andronic.name">Nicolae Andronic</h4>
-            <span data-translate="team.position">Associate Lawyer</span>
           </div>
         </div>
         <!-- Team Member 7 -->
-        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="700">
-          <div class="member-img">
-            <img src="assets/img/team/OIP.jpg" class="img-fluid" alt="">
-            <div class="member-overlay">
-              <h4 data-translate="team.igor.name">Igor Clima</h4>
-              <p data-translate="team.igor.description">Mr. Igor Clima is an accomplished professional with a deep and personalized approach to each case, demonstrating a clear understanding of each client's values and needs.</p>
-              <ul>
-                <li data-translate="team.igor.expertise1">Civil law</li>
-                <li data-translate="team.igor.expertise2">Commercial law</li>
-                <li data-translate="team.igor.expertise3">Fiscal law</li>
-                <li data-translate="team.igor.expertise4">Financial law</li>
-                <li data-translate="team.igor.expertise5">Intellectual property law</li>
-              </ul>
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="700" data-member="igor">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/img/team/OIP.jpg" class="img-fluid" alt="">
+                <div class="member-info">
+                  <h4 data-translate="team.igor.name">Igor Clima</h4>
+                  <span data-translate="team.position">Associate Lawyer</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h4 data-translate="team.igor.name">Igor Clima</h4>
+                <p data-translate="team.igor.description">Mr. Igor Clima is an accomplished professional with a deep and personalized approach to each case, demonstrating a clear understanding of each client's values and needs.</p>
+                <ul>
+                  <li data-translate="team.igor.expertise1">Civil law</li>
+                  <li data-translate="team.igor.expertise2">Commercial law</li>
+                  <li data-translate="team.igor.expertise3">Fiscal law</li>
+                  <li data-translate="team.igor.expertise4">Financial law</li>
+                  <li data-translate="team.igor.expertise5">Intellectual property law</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="member-info text-center">
-            <h4 data-translate="team.igor.name">Igor Clima</h4>
-            <span data-translate="team.position">Associate Lawyer</span>
           </div>
         </div>
         <!-- Team Member 8 -->
-        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="800">
-          <div class="member-img">
-            <img src="assets/img/team/fala2018.jpg" class="img-fluid" alt="">
-            <div class="member-overlay">
-              <h4 data-translate="team.nicolae_fala.name">Nicolae Fală</h4>
-              <p data-translate="team.nicolae_fala.description">Mr. Nicolae Fală is a professional whose methodological approaches and legal strategies are based on a rare combination of in-depth knowledge, epistemological thinking, and scientific principles applied to legal practice.</p>
-              <ul>
-                <li data-translate="team.nicolae_fala.expertise1">Civil law</li>
-                <li data-translate="team.nicolae_fala.expertise2">Civil procedure law</li>
-                <li data-translate="team.nicolae_fala.expertise3">Real rights</li>
-                <li data-translate="team.nicolae_fala.expertise4">Commercial law</li>
-                <li data-translate="team.nicolae_fala.expertise5">Administrative procedure law</li>
-              </ul>
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="800" data-member="nicolae_fala">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/img/team/fala2018.jpg" class="img-fluid" alt="">
+                <div class="member-info">
+                  <h4 data-translate="team.nicolae_fala.name">Nicolae Fală</h4>
+                  <span data-translate="team.position">Associate Lawyer</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h4 data-translate="team.nicolae_fala.name">Nicolae Fală</h4>
+                <p data-translate="team.nicolae_fala.description">Mr. Nicolae Fală is a professional whose methodological approaches and legal strategies are based on a rare combination of in-depth knowledge, epistemological thinking, and scientific principles applied to legal practice.</p>
+                <ul>
+                  <li data-translate="team.nicolae_fala.expertise1">Civil law</li>
+                  <li data-translate="team.nicolae_fala.expertise2">Civil procedure law</li>
+                  <li data-translate="team.nicolae_fala.expertise3">Real rights</li>
+                  <li data-translate="team.nicolae_fala.expertise4">Commercial law</li>
+                  <li data-translate="team.nicolae_fala.expertise5">Administrative procedure law</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="member-info text-center">
-            <h4 data-translate="team.nicolae_fala.name">Nicolae Fală</h4>
-            <span data-translate="team.position">Associate Lawyer</span>
           </div>
         </div>
         <!-- Team Member 9 -->
-        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="900">
-          <div class="member-img">
-            <img src="assets/img/team/arhiliuc2018.jpg" class="img-fluid" alt="">
-            <div class="member-overlay">
-              <h4 data-translate="team.ion.name">Ion Arhiliuc</h4>
-              <p data-translate="team.ion.description">Mr. Ion Arhiliuc is a professional with an impressive legal career, with 32 years of experience in jurisprudence, including as a judge in the Criminal Panel of the Supreme Court of Justice.</p>
-              <ul>
-                <li data-translate="team.ion.expertise1">Criminal law</li>
-                <li data-translate="team.ion.expertise2">Civil law</li>
-                <li data-translate="team.ion.expertise3">Human rights</li>
-                <li data-translate="team.ion.expertise4">Filing claims before the ECHR</li>
-              </ul>
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="900" data-member="ion">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/img/team/arhiliuc2018.jpg" class="img-fluid" alt="">
+                <div class="member-info">
+                  <h4 data-translate="team.ion.name">Ion Arhiliuc</h4>
+                  <span data-translate="team.position">Associate Lawyer</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h4 data-translate="team.ion.name">Ion Arhiliuc</h4>
+                <p data-translate="team.ion.description">Mr. Ion Arhiliuc is a professional with an impressive legal career, with 32 years of experience in jurisprudence, including as a judge in the Criminal Panel of the Supreme Court of Justice.</p>
+                <ul>
+                  <li data-translate="team.ion.expertise1">Criminal law</li>
+                  <li data-translate="team.ion.expertise2">Civil law</li>
+                  <li data-translate="team.ion.expertise3">Human rights</li>
+                  <li data-translate="team.ion.expertise4">Filing claims before the ECHR</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="member-info text-center">
-            <h4 data-translate="team.ion.name">Ion Arhiliuc</h4>
-            <span data-translate="team.position">Associate Lawyer</span>
           </div>
         </div>
         <!-- Team Member 10 -->
-        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="1000">
-          <div class="member-img">
-            <img src="assets/img/team/buzui2018.jpg" class="img-fluid" alt="">
-            <div class="member-overlay">
-              <h4 data-translate="team.irina.name">Irina Buzu</h4>
-              <p data-translate="team.irina.description">Ms. Irina Buzu is an accomplished professional with solid and in-depth expertise in specific areas of modern law, recognized for her exceptional skills in legal assistance and representation in intellectual property and technology matters.</p>
-              <ul>
-                <li data-translate="team.irina.expertise1">Trademark and industrial design registration</li>
-                <li data-translate="team.irina.expertise2">Artificial intelligence and cybersecurity</li>
-                <li data-translate="team.irina.expertise3">Digitalization of intellectual property</li>
-                <li data-translate="team.irina.expertise4">GDPR</li>
-                <li data-translate="team.irina.expertise5">Refugee and migration law</li>
-                <li data-translate="team.irina.expertise6">Tech law</li>
-              </ul>
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="1000" data-member="irina">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/img/team/buzui2018.jpg" class="img-fluid" alt="">
+                <div class="member-info">
+                  <h4 data-translate="team.irina.name">Irina Buzu</h4>
+                  <span data-translate="team.position">Associate Lawyer</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h4 data-translate="team.irina.name">Irina Buzu</h4>
+                <p data-translate="team.irina.description">Ms. Irina Buzu is an accomplished professional with solid and in-depth expertise in specific areas of modern law, recognized for her exceptional skills in legal assistance and representation in intellectual property and technology matters.</p>
+                <ul>
+                  <li data-translate="team.irina.expertise1">Trademark and industrial design registration</li>
+                  <li data-translate="team.irina.expertise2">Artificial intelligence and cybersecurity</li>
+                  <li data-translate="team.irina.expertise3">Digitalization of intellectual property</li>
+                  <li data-translate="team.irina.expertise4">GDPR</li>
+                  <li data-translate="team.irina.expertise5">Refugee and migration law</li>
+                  <li data-translate="team.irina.expertise6">Tech law</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="member-info text-center">
-            <h4 data-translate="team.irina.name">Irina Buzu</h4>
-            <span data-translate="team.position">Associate Lawyer</span>
           </div>
         </div>
         <!-- Team Member 11 -->
-        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="1100">
-          <div class="member-img">
-            <img src="assets/img/team/profile-img.jpg" class="img-fluid" alt="">
-            <div class="member-overlay">
-              <h4 data-translate="team.mihail.name">Mihail Poalelungi</h4>
-              <p data-translate="team.mihail.description">Mr. Mihail Poalelungi is a top legal expert whose profound knowledge and strategic vision place him at the forefront of the legal profession.</p>
-              <ul>
-                <li data-translate="team.mihail.expertise1">Constitutional law</li>
-                <li data-translate="team.mihail.expertise2">Human rights law</li>
-                <li data-translate="team.mihail.expertise3">European law</li>
-                <li data-translate="team.mihail.expertise4">Civil law</li>
-                <li data-translate="team.mihail.expertise5">Commercial law</li>
-                <li data-translate="team.mihail.expertise6">Administrative procedure law</li>
-                <li data-translate="team.mihail.expertise7">Civil procedure law</li>
-              </ul>
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="1100" data-member="mihail">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/img/team/profile-img.jpg" class="img-fluid" alt="">
+                <div class="member-info">
+                  <h4><a href="poalelungi_mihai_/poalelungi.html" data-translate="team.mihail.name">Mihail Poalelungi</a></h4>
+                  <span data-translate="team.position">Associate Lawyer</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h4 data-translate="team.mihail.name">Mihail Poalelungi</h4>
+                <p data-translate="team.mihail.description">Mr. Mihail Poalelungi is a top legal expert whose profound knowledge and strategic vision place him at the forefront of the legal profession.</p>
+                <ul>
+                  <li data-translate="team.mihail.expertise1">Constitutional law</li>
+                  <li data-translate="team.mihail.expertise2">Human rights law</li>
+                  <li data-translate="team.mihail.expertise3">European law</li>
+                  <li data-translate="team.mihail.expertise4">Civil law</li>
+                  <li data-translate="team.mihail.expertise5">Commercial law</li>
+                  <li data-translate="team.mihail.expertise6">Administrative procedure law</li>
+                  <li data-translate="team.mihail.expertise7">Civil procedure law</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="member-info text-center">
-            <h4><a href="poalelungi_mihai_/poalelungi.html" data-translate="team.mihail.name">Mihail Poalelungi</a></h4>
-            <span data-translate="team.position">Associate Lawyer</span>
           </div>
         </div>
         <!-- Team Member 12 -->
-        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="1200">
-          <div class="member-img">
-            <img src="assets/img/team/spacvadim.jpg" class="img-fluid" alt="">
-            <div class="member-overlay">
-              <h4 data-translate="team.vadim.name">Vadim Șpac</h4>
-              <p data-translate="team.vadim.description">Mr. Vadim Șpac is an exceptional professional recognized for his ability to navigate successfully through the complexity of various legal fields, providing precise and effective legal solutions.</p>
-              <ul>
-                <li data-translate="team.vadim.expertise1">Civil law</li>
-                <li data-translate="team.vadim.expertise2">Commercial law</li>
-                <li data-translate="team.vadim.expertise3">Civil procedural law</li>
-                <li data-translate="team.vadim.expertise4">Real rights</li>
-                <li data-translate="team.vadim.expertise5">Administrative procedural law</li>
-              </ul>
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="1200" data-member="vadim">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/img/team/spacvadim.jpg" class="img-fluid" alt="">
+                <div class="member-info">
+                  <h4 data-translate="team.vadim.name">Vadim Șpac</h4>
+                  <span data-translate="team.position">Associate Lawyer</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h4 data-translate="team.vadim.name">Vadim Șpac</h4>
+                <p data-translate="team.vadim.description">Mr. Vadim Șpac is an exceptional professional recognized for his ability to navigate successfully through the complexity of various legal fields, providing precise and effective legal solutions.</p>
+                <ul>
+                  <li data-translate="team.vadim.expertise1">Civil law</li>
+                  <li data-translate="team.vadim.expertise2">Commercial law</li>
+                  <li data-translate="team.vadim.expertise3">Civil procedural law</li>
+                  <li data-translate="team.vadim.expertise4">Real rights</li>
+                  <li data-translate="team.vadim.expertise5">Administrative procedural law</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="member-info text-center">
-            <h4 data-translate="team.vadim.name">Vadim Șpac</h4>
-            <span data-translate="team.position">Associate Lawyer</span>
           </div>
         </div>
         <!-- Team Member 13 -->
-        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="1300">
-          <div class="member-img">
-            <img src="assets/img/team/Clima-Vladislav.png" class="img-fluid" alt="">
-            <div class="member-overlay">
-              <h4 data-translate="team.vladislav.name">Vladislav Clima</h4>
-              <p data-translate="team.vladislav.description">Mr. Vladislav Clima is a professional with an impressive legal career, appreciated for his strategic, thorough, and effective approach to resolving the most complex cases.</p>
-              <ul>
-                <li data-translate="team.vladislav.expertise1">Civil law</li>
-                <li data-translate="team.vladislav.expertise2">Commercial law</li>
-                <li data-translate="team.vladislav.expertise3">Civil procedural law</li>
-                <li data-translate="team.vladislav.expertise4">Administrative law</li>
-              </ul>
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="1300" data-member="vladislav">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/img/team/Clima-Vladislav.png" class="img-fluid" alt="">
+                <div class="member-info">
+                  <h4 data-translate="team.vladislav.name">Vladislav Clima</h4>
+                  <span data-translate="team.position">Associate Lawyer</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h4 data-translate="team.vladislav.name">Vladislav Clima</h4>
+                <p data-translate="team.vladislav.description">Mr. Vladislav Clima is a professional with an impressive legal career, appreciated for his strategic, thorough, and effective approach to resolving the most complex cases.</p>
+                <ul>
+                  <li data-translate="team.vladislav.expertise1">Civil law</li>
+                  <li data-translate="team.vladislav.expertise2">Commercial law</li>
+                  <li data-translate="team.vladislav.expertise3">Civil procedural law</li>
+                  <li data-translate="team.vladislav.expertise4">Administrative law</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="member-info text-center">
-            <h4 data-translate="team.vladislav.name">Vladislav Clima</h4>
-            <span data-translate="team.position">Associate Lawyer</span>
           </div>
         </div>
         <!-- Team Member 14 -->
-        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="1400">
-          <div class="member-img">
-            <img src="assets/img/team/rotari.jpg" class="img-fluid" alt="">
-            <div class="member-overlay">
-              <h4 data-translate="team.oleg.name">Oleg Rotari</h4>
-              <p data-translate="team.oleg.description">Mr. Oleg Rotari is a professional with an exceptional legal career, having a remarkable background as a former lawyer at the European Court of Human Rights (ECHR) and as a representative of the Government of the Republic of Moldova before this institution.</p>
-              <ul>
-                <li data-translate="team.oleg.expertise1">Human rights</li>
-                <li data-translate="team.oleg.expertise2">International jurisprudence</li>
-                <li data-translate="team.oleg.expertise3">Diplomatic representation</li>
-                <li data-translate="team.oleg.expertise4">Legal analysis and strategy</li>
-                <li data-translate="team.oleg.expertise5">Public international law and European law</li>
-              </ul>
+        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="1400" data-member="oleg">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/img/team/rotari.jpg" class="img-fluid" alt="">
+                <div class="member-info">
+                  <h4 data-translate="team.oleg.name">Oleg Rotari</h4>
+                  <span data-translate="team.position">Associate Lawyer</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h4 data-translate="team.oleg.name">Oleg Rotari</h4>
+                <p data-translate="team.oleg.description">Mr. Oleg Rotari is a professional with an exceptional legal career, having a remarkable background as a former lawyer at the European Court of Human Rights (ECHR) and as a representative of the Government of the Republic of Moldova before this institution.</p>
+                <ul>
+                  <li data-translate="team.oleg.expertise1">Human rights</li>
+                  <li data-translate="team.oleg.expertise2">International jurisprudence</li>
+                  <li data-translate="team.oleg.expertise3">Diplomatic representation</li>
+                  <li data-translate="team.oleg.expertise4">Legal analysis and strategy</li>
+                  <li data-translate="team.oleg.expertise5">Public international law and European law</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="member-info text-center">
-            <h4 data-translate="team.oleg.name">Oleg Rotari</h4>
-            <span data-translate="team.position">Associate Lawyer</span>
           </div>
         </div>
       </div>
@@ -526,10 +612,10 @@
       <div class="col-lg-2 col-md-3 footer-links">
         <h4 data-translate="footer.links.title">Useful Links</h4>
         <ul>
-          <li><a href="#" data-translate="footer.links.home">Startseite</a></li>
-          <li><a href="#" data-translate="footer.links.about">Über uns</a></li>
-          <li><a href="#" data-translate="footer.links.team">Unser Team</a></li>
-          <li><a href="#" data-translate="footer.links.publications">Publikationen</a></li>
+          <li><a href="#" data-translate="footer.links.home">Home</a></li>
+          <li><a href="#" data-translate="footer.links.about">About us</a></li>
+          <li><a href="#" data-translate="footer.links.team">Our Team</a></li>
+          <li><a href="#" data-translate="footer.links.publications">Publications</a></li>
         </ul>
       </div>
     </div>
@@ -542,7 +628,8 @@
   </div>
 </footer>
 
-  <!-- Scroll Top -->
+
+<!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
