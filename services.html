@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Services - UpConstruction Bootstrap Template</title>
+  <title data-translate="title.services">Services - BAA «CORECT»</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -27,459 +27,766 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: UpConstruction
-  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-  * Updated: May 05 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="services-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center">
+      <img src="assets/img/logo.png" alt="">
+      <h1 class="sitename">BAA «CORECT»</h1> <span>.</span>
+    </a>
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">UpConstruction</h1> <span>.</span>
-      </a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html" data-translate="nav.home">Home</a></li>
+        <li><a href="about.html" data-translate="nav.about">About</a></li>
+        <li><a href="services.html" class="active" data-translate="nav.services">Services</a></li>
+        <li><a href="projects.html" data-translate="nav.team">Our Team</a></li>
+        <li><a href="blog.html" data-translate="nav.publications">Publications</a></li>
+        <li class="dropdown"><a href="contact.html"><span data-translate="nav.contacts">Contacts</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="#" data-translate="team.stepan.name">Stepan Zghibarțî</a></li>
+            <li><a href="#" data-translate="team.nicolae_buzu.name">Buzu Nicolae</a></li>
+            <li><a href="#" data-translate="team.victor.name">Victor Berlinski</a></li>
+            <li><a href="#" data-translate="team.alexei.name">Alexei Barbăneagră</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#"><span id="active-language" data-translate="nav.language">Language: English</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="#" onclick="setLanguage('en')">English</a></li>
+            <li><a href="#" onclick="setLanguage('ro')">Română</a></li>
+            <li><a href="#" onclick="setLanguage('fr')">Français</a></li>
+            <li><a href="#" onclick="setLanguage('de')">Deutsch</a></li>
+          </ul>
+        </li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+  </div>
+</header>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" class="">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+<main class="main">
+
+  <!-- Page Title -->
+  <div class="page-title" data-aos="fade" style="background-image: url(assets/img/colectiv3.jpg);">
+    <div class="container position-relative">
+      <h1 data-translate="services.title">Services</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="index.html" data-translate="nav.home">Home</a></li>
+          <li class="current" data-translate="nav.services">Services</li>
+        </ol>
       </nav>
-
     </div>
-  </header>
+  </div><!-- End Page Title -->
 
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade" style="background-image: url(assets/img/page-title-bg.jpg);">
-      <div class="container position-relative">
-        <h1>Services</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Services</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-mountain-city"></i>
-              </div>
-              <h3>Nesciunt Mete</h3>
-              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
-              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+  <!-- Services Section -->
+  <section id="services" class="services section">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="fa-solid fa-gavel"></i>
             </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
-              </div>
-              <h3>Eosle Commodi</h3>
-              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
-              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-compass-drafting"></i>
-              </div>
-              <h3>Ledo Markt</h3>
-              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
-              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-trowel-bricks"></i>
-              </div>
-              <h3>Asperiores Commodit</h3>
-              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
-              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-helmet-safety"></i>
-              </div>
-              <h3>Velit Doloremque</h3>
-              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
-              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
-              </div>
-              <h3>Dolori Architecto</h3>
-              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
-              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Features Cards Section -->
-    <section id="features-cards" class="features-cards section">
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <h3>Quasi eaque omnis</h3>
-            <p>Eius non minus autem soluta ut ui labore omnis quisquam corrupti autem odit voluptas quos commodi magnam occaecati.</p>
-            <ul class="list-unstyled">
-              <li><i class="bi bi-check2"></i> <span>Ullamco laboris nisi ut aliquip</span></li>
-              <li><i class="bi bi-check2"></i> <span>Duis aute irure dolor in reprehenderit</span></li>
-              <li><i class="bi bi-check2"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
-            </ul>
-          </div><!-- End feature item-->
-
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <h3>Et nemo dolores consectetur</h3>
-            <p>Ducimus ea quam et occaecati est. Temporibus in soluta labore voluptates aut. Et sit soluta non repellat sed quia dire plovers tradoria</p>
-
-            <ul class="list-unstyled">
-              <li><i class="bi bi-check2"></i> <span>Enim temporibus maiores eligendi</span></li>
-              <li><i class="bi bi-check2"></i> <span>Ut maxime ut quibusdam quam qui</span></li>
-              <li><i class="bi bi-check2"></i> <span>Officiis aspernatur in officiis</span></li>
-            </ul>
-          </div><!-- End feature item-->
-
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <h3>Staque laboriosam modi</h3>
-            <p>Velit eos error et dolor omnis voluptates nobis tenetur sed enim nihil vero qui suscipit ipsum at magni. Ipsa architecto consequatur aliquam</p>
-            <ul class="list-unstyled">
-              <li><i class="bi bi-check2"></i> <span>Quis voluptates laboriosam numquam</span></li>
-              <li><i class="bi bi-check2"></i> <span>Debitis eos est est corrupti</span></li>
-            </ul>
-          </div><!-- End feature item-->
-
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <h3>Dignissimos suscipit iste</h3>
-            <p>Molestiae occaecati assumenda quia saepe nobis recusandae at dicta ducimus sequi numquam commodi est in consequatur ea magnam quia itaque</p>
-            <ul class="list-unstyled">
-              <li><i class="bi bi-check2"></i> <span>Veritatis qui reprehenderit quis</span></li>
-              <li><i class="bi bi-check2"></i> <span>Accusantium vel numquam sunt minus</span></li>
-              <li><i class="bi bi-check2"></i> <span>Voluptatem pariatur est sationem</span></li>
-            </ul>
-          </div><!-- End feature item-->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Features Cards Section -->
-
-    <!-- Alt Services 2 Section -->
-    <section id="alt-services-2" class="alt-services-2 section">
-
-      <div class="container">
-
-        <div class="row justify-content-around gy-4">
-
-          <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-            <h3>Enim quis est voluptatibus aliquid consequatur</h3>
-            <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi</p>
-
-            <div class="row">
-
-              <div class="col-lg-6 icon-box d-flex">
-                <i class="bi bi-easel flex-shrink-0"></i>
-                <div>
-                  <h4>Lorem Ipsum</h4>
-                  <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias </p>
-                </div>
-              </div><!-- End Icon Box -->
-
-              <div class="col-lg-6 icon-box d-flex">
-                <i class="bi bi-patch-check flex-shrink-0"></i>
-                <div>
-                  <h4>Nemo Enim</h4>
-                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiise</p>
-                </div>
-              </div><!-- End Icon Box -->
-
-              <div class="col-lg-6 icon-box d-flex">
-                <i class="bi bi-brightness-high flex-shrink-0"></i>
-                <div>
-                  <h4>Dine Pad</h4>
-                  <p>Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit</p>
-                </div>
-              </div><!-- End Icon Box -->
-
-              <div class="col-lg-6 icon-box d-flex">
-                <i class="bi bi-brightness-high flex-shrink-0"></i>
-                <div>
-                  <h4>Tride clov</h4>
-                  <p>Est voluptatem labore deleniti quis a delectus et. Saepe dolorem libero sit</p>
-                </div>
-              </div><!-- End Icon Box -->
-
-            </div>
-
+            <h3 data-translate="services.legal_advice.title">Legal Advice & Opinions</h3>
+            <p data-translate="services.legal_advice.desc">Providing expert legal consultations, drafting legal opinions, and preparing due diligence reports on national and international laws.</p>
+            <a href="#" class="readmore stretched-link" data-translate="services.readmore">Read more <i class="bi bi-arrow-right"></i></a>
           </div>
+        </div><!-- End Service Item -->
 
-          <div class="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/features-3-2.jpg" alt="">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="fa-solid fa-file-contract"></i>
+            </div>
+            <h3 data-translate="services.drafting.title">Document Drafting</h3>
+            <p data-translate="services.drafting.desc">Drafting contracts, statutory documents, and legal instruments for companies and institutions of any legal form.</p>
+            <a href="#" class="readmore stretched-link" data-translate="services.readmore">Read more <i class="bi bi-arrow-right"></i></a>
           </div>
+        </div><!-- End Service Item -->
 
-        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="fa-solid fa-building"></i>
+            </div>
+            <h3 data-translate="services.corporate.title">Corporate Law Support</h3>
+            <p data-translate="services.corporate.desc">Assisting with establishment, reorganization, liquidation, and changes to statutory documents of legal entities.</p>
+            <a href="#" class="readmore stretched-link" data-translate="services.readmore">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div><!-- End Service Item -->
 
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="fa-solid fa-balance-scale"></i>
+            </div>
+            <h3 data-translate="services.representation.title">Court Representation</h3>
+            <p data-translate="services.representation.desc">Representing clients in civil, commercial, administrative, and criminal cases across all stages in Moldovan courts.</p>
+            <a href="#" class="readmore stretched-link" data-translate="services.readmore">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="fa-solid fa-handcuffs"></i>
+            </div>
+            <h3 data-translate="services.criminal.title">Criminal Case Assistance</h3>
+            <p data-translate="services.criminal.desc">Offering legal support to victims, plaintiffs, or defendants during prosecution and trial phases of criminal cases.</p>
+            <a href="#" class="readmore stretched-link" data-translate="services.readmore">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="fa-solid fa-landmark"></i>
+            </div>
+            <h3 data-translate="services.echr.title">ECHR Representation</h3>
+            <p data-translate="services.echr.desc">Representing clients’ interests before the European Court of Human Rights to protect their rights.</p>
+            <a href="#" class="readmore stretched-link" data-translate="services.readmore">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div><!-- End Service Item -->
       </div>
+    </div>
+  </section><!-- /Services Section -->
 
-    </section><!-- /Alt Services 2 Section -->
+  <!-- Features Cards Section -->
+  <section id="features-cards" class="features-cards section">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <h3 data-translate="features.expertise.title">Broad Legal Expertise</h3>
+          <p data-translate="features.expertise.desc">Our team offers extensive knowledge in civil, commercial, criminal, administrative, tax, customs, and intellectual property law.</p>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-check2"></i> <span data-translate="features.expertise.item1">Comprehensive legal consultations</span></li>
+            <li><i class="bi bi-check2"></i> <span data-translate="features.expertise.item2">Tailored legal solutions</span></li>
+            <li><i class="bi bi-check2"></i> <span data-translate="features.expertise.item3">International law expertise</span></li>
+          </ul>
+        </div><!-- End feature item -->
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <h3 data-translate="features.efficiency.title">Efficient Solutions</h3>
+          <p data-translate="features.efficiency.desc">We prioritize simple, effective legal solutions to save time and meet client needs promptly.</p>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-check2"></i> <span data-translate="features.efficiency.item1">Streamlined processes</span></li>
+            <li><i class="bi bi-check2"></i> <span data-translate="features.efficiency.item2">Rapid response times</span></li>
+            <li><i class="bi bi-check2"></i> <span data-translate="features.efficiency.item3">Client-focused strategies</span></li>
+          </ul>
+        </div><!-- End feature item -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <h3 data-translate="features.ethics.title">Ethics & Confidentiality</h3>
+          <p data-translate="features.ethics.desc">We uphold the highest standards of discretion, loyalty, and professional ethics in all client interactions.</p>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-check2"></i> <span data-translate="features.ethics.item1">Strict confidentiality</span></li>
+            <li><i class="bi bi-check2"></i> <span data-translate="features.ethics.item2">Moral integrity</span></li>
+          </ul>
+        </div><!-- End feature item -->
 
-        <div class="swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <h3 data-translate="features.success.title">Proven Success</h3>
+          <p data-translate="features.success.desc">Our high success rate reflects our commitment to achieving favorable outcomes for every client.</p>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-check2"></i> <span data-translate="features.success.item1">Strong track record</span></li>
+            <li><i class="bi bi-check2"></i> <span data-translate="features.success.item2">Client satisfaction</span></li>
+            <li><i class="bi bi-check2"></i> <span data-translate="features.success.item3">Competitive legal strategies</span></li>
+          </ul>
+        </div><!-- End feature item -->
+      </div>
+    </div>
+  </section><!-- /Features Cards Section -->
+
+  <!-- Alt Services 2 Section -->
+  <section id="alt-services-2" class="alt-services-2 section">
+    <div class="container">
+      <div class="row justify-content-around gy-4">
+        <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+          <h3 data-translate="alt_services.title">Comprehensive Legal Support</h3>
+          <p data-translate="alt_services.desc">We provide tailored legal services to individuals and businesses, ensuring their rights and interests are protected across various legal domains.</p>
+          <div class="row">
+            <div class="col-lg-6 icon-box d-flex">
+              <i class="bi bi-briefcase flex-shrink-0"></i>
+              <div>
+                <h4 data-translate="alt_services.corporate.title">Corporate Assistance</h4>
+                <p data-translate="alt_services.corporate.desc">Support for business establishment, reorganization, and compliance with legal requirements.</p>
+              </div>
+            </div><!-- End Icon Box -->
+            <div class="col-lg-6 icon-box d-flex">
+              <i class="bi bi-gavel flex-shrink-0"></i>
+              <div>
+                <h4 data-translate="alt_services.litigation.title">Litigation Services</h4>
+                <p data-translate="alt_services.litigation.desc">Expert representation in courts for civil, commercial, and criminal cases.</p>
+              </div>
+            </div><!-- End Icon Box -->
+            <div class="col-lg-6 icon-box d-flex">
+              <i class="bi bi-globe flex-shrink-0"></i>
+              <div>
+                <h4 data-translate="alt_services.echr.title">ECHR Advocacy</h4>
+                <p data-translate="alt_services.echr.desc">Representation at the European Court of Human Rights for human rights cases.</p>
+              </div>
+            </div><!-- End Icon Box -->
+            <div class="col-lg-6 icon-box d-flex">
+              <i class="bi bi-shield-check flex-shrink-0"></i>
+              <div>
+                <h4 data-translate="alt_services.compliance.title">Legal Compliance</h4>
+                <p data-translate="alt_services.compliance.desc">Ensuring adherence to national and international legal standards.</p>
+              </div>
+            </div><!-- End Icon Box -->
+          </div>
+        </div>
+        <div class="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/img/features-3-2.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section><!-- /Alt Services 2 Section -->
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials section">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper">
+        <script type="application/json" class="swiper-config">
+          {
+            "loop": true,
+            "speed": 600,
+            "autoplay": {
+              "delay": 5000
+            },
+            "slidesPerView": "auto",
+            "pagination": {
+              "el": ".swiper-pagination",
+              "type": "bullets",
+              "clickable": true
+            },
+            "breakpoints": {
+              "320": {
+                "slidesPerView": 1,
+                "spaceBetween": 40
               },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 20
-                }
+              "1200": {
+                "slidesPerView": 2,
+                "spaceBetween": 20
               }
             }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                  <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
+          }
+        </script>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3 data-translate="testimonials.client1.name">Saul Goodman</h3>
+                <h4 data-translate="testimonials.client1.title">CEO & Founder</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span data-translate="testimonials.client1.text">The legal advice provided by BAA «CORECT» was precise and effective, resolving our corporate issue swiftly.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
+            </div>
+          </div><!-- End testimonial item -->
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3 data-translate="testimonials.client2.name">Sara Wilsson</h3>
+                <h4 data-translate="testimonials.client2.title">Business Owner</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span data-translate="testimonials.client2.text">Their representation in court was exceptional, securing a favorable outcome for our case.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
+            </div>
+          </div><!-- End testimonial item -->
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3 data-translate="testimonials.client3.name">Jena Karlis</h3>
+                <h4 data-translate="testimonials.client3.title">Entrepreneur</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span data-translate="testimonials.client3.text">BAA «CORECT» drafted our contracts with utmost professionalism, ensuring all legal aspects were covered.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                  <h3>Matt Brandon</h3>
-                  <h4>Freelancer</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
+            </div>
+          </div><!-- End testimonial item -->
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3 data-translate="testimonials.client4.name">Matt Brandon</h3>
+                <h4 data-translate="testimonials.client4.title">Corporate Client</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span data-translate="testimonials.client4.text">Their support in our ECHR case was outstanding, protecting our rights effectively.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
+            </div>
+          </div><!-- End testimonial item -->
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3 data-translate="testimonials.client5.name">John Larson</h3>
+                <h4 data-translate="testimonials.client5.title">Individual Client</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span data-translate="testimonials.client5.text">The team’s dedication during my criminal case was remarkable, guiding me through every step.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
+            </div>
+          </div><!-- End testimonial item -->
         </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
-  </main>
-
-  <footer id="footer" class="footer">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">B.A.A. „Corect”</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>str. Mitropolit Gavriil Bănulescu Bodoni 14/4 </p>
-            <p>Chișinău, Moldova.</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+373 69 105 693</span></p>
-            <p><strong>Email:</strong> <span>buzunicolae@gmail.com</span></p>
-          </div>
-
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Publications</a></li>
-          </ul>
-        </div>
-
-
-
+        <div class="swiper-pagination"></div>
       </div>
     </div>
+  </section><!-- /Testimonials Section -->
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">B.A.A. „Corect”</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
+</main>
 
-        Designed by <a href="#">Poalelungi Ion</a>
+<footer id="footer" class="footer">
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6 footer-about">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <span class="sitename" data-translate="footer.sitename">B.A.A. „Corect”</span>
+        </a>
+        <div class="footer-contact pt-3">
+          <p data-translate="footer.address">str. Mitropolit Gavriil Bănulescu Bodoni 14/4, Chișinău, Moldova.</p>
+          <p class="mt-3"><strong data-translate="footer.phone.title">Phone:</strong> <span>+373 69 105 693</span></p>
+          <p><strong data-translate="footer.email.title">Email:</strong> <span><a href="mailto:buzunicolae@gmail.com">buzunicolae@gmail.com</a></span></p>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4 data-translate="footer.links.title">Useful Links</h4>
+        <ul>
+          <li><a href="index.html" data-translate="footer.links.home">Home</a></li>
+          <li><a href="about.html" data-translate="footer.links.about">About us</a></li>
+          <li><a href="services.html" data-translate="footer.links.services">Services</a></li>
+          <li><a href="projects.html" data-translate="footer.links.team">Our Team</a></li>
+          <li><a href="blog.html" data-translate="footer.links.publications">Publications</a></li>
+        </ul>
       </div>
     </div>
+  </div>
+  <div class="container copyright text-center mt-4">
+    <p>© <span data-translate="footer.copyright">Copyright</span> <strong class="px-1 sitename" data-translate="footer.sitename">B.A.A. „Corect”</strong> <span data-translate="footer.rights">All Rights Reserved</span></p>
+    <div class="credits">
+      <span data-translate="footer.designed">Designed by</span> <a href="#">Poalelungi Ion</a>
+    </div>
+  </div>
+</footer>
 
-  </footer>
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+<!-- Preloader -->
+<div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+
+<script>
+  const translations = {
+    en: {
+      "title.services": "Services - BAA «CORECT»",
+      "nav.home": "Home",
+      "nav.about": "About",
+      "nav.services": "Services",
+      "nav.team": "Our Team",
+      "nav.publications": "Publications",
+      "nav.contacts": "Contacts",
+      "nav.language": "Language: English",
+      "team.stepan.name": "Stepan Zghibarțî",
+      "team.nicolae_buzu.name": "Buzu Nicolae",
+      "team.victor.name": "Victor Berlinski",
+      "team.alexei.name": "Alexei Barbăneagră",
+      "services.title": "Services",
+      "services.legal_advice.title": "Legal Advice & Opinions",
+      "services.legal_advice.desc": "Providing expert legal consultations, drafting legal opinions, and preparing due diligence reports on national and international laws.",
+      "services.drafting.title": "Document Drafting",
+      "services.drafting.desc": "Drafting contracts, statutory documents, and legal instruments for companies and institutions of any legal form.",
+      "services.corporate.title": "Corporate Law Support",
+      "services.corporate.desc": "Assisting with establishment, reorganization, liquidation, and changes to statutory documents of legal entities.",
+      "services.representation.title": "Court Representation",
+      "services.representation.desc": "Representing clients in civil, commercial, administrative, and criminal cases across all stages in Moldovan courts.",
+      "services.criminal.title": "Criminal Case Assistance",
+      "services.criminal.desc": "Offering legal support to victims, plaintiffs, or defendants during prosecution and trial phases of criminal cases.",
+      "services.echr.title": "ECHR Representation",
+      "services.echr.desc": "Representing clients’ interests before the European Court of Human Rights to protect their rights.",
+      "services.readmore": "Read more",
+      "features.expertise.title": "Broad Legal Expertise",
+      "features.expertise.desc": "Our team offers extensive knowledge in civil, commercial, criminal, administrative, tax, customs, and intellectual property law.",
+      "features.expertise.item1": "Comprehensive legal consultations",
+      "features.expertise.item2": "Tailored legal solutions",
+      "features.expertise.item3": "International law expertise",
+      "features.efficiency.title": "Efficient Solutions",
+      "features.efficiency.desc": "We prioritize simple, effective legal solutions to save time and meet client needs promptly.",
+      "features.efficiency.item1": "Streamlined processes",
+      "features.efficiency.item2": "Rapid response times",
+      "features.efficiency.item3": "Client-focused strategies",
+      "features.ethics.title": "Ethics & Confidentiality",
+      "features.ethics.desc": "We uphold the highest standards of discretion, loyalty, and professional ethics in all client interactions.",
+      "features.ethics.item1": "Strict confidentiality",
+      "features.ethics.item2": "Moral integrity",
+      "features.success.title": "Proven Success",
+      "features.success.desc": "Our high success rate reflects our commitment to achieving favorable outcomes for every client.",
+      "features.success.item1": "Strong track record",
+      "features.success.item2": "Client satisfaction",
+      "features.success.item3": "Competitive legal strategies",
+      "alt_services.title": "Comprehensive Legal Support",
+      "alt_services.desc": "We provide tailored legal services to individuals and businesses, ensuring their rights and interests are protected across various legal domains.",
+      "alt_services.corporate.title": "Corporate Assistance",
+      "alt_services.corporate.desc": "Support for business establishment, reorganization, and compliance with legal requirements.",
+      "alt_services.litigation.title": "Litigation Services",
+      "alt_services.litigation.desc": "Expert representation in courts for civil, commercial, and criminal cases.",
+      "alt_services.echr.title": "ECHR Advocacy",
+      "alt_services.echr.desc": "Representation at the European Court of Human Rights for human rights cases.",
+      "alt_services.compliance.title": "Legal Compliance",
+      "alt_services.compliance.desc": "Ensuring adherence to national and international legal standards.",
+      "testimonials.client1.name": "Saul Goodman",
+      "testimonials.client1.title": "CEO & Founder",
+      "testimonials.client1.text": "The legal advice provided by BAA «CORECT» was precise and effective, resolving our corporate issue swiftly.",
+      "testimonials.client2.name": "Sara Wilsson",
+      "testimonials.client2.title": "Business Owner",
+      "testimonials.client2.text": "Their representation in court was exceptional, securing a favorable outcome for our case.",
+      "testimonials.client3.name": "Jena Karlis",
+      "testimonials.client3.title": "Entrepreneur",
+      "testimonials.client3.text": "BAA «CORECT» drafted our contracts with utmost professionalism, ensuring all legal aspects were covered.",
+      "testimonials.client4.name": "Matt Brandon",
+      "testimonials.client4.title": "Corporate Client",
+      "testimonials.client4.text": "Their support in our ECHR case was outstanding, protecting our rights effectively.",
+      "testimonials.client5.name": "John Larson",
+      "testimonials.client5.title": "Individual Client",
+      "testimonials.client5.text": "The team’s dedication during my criminal case was remarkable, guiding me through every step.",
+      "footer.sitename": "B.A.A. „Corect”",
+      "footer.address": "str. Mitropolit Gavriil Bănulescu Bodoni 14/4, Chișinău, Moldova.",
+      "footer.phone.title": "Phone:",
+      "footer.email.title": "Email:",
+      "footer.links.title": "Useful Links",
+      "footer.links.home": "Home",
+      "footer.links.about": "About us",
+      "footer.links.services": "Services",
+      "footer.links.team": "Our Team",
+      "footer.links.publications": "Publications",
+      "footer.copyright": "Copyright",
+      "footer.rights": "All Rights Reserved",
+      "footer.designed": "Designed by"
+    },
+    ro: {
+      "title.services": "Servicii - BAA «CORECT»",
+      "nav.home": "Acasă",
+      "nav.about": "Despre",
+      "nav.services": "Servicii",
+      "nav.team": "Echipa Noastră",
+      "nav.publications": "Publicații",
+      "nav.contacts": "Contacte",
+      "nav.language": "Limbă: Română",
+      "team.stepan.name": "Stepan Zghibarțî",
+      "team.nicolae_buzu.name": "Nicolae Buzu",
+      "team.victor.name": "Victor Berlinski",
+      "team.alexei.name": "Alexei Barbăneagră",
+      "services.title": "Servicii",
+      "services.legal_advice.title": "Consultanță și Opinii Juridice",
+      "services.legal_advice.desc": "Oferim consultații juridice de specialitate, redactăm opinii juridice și pregătim rapoarte de due diligence privind legile naționale și internaționale.",
+      "services.drafting.title": "Redactarea Documentelor",
+      "services.drafting.desc": "Redactăm contracte, documente statutare și instrumente juridice pentru companii și instituții de orice formă juridică.",
+      "services.corporate.title": "Suport în Drept Corporativ",
+      "services.corporate.desc": "Asistăm la înființarea, reorganizarea, lichidarea și modificarea documentelor statutare ale entităților juridice.",
+      "services.representation.title": "Reprezentare în Instanță",
+      "services.representation.desc": "Reprezentăm clienții în cauze civile, comerciale, administrative și penale în toate etapele în instanțele din Moldova.",
+      "services.criminal.title": "Asistență în Cazuri Penale",
+      "services.criminal.desc": "Oferim suport juridic victimelor, reclamanților sau pârâților în fazele de urmărire penală și judecată ale cazurilor penale.",
+      "services.echr.title": "Reprezentare la CEDO",
+      "services.echr.desc": "Reprezentăm interesele clienților în fața Curții Europene a Drepturilor Omului pentru a le proteja drepturile.",
+      "services.readmore": "Citește mai mult",
+      "features.expertise.title": "Expertiză Juridică Vastă",
+      "features.expertise.desc": "Echipa noastră oferă cunoștințe extinse în drept civil, comercial, penal, administrativ, fiscal, vamal și proprietate intelectuală.",
+      "features.expertise.item1": "Consultanță juridică completă",
+      "features.expertise.item2": "Soluții juridice personalizate",
+      "features.expertise.item3": "Expertiză în drept internațional",
+      "features.efficiency.title": "Soluții Eficiente",
+      "features.efficiency.desc": "Prioritizăm soluții juridice simple și eficiente pentru a economisi timp și a răspunde prompt nevoilor clienților.",
+      "features.efficiency.item1": "Procese simplificate",
+      "features.efficiency.item2": "Timp de răspuns rapid",
+      "features.efficiency.item3": "Strategii axate pe client",
+      "features.ethics.title": "Etică și Confidențialitate",
+      "features.ethics.desc": "Respectăm cele mai înalte standarde de discreție, loialitate și etică profesională în toate interacțiunile cu clienții.",
+      "features.ethics.item1": "Confidențialitate strictă",
+      "features.ethics.item2": "Integritate morală",
+      "features.success.title": "Succes Dovedit",
+      "features.success.desc": "Rata noastră ridicată de succes reflectă angajamentul de a obține rezultate favorabile pentru fiecare client.",
+      "features.success.item1": "Palmares solid",
+      "features.success.item2": "Satisfacția clienților",
+      "features.success.item3": "Strategii juridice competitive",
+      "alt_services.title": "Suport Juridic Complet",
+      "alt_services.desc": "Oferim servicii juridice personalizate pentru persoane fizice și juridice, asigurând protecția drepturilor și intereselor lor în diverse domenii juridice.",
+      "alt_services.corporate.title": "Asistență Corporativă",
+      "alt_services.corporate.desc": "Suport pentru înființarea, reorganizarea și conformitatea afacerilor cu cerințele legale.",
+      "alt_services.litigation.title": "Servicii de Litigii",
+      "alt_services.litigation.desc": "Reprezentare expertă în instanțe pentru cauze civile, comerciale și penale.",
+      "alt_services.echr.title": "Avocatură la CEDO",
+      "alt_services.echr.desc": "Reprezentare la Curtea Europeană a Drepturilor Omului pentru cazuri de drepturile omului.",
+      "alt_services.compliance.title": "Conformitate Juridică",
+      "alt_services.compliance.desc": "Asigurarea respectării standardelor juridice naționale și internaționale.",
+      "testimonials.client1.name": "Saul Goodman",
+      "testimonials.client1.title": "CEO și Fondator",
+      "testimonials.client1.text": "Consultanța juridică oferită de BAA «CORECT» a fost precisă și eficientă, rezolvând rapid problema noastră corporativă.",
+      "testimonials.client2.name": "Sara Wilsson",
+      "testimonials.client2.title": "Proprietar de Afacere",
+      "testimonials.client2.text": "Reprezentarea lor în instanță a fost excepțională, asigurând un rezultat favorabil pentru cazul nostru.",
+      "testimonials.client3.name": "Jena Karlis",
+      "testimonials.client3.title": "Antreprenor",
+      "testimonials.client3.text": "BAA «CORECT» a redactat contractele noastre cu maxim profesionalism, acoperind toate aspectele juridice.",
+      "testimonials.client4.name": "Matt Brandon",
+      "testimonials.client4.title": "Client Corporativ",
+      "testimonials.client4.text": "Suportul lor în cazul CEDO a fost remarcabil, protejând eficient drepturile noastre.",
+      "testimonials.client5.name": "John Larson",
+      "testimonials.client5.title": "Client Individual",
+      "testimonials.client5.text": "Dedicarea echipei în cazul meu penal a fost remarcabilă, ghidându-mă în fiecare etapă.",
+      "footer.sitename": "B.A.A. „Corect”",
+      "footer.address": "str. Mitropolit Gavriil Bănulescu Bodoni 14/4, Chișinău, Moldova.",
+      "footer.phone.title": "Telefon:",
+      "footer.email.title": "Email:",
+      "footer.links.title": "Linkuri Utile",
+      "footer.links.home": "Acasă",
+      "footer.links.about": "Despre noi",
+      "footer.links.services": "Servicii",
+      "footer.links.team": "Echipa Noastră",
+      "footer.links.publications": "Publicații",
+      "footer.copyright": "Drepturi de autor",
+      "footer.rights": "Toate drepturile rezervate",
+      "footer.designed": "Proiectat de"
+    },
+    fr: {
+      "title.services": "Services - BAA «CORECT»",
+      "nav.home": "Accueil",
+      "nav.about": "À propos",
+      "nav.services": "Services",
+      "nav.team": "Notre Équipe",
+      "nav.publications": "Publications",
+      "nav.contacts": "Contacts",
+      "nav.language": "Langue: Français",
+      "team.stepan.name": "Stepan Zghibarțî",
+      "team.nicolae_buzu.name": "Nicolae Buzu",
+      "team.victor.name": "Victor Berlinski",
+      "team.alexei.name": "Alexei Barbăneagră",
+      "services.title": "Services",
+      "services.legal_advice.title": "Conseils et Avis Juridiques",
+      "services.legal_advice.desc": "Fourniture de consultations juridiques spécialisées, rédaction d'avis juridiques et préparation de rapports de due diligence sur les lois nationales et internationales.",
+      "services.drafting.title": "Rédaction de Documents",
+      "services.drafting.desc": "Rédaction de contrats, de documents statutaires et d'instruments juridiques pour les entreprises et institutions de toute forme juridique.",
+      "services.corporate.title": "Soutien en Droit des Sociétés",
+      "services.corporate.desc": "Assistance à la création, la réorganisation, la liquidation et les modifications des documents statutaires des entités juridiques.",
+      "services.representation.title": "Représentation en Justice",
+      "services.representation.desc": "Représentation des clients dans des affaires civiles, commerciales, administratives et pénales à toutes les étapes devant les tribunaux moldaves.",
+      "services.criminal.title": "Assistance dans les Affaires Pénales",
+      "services.criminal.desc": "Fourniture d'un soutien juridique aux victimes, plaignants ou défendeurs pendant les phases de poursuite et de procès des affaires pénales.",
+      "services.echr.title": "Représentation à la CEDH",
+      "services.echr.desc": "Représentation des intérêts des clients devant la Cour Européenne des Droits de l'Homme pour protéger leurs droits.",
+      "services.readmore": "En savoir plus",
+      "features.expertise.title": "Expertise Juridique Étendue",
+      "features.expertise.desc": "Notre équipe offre une connaissance approfondie en droit civil, commercial, pénal, administratif, fiscal, douanier et de la propriété intellectuelle.",
+      "features.expertise.item1": "Consultations juridiques complètes",
+      "features.expertise.item2": "Solutions juridiques adaptées",
+      "features.expertise.item3": "Expertise en droit international",
+      "features.efficiency.title": "Solutions Efficaces",
+      "features.efficiency.desc": "Nous privilégions des solutions juridiques simples et efficaces pour gagner du temps et répondre rapidement aux besoins des clients.",
+      "features.efficiency.item1": "Processus simplifiés",
+      "features.efficiency.item2": "Temps de réponse rapide",
+      "features.efficiency.item3": "Stratégies centrées sur le client",
+      "features.ethics.title": "Éthique et Confidentialité",
+      "features.ethics.desc": "Nous respectons les normes les plus élevées de discrétion, de loyauté et d'éthique professionnelle dans toutes les interactions avec les clients.",
+      "features.ethics.item1": "Confidentialité stricte",
+      "features.ethics.item2": "Intégrité morale",
+      "features.success.title": "Succès Prouvé",
+      "features.success.desc": "Notre taux de succès élevé reflète notre engagement à obtenir des résultats favorables pour chaque client.",
+      "features.success.item1": "Historique solide",
+      "features.success.item2": "Satisfaction des clients",
+      "features.success.item3": "Stratégies juridiques compétitives",
+      "alt_services.title": "Soutien Juridique Complet",
+      "alt_services.desc": "Nous fournissons des services juridiques adaptés aux particuliers et aux entreprises, garantissant la protection de leurs droits et intérêts dans divers domaines juridiques.",
+      "alt_services.corporate.title": "Assistance Corporative",
+      "alt_services.corporate.desc": "Soutien pour la création, la réorganisation et la conformité des entreprises aux exigences légales.",
+      "alt_services.litigation.title": "Services de Contentieux",
+      "alt_services.litigation.desc": "Représentation experte devant les tribunaux pour les affaires civiles, commerciales et pénales.",
+      "alt_services.echr.title": "Plaidoyer à la CEDH",
+      "alt_services.echr.desc": "Représentation à la Cour Européenne des Droits de l'Homme pour les affaires de droits humains.",
+      "alt_services.compliance.title": "Conformité Juridique",
+      "alt_services.compliance.desc": "Assurer le respect des normes juridiques nationales et internationales.",
+      "testimonials.client1.name": "Saul Goodman",
+      "testimonials.client1.title": "PDG et Fondateur",
+      "testimonials.client1.text": "Les conseils juridiques fournis par BAA «CORECT» étaient précis et efficaces, résolvant rapidement notre problème corporatif.",
+      "testimonials.client2.name": "Sara Wilsson",
+      "testimonials.client2.title": "Propriétaire d'Entreprise",
+      "testimonials.client2.text": "Leur représentation en justice était exceptionnelle, obtenant un résultat favorable pour notre affaire.",
+      "testimonials.client3.name": "Jena Karlis",
+      "testimonials.client3.title": "Entrepreneur",
+      "testimonials.client3.text": "BAA «CORECT» a rédigé nos contrats avec le plus grand professionnalisme, couvrant tous les aspects juridiques.",
+      "testimonials.client4.name": "Matt Brandon",
+      "testimonials.client4.title": "Client Corporatif",
+      "testimonials.client4.text": "Leur soutien dans notre affaire CEDH était remarquable, protégeant efficacement nos droits.",
+      "testimonials.client5.name": "John Larson",
+      "testimonials.client5.title": "Client Individuel",
+      "testimonials.client5.text": "Le dévouement de l'équipe dans mon affaire pénale était remarquable, me guidant à chaque étape.",
+      "footer.sitename": "B.A.A. „Corect”",
+      "footer.address": "str. Mitropolit Gavriil Bănulescu Bodoni 14/4, Chișinău, Moldavie.",
+      "footer.phone.title": "Téléphone:",
+      "footer.email.title": "Email:",
+      "footer.links.title": "Liens Utiles",
+      "footer.links.home": "Accueil",
+      "footer.links.about": "À propos de nous",
+      "footer.links.services": "Services",
+      "footer.links.team": "Notre Équipe",
+      "footer.links.publications": "Publications",
+      "footer.copyright": "Droit d'auteur",
+      "footer.rights": "Tous droits réservés",
+      "footer.designed": "Conçu par"
+    },
+    de: {
+      "title.services": "Dienstleistungen - BAA «CORECT»",
+      "nav.home": "Startseite",
+      "nav.about": "Über uns",
+      "nav.services": "Dienstleistungen",
+      "nav.team": "Unser Team",
+      "nav.publications": "Publikationen",
+      "nav.contacts": "Kontakte",
+      "nav.language": "Sprache: Deutsch",
+      "team.stepan.name": "Stepan Zghibarțî",
+      "team.nicolae_buzu.name": "Nicolae Buzu",
+      "team.victor.name": "Victor Berlinski",
+      "team.alexei.name": "Alexei Barbăneagră",
+      "services.title": "Dienstleistungen",
+      "services.legal_advice.title": "Rechtsberatung & Gutachten",
+      "services.legal_advice.desc": "Bereitstellung von fachkundigen Rechtsberatungen, Erstellung von Rechtsgutachten und Vorbereitung von Due-Diligence-Berichten zu nationalen und internationalen Gesetzen.",
+      "services.drafting.title": "Dokumentenentwurf",
+      "services.drafting.desc": "Erstellung von Verträgen, Satzungen und rechtlichen Instrumenten für Unternehmen und Institutionen jeder Rechtsform.",
+      "services.corporate.title": "Unterstützung im Gesellschaftsrecht",
+      "services.corporate.desc": "Unterstützung bei der Gründung, Umstrukturierung, Liquidation und Änderung der Satzung von juristischen Personen.",
+      "services.representation.title": "Gerichtsvertretung",
+      "services.representation.desc": "Vertretung von Mandanten in Zivil-, Handels-, Verwaltungs- und Strafsachen in allen Phasen vor moldauischen Gerichten.",
+      "services.criminal.title": "Unterstützung in Strafsachen",
+      "services.criminal.desc": "Bereitstellung rechtlicher Unterstützung für Opfer, Kläger oder Angeklagte während der Ermittlungs- und Gerichtsphasen von Strafsachen.",
+      "services.echr.title": "Vertretung vor dem EGMR",
+      "services.echr.desc": "Vertretung der Interessen von Mandanten vor dem Europäischen Gerichtshof für Menschenrechte zum Schutz ihrer Rechte.",
+      "services.readmore": "Mehr lesen",
+      "features.expertise.title": "Umfassende Rechtsexpertise",
+      "features.expertise.desc": "Unser Team bietet umfassende Kenntnisse im Zivil-, Handels-, Straf-, Verwaltungs-, Steuer-, Zoll- und Immaterialgüterrecht.",
+      "features.expertise.item1": "Umfassende Rechtsberatung",
+      "features.expertise.item2": "Maßgeschneiderte rechtliche Lösungen",
+      "features.expertise.item3": "Expertise im internationalen Recht",
+      "features.efficiency.title": "Effiziente Lösungen",
+      "features.efficiency.desc": "Wir legen Wert auf einfache, effektive rechtliche Lösungen, um Zeit zu sparen und die Bedürfnisse der Mandanten schnell zu erfüllen.",
+      "features.efficiency.item1": "Optimierte Prozesse",
+      "features.efficiency.item2": "Schnelle Reaktionszeiten",
+      "features.efficiency.item3": "Mandantenorientierte Strategien",
+      "features.ethics.title": "Ethik & Vertraulichkeit",
+      "features.ethics.desc": "Wir halten die höchsten Standards an Diskretion, Loyalität und beruflicher Ethik in allen Interaktionen mit Mandanten ein.",
+      "features.ethics.item1": "Strenge Vertraulichkeit",
+      "features.ethics.item2": "Moralische Integrität",
+      "features.success.title": "Bewährter Erfolg",
+      "features.success.desc": "Unsere hohe Erfolgsquote spiegelt unser Engagement wider, für jeden Mandanten positive Ergebnisse zu erzielen.",
+      "features.success.item1": "Starke Erfolgsbilanz",
+      "features.success.item2": "Mandantenzufriedenheit",
+      "features.success.item3": "Wettbewerbsfähige rechtliche Strategien",
+      "alt_services.title": "Umfassende rechtliche Unterstützung",
+      "alt_services.desc": "Wir bieten maßgeschneiderte rechtliche Dienstleistungen für Einzelpersonen und Unternehmen, um deren Rechte und Interessen in verschiedenen Rechtsbereichen zu schützen.",
+      "alt_services.corporate.title": "Unternehmensunterstützung",
+      "alt_services.corporate.desc": "Unterstützung bei der Gründung, Umstrukturierung und Einhaltung gesetzlicher Anforderungen von Unternehmen.",
+      "alt_services.litigation.title": "Prozessführungsdienste",
+      "alt_services.litigation.desc": "Fachkundige Vertretung vor Gericht in Zivil-, Handels- und Strafsachen.",
+      "alt_services.echr.title": "EGMR-Vertretung",
+      "alt_services.echr.desc": "Vertretung vor dem Europäischen Gerichtshof für Menschenrechte in Menschenrechtsfällen.",
+      "alt_services.compliance.title": "Rechtliche Konformität",
+      "alt_services.compliance.desc": "Sicherstellung der Einhaltung nationaler und internationaler rechtlicher Standards.",
+      "testimonials.client1.name": "Saul Goodman",
+      "testimonials.client1.title": "CEO & Gründer",
+      "testimonials.client1.text": "Die von BAA «CORECT» bereitgestellte Rechtsberatung war präzise und effektiv und löste unser Unternehmensproblem schnell.",
+      "testimonials.client2.name": "Sara Wilsson",
+      "testimonials.client2.title": "Unternehmerin",
+      "testimonials.client2.text": "Ihre Vertretung vor Gericht war außergewöhnlich und sicherte ein positives Ergebnis für unseren Fall.",
+      "testimonials.client3.name": "Jena Karlis",
+      "testimonials.client3.title": "Unternehmerin",
+      "testimonials.client3.text": "BAA «CORECT» hat unsere Verträge mit höchstem Professionalismus erstellt und alle rechtlichen Aspekte abgedeckt.",
+      "testimonials.client4.name": "Matt Brandon",
+      "testimonials.client4.title": "Unternehmenskunde",
+      "testimonials.client4.text": "Ihre Unterstützung in unserem EGMR-Fall war hervorragend und schützte unsere Rechte effektiv.",
+      "testimonials.client5.name": "John Larson",
+      "testimonials.client5.title": "Einzelkunde",
+      "testimonials.client5.text": "Das Engagement des Teams in meinem Strafverfahren war bemerkenswert und führte mich durch jeden Schritt.",
+      "footer.sitename": "B.A.A. „Corect”",
+      "footer.address": "str. Mitropolit Gavriil Bănulescu Bodoni 14/4, Chișinău, Moldawien.",
+      "footer.phone.title": "Telefon:",
+      "footer.email.title": "Email:",
+      "footer.links.title": "Nützliche Links",
+      "footer.links.home": "Startseite",
+      "footer.links.about": "Über uns",
+      "footer.links.services": "Dienstleistungen",
+      "footer.links.team": "Unser Team",
+      "footer.links.publications": "Publikationen",
+      "footer.copyright": "Urheberrecht",
+      "footer.rights": "Alle Rechte vorbehalten",
+      "footer.designed": "Entworfen von"
+    }
+  };
+
+  function setLanguage(lang) {
+    localStorage.setItem('language', lang);
+    document.querySelectorAll('[data-translate]').forEach(element => {
+      const key = element.getAttribute('data-translate');
+      if (translations[lang] && translations[lang][key]) {
+        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+          element.placeholder = translations[lang][key];
+        } else {
+          element.textContent = translations[lang][key];
+        }
+      }
+    });
+    document.querySelector('#active-language').textContent = translations[lang]['nav.language'];
+    document.title = translations[lang]['title.services'];
+  }
+
+  // Initialize language on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('language') || 'en';
+    setLanguage(savedLang);
+  });
+</script>
 
 </body>
-
 </html>
